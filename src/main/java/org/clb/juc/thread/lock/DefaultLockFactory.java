@@ -6,10 +6,10 @@ import java.util.concurrent.ConcurrentMap;
 public class DefaultLockFactory implements LockFactory {
 
 
-    private  final ConcurrentMap<String, Lock> lockMap = new ConcurrentHashMap<>();
+    private  final ConcurrentMap<String, MyLock> lockMap = new ConcurrentHashMap<>();
 
     @Override
-    public Lock getLock(String key) {
+    public MyLock getLock(String key) {
         if (lockMap.containsKey(key)) {
             return lockMap.get(key);
         } else {

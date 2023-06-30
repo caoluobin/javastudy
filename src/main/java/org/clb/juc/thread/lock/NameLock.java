@@ -3,7 +3,7 @@ package org.clb.juc.thread.lock;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class NameLock implements Lock{
+public class NameLock implements MyLock{
     private ConcurrentHashMap<Integer, ReentrantLock> lockMap = new ConcurrentHashMap<>();
     private ReentrantLock lock = new ReentrantLock();
     private Integer lockCount=16;

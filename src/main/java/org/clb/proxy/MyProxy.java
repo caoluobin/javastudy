@@ -1,9 +1,5 @@
 package org.clb.proxy;
 
-import org.clb.Acc;
-import org.clb.Fa;
-import org.clb.pojo.User;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -28,9 +24,6 @@ public class MyProxy implements InvocationHandler {
 
 
     public static void main(String[] args) {
-        MyProxy myProxy = new MyProxy(new Fa());
-        System.out.println(myProxy);
-        Acc acc = myProxy.getInstance(Acc.class);
-        acc.say(Collections.singletonList("aaa"));
+
     }
 }
