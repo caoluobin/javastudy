@@ -105,6 +105,19 @@ public class MyThreadPool extends ThreadPoolExecutor {
 //            System.out.println("result==============================> ");
 //            return 10;
 //        }), threadPool);
+        CompletableFuture<Object> a = CompletableFuture.supplyAsync(() ->{
+            return 1;
+        });
+        CompletableFuture<Object> b = CompletableFuture.supplyAsync(() ->{
+            return 1;
+        });
+        CompletableFuture<Object> c = CompletableFuture.supplyAsync(() ->{
+            return 1;
+        });
+        CompletableFuture<Void> f = CompletableFuture.allOf(a, b, c).whenComplete((dd, aa) -> {
+
+        });
+//        f.get();
         threadPool.shutdown();
     }
 

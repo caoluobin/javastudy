@@ -8,22 +8,30 @@ import org.clb.pojo.list.BTreeNode;
  * @Date 2021/8/5 9:16
  * @Author clb
  */
-public class BinaryTreeCode1 extends BTreeUtil{
+public class BinaryTreeCode1 extends BTreeUtil {
 
-    public static void pre(BTreeNode head){
-        if (head==null) return;
+    public static void pre(BTreeNode head) {
+        if (head == null) {
+            return;
+        }
         System.out.print(head.value);
         pre(head.left);
         pre(head.right);
     }
-    public static void mid(BTreeNode head){
-        if (head==null) return;
+
+    public static void mid(BTreeNode head) {
+        if (head == null) {
+            return;
+        }
         pre(head.left);
         System.out.print(head.value);
         pre(head.right);
     }
-    public static void pos(BTreeNode head){
-        if (head==null) return;
+
+    public static void pos(BTreeNode head) {
+        if (head == null) {
+            return;
+        }
         pre(head.left);
         pre(head.right);
         System.out.print(head.value);

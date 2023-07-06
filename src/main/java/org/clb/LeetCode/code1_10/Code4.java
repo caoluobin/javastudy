@@ -27,13 +27,13 @@ public class Code4 extends Sort {
         double[] c=new double[2];
         while (a<(nums1.length+nums2.length)/2){
             if (index1<nums1.length&&index2<nums2.length)
-            c[0]=nums1[index1] < nums2[index2]?nums1[index1++]:nums2[index2++];
+                c[0]=nums1[index1] < nums2[index2]?nums1[index1++]:nums2[index2++];
             if (index1>=nums1.length) c[0]=nums2[index2++];
             if (index2>=nums2.length) c[0]=nums1[index1++];
             a++;
         }
         if (index1<nums1.length&&index2<nums2.length)
-        c[1]=(nums1.length+nums2.length)%2==1?c[0]:nums1[index1] <nums2[index2]?nums1[index1]:nums2[index2];
+            c[1]=(nums1.length+nums2.length)%2==1?c[0]: Math.min(nums1[index1], nums2[index2]);
         if (index1>=nums1.length) c[1]=(nums1.length+nums2.length)%2==1?c[0]:nums2[index2];
         if (index2>=nums2.length) c[1]=(nums1.length+nums2.length)%2==1?c[0]:nums1[index1];
         return (c[0]+c[1])/2;

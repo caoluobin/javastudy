@@ -35,6 +35,28 @@ public class ForkJoinPoolTest {
         fk.shutdown();
         System.out.println(invoke2);
     }
+    class ForkNode {
+        List<ForkNode> childs = new ArrayList<>();
+        Integer a;
+    }
+    @Data
+    static class ForkNodeTask extends RecursiveTask<Integer>{
+        ForkNode node;
+
+        public ForkNodeTask(ForkNode node) {
+            this.node = node;
+        }
+
+        @Override
+        protected Integer compute() {
+            if (node.childs.isEmpty()) {
+                return node.a;
+            } else {
+
+            }
+            return null;
+        }
+    }
     @Data
     static class MyTask extends RecursiveTask<Integer> {
 

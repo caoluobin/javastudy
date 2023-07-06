@@ -9,11 +9,7 @@ import java.util.concurrent.Semaphore;
 
 public class SemaphoreTest {
     public static void main(String[] args) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(new Date());
-        cal.add(Calendar.DAY_OF_YEAR,174);
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        System.out.println(format.format(cal.getTime()));
+        test1();
 //        System.out.println("123".substring(0,2));
 //        Semaphore semaphore = new Semaphore(2);
 //        try {
@@ -36,6 +32,7 @@ public class SemaphoreTest {
             Thread thread = new Thread(()->{
                 semaphore.acquireUninterruptibly();
                 System.out.println(Thread.currentThread().getName()+"得到资源");
+                semaphore.release();
             },"thread"+i);
             thread.start();
             map.put(i,thread);
