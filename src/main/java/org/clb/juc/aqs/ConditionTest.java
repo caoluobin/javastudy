@@ -1,6 +1,5 @@
 package org.clb.juc.aqs;
 
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
@@ -17,31 +16,31 @@ public class ConditionTest {
     public static void test() throws InterruptedException {
 
         new Thread(() -> {
+            lock.lock();
             try {
-                lock.lock();
-                System.out.println(Thread.currentThread().getName()+"等待1");
+                System.out.println(Thread.currentThread().getName() + "等待1");
                 condition.await();
-                System.out.println(Thread.currentThread().getName()+"等待2");
+                System.out.println(Thread.currentThread().getName() + "等待2");
                 condition.await();
-                System.out.println(Thread.currentThread().getName()+"冲");
+                System.out.println(Thread.currentThread().getName() + "冲");
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } finally {
                 lock.unlock();
             }
-        },"ThreadB").start();
+        }, "ThreadB").start();
         TimeUnit.SECONDS.sleep(1);
         new Thread(() -> {
+            lock.lock();
             try {
-                lock.lock();
-                System.out.println(Thread.currentThread().getName()+"111");
+                System.out.println(Thread.currentThread().getName() + "111");
                 condition.signal();
-                System.out.println(Thread.currentThread().getName()+"222");
+                System.out.println(Thread.currentThread().getName() + "222");
                 condition.signal();
-                System.out.println(Thread.currentThread().getName()+"333");
+                System.out.println(Thread.currentThread().getName() + "333");
             } finally {
                 lock.unlock();
             }
-        },"ThreadA").start();
+        }, "ThreadA").start();
     }
 }
