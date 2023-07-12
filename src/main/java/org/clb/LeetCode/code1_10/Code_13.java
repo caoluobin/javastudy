@@ -3,7 +3,7 @@ package org.clb.LeetCode.code1_10;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Code13 {
+public class Code_13 {
 
     public static Map<String,Integer> map = new HashMap() {
         {

@@ -1,6 +1,6 @@
 package org.clb.LeetCode.code1_10;
 
-public class Code14 {
+public class Code_14 {
 
 
     public String longestCommonPrefix(String[] strs) {

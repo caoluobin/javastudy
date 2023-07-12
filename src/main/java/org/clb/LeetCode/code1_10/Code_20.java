@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Stack;
 
-public class Code20 {
+public class Code_20 {
 
     public boolean isValid(String s) {
         if (s.length()%2==1) return false;

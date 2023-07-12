@@ -1,6 +1,6 @@
 package org.clb.LeetCode.code1_10;
 
-public class Code5 {
+public class Code_5 {
 
 
     public static void main(String[] args) {
