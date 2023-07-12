@@ -8,7 +8,7 @@ import org.clb.structure.sort.Sort;
  * @Date 2021/7/1 10:07
  * @Author clb
  */
-public class Code4 extends Sort {
+public class Code_4 extends Sort {
     /**
      *  1 3 5 7 11 23
      *  2 3 6
@@ -25,11 +25,14 @@ public class Code4 extends Sort {
         int index2=0;
         int a=0;
         double[] c=new double[2];
-        while (a<(nums1.length+nums2.length)/2){
-            if (index1<nums1.length&&index2<nums2.length)
+        while (a<(nums1.length+nums2.length+1)/2){
+            if (index1<nums1.length&&index2<nums2.length) {
                 c[0]=nums1[index1] < nums2[index2]?nums1[index1++]:nums2[index2++];
-            if (index1>=nums1.length) c[0]=nums2[index2++];
-            if (index2>=nums2.length) c[0]=nums1[index1++];
+            } else if (index1>=nums1.length) {
+                c[0]=nums2[index2++];
+            } else if (index2>=nums2.length) {
+                c[0]=nums1[index1++];
+            }
             a++;
         }
         if (index1<nums1.length&&index2<nums2.length)
@@ -40,8 +43,8 @@ public class Code4 extends Sort {
     }
 
     public static void main(String[] args) {
-        int[] a=new int[]{3,4,5,8};
-        int[] b=new int[]{1,2,3,4};
+        int[] a=new int[]{3,4,5,6};
+        int[] b=new int[]{1};
         System.out.println(fin(a,b));
     }
 
