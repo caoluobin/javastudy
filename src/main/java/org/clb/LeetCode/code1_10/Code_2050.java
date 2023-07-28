@@ -47,7 +47,7 @@ public class Code_2050 {
                 relations[j] = relation;
             }
             int res1 = new Code_2050().minimumTime(n, relations, time);
-            int res2 = new Code_2050().minimumTime2(n, relations, time);
+            int res2 = new Code_2050().minimumTime1(n, relations, time);
             if (res1!=res2) {
                 System.out.println(res1+"  "+res2);
                 System.out.println(Arrays.toString(time));
@@ -81,7 +81,47 @@ public class Code_2050 {
         }
         return res;
     }
-
+    public int minimumTime1(int n, int[][] relations, int[] time) {
+        Map<Integer,Set<Integer>> relMap = new HashMap<>();
+        for (int i = 0; i < relations.length; i++) {
+            int[] relation = relations[i];
+            Set<Integer> set = relMap.computeIfAbsent(relation[0], k -> new HashSet<>());
+            set.add(relation[1]);
+        }
+        int res = 0;
+        int[] dp = new int[n];
+        for (int i = 0; i < time.length; i++) {
+            int max = deal1(i , relMap, time, dp);
+            res = Math.max(res,max);
+            dp[i] = max;
+        }
+        return res;
+    }
+    public int deal1(int index,Map<Integer,Set<Integer>> relMap,int[] time,int[] dp) {
+        Set<Integer> nextSet = relMap.getOrDefault(index + 1, new HashSet<>());
+        if (nextSet.size() == 0) {
+            return time[index];
+        }
+        if (dp[index] != 0)
+            return dp[index];
+        int sonMax = 0;
+        for (Integer next : nextSet) {
+            int son = deal1(next - 1, relMap, time, dp);
+            sonMax = Math.max(sonMax,son);
+        }
+//        for (Course nextCourse : course.nextSet) {
+//            int preTime = course.time+course.preTime;
+//            if (nextCourse.preTime <preTime ) {
+//                nextCourse.preTime = preTime;
+//                if (nextCourse.nextTime == 0)
+//                    nextCourse.nextTime = deal(nextCourse);
+//            } else if (nextCourse.preTime == preTime) {
+//                nextCourse.preTime = preTime;
+//            }
+//            sonMax = Math.max(sonMax,nextCourse.nextTime);
+//        }
+        return sonMax + time[index];
+    }
     public int deal(Course course) {
         if (course.nextSet.size() == 0) {
             return course.time;
