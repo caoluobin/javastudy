@@ -1,5 +1,8 @@
 package org.clb;
 
+import com.google.common.collect.Lists;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,14 +11,10 @@ import java.util.Map;
 public class Code100 {
 
 
-    public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-
-
-        list.add(50);
-        list.add(50);
-        list.add(50);
-        System.out.println(getSum100(list));
+    public static void main(String[] args) throws IOException {
+        Double a = 1.0;
+        Integer b =1;
+        System.out.println(a.equals(b));
     }
 
     // 1 5 95 98 2  ·¶Î§-100 ~ 100
