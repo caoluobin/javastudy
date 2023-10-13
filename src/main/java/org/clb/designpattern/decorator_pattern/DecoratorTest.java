@@ -9,7 +9,7 @@ package org.clb.designpattern.decorator_pattern;
 public class DecoratorTest {
 
     public static void main(String[] args) {
-        Student stu=new Student();
+        Student stu=new Student("ccc","ddd");
         stu.setName("hapi");
         StudentDeCorator stu2=new StudentDressDecorator(stu);
          stu2.dress();

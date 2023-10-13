@@ -1,14 +1,37 @@
 package org.clb.designpattern.decorator_pattern;
 
+import lombok.AllArgsConstructor;
+
 /**
  * @Description
  * @Classname Student
  * @Date 2021/5/21 14:19
  * @Author clb
  */
-public class Student implements Stu {
+public class Student implements Stu,Cloneable {
     String name;
     String clothes="¿ÕÆø";
+    String a = "cccasfagajwoprqwporqpworiqpw j alksjaljdfalksjflkajwrriq i j jaljfalksfla2 g";
+    String b = "cccasfagajwoprqwporqpworiqpw j alksjaljdfalksjflkajwrriq i j jaljfalksfla2s";
+    String v = "cccasfagajwoprqwporqpworiqpw j alksjaljdfalksjflkajwrriq i j jaljfalksfla2 t";
+    String s = "cccasfagajwoprqwporqpworiqpw j alksjaljdfalksjflkajwrriq i j jaljfalksfla2 s";
+    String d = "cccasfagajwoprqwporqpworiqpw j alksjaljdfalksjflkajwrriq i j jaljfalksfla2 nn";
+    String e = "cccasfagajwoprqwporqpworiqpw j alksjaljdfalksjflkajwrriq i j jaljfalksfla2 354235";
+
+
+    public Student(String name, String clothes) {
+        Integer count= 0 ;
+        for (int i = 0; i < 1000; i++) {
+            count++;
+        }
+        this.name = name;
+        this.clothes = clothes;
+    }
+
+    @Override
+    public Student clone() throws CloneNotSupportedException {
+        return (Student)super.clone();
+    }
 
     @Override
     public String toString() {

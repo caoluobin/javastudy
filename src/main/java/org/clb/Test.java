@@ -4,31 +4,28 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import lombok.var;
+import org.clb.designpattern.decorator_pattern.Student;
 import org.clb.util.text.TextRead;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Student  student = new Student("clothes","ssss");
+        List<Student> list2 = new LinkedList<>();
+        List<Student> list = new ArrayList<>();
         long start = System.currentTimeMillis();
-        for (int i = 0; i < 8; i++) {
-            int finalI = i;
-            new Thread(()->{
-
-                while (true) {
-                    long now = System.currentTimeMillis();
-                    System.out.println(finalI+""+finalI+finalI+finalI+finalI+finalI+finalI+finalI+finalI);
-
-                    while (System.currentTimeMillis()-now<1000) {
-
-                    }
-                    if (System.currentTimeMillis()-start>5000) {
-                        break;
-                    }
-                }
-            }).start();
+//        for (int i = 0; i < 1000 * 3000; i++) {
+//            list2.add(student);
+//        }
+//        System.out.println(System.currentTimeMillis()-start);
+//        start = System.currentTimeMillis();
+        for (int i = 0; i < 1000 * 300; i++) {
+            list2.add(student);
         }
+        System.out.println(System.currentTimeMillis()-start);
     }
 
     public static String[] getDeal(String object,String emailss) {
