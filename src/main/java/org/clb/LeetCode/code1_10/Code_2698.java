@@ -12,8 +12,40 @@ import java.util.*;
 public class Code_2698 {
     public static void main(String[] args) {
         Code_2698 code = new Code_2698();
-        System.out.println(code.punishmentNumber(45));
+        System.out.println(code.punishmentNumber2(45));
     }
+
+    public int punishmentNumber2(int n) {
+        int res=0;
+        for (int i = 1; i < n + 1; i++) {
+            int m = i *i;
+            if (dfs2(m,i)) {
+                res+=i*i;
+            }
+        }
+        return res;
+    }
+
+    private boolean dfs2(int m, int target) {//20  20
+        if (m<10||m==target) {
+            return m == target;
+        }
+        if (target>m) {
+            return false;
+        }
+        int a= 10;
+        while (m>=a) {
+            int d = m%a;//25
+            int s = m/a;//20
+            if (dfs2(s,target-d)) {
+                return true;
+            }
+            a=a*10;
+        }
+        return false;
+    }
+
+
     // key 当前值  set: 所有拥有的和
     private static Map<Integer, Set<Integer>> map = new HashMap<>();
     public int punishmentNumber(int n) {
