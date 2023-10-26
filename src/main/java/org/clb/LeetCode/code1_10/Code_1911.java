@@ -31,7 +31,7 @@ public class Code_1911 {
     public static long maxAlternatingSum2(int[] nums) {
         return dfs(nums, new ArrayList<>(), 0);
     }
-    public static long dfs(int[] nums, List<Integer> dfs, int index) {
+    private static long dfs(int[] nums, List<Integer> dfs, int index) {
         if (index==nums.length) {
             long sum = 0;
             for (int i = 0; i < dfs.size(); i++) {
