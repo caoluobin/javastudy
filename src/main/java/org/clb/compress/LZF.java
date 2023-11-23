@@ -1,7 +1,7 @@
 package org.clb.compress;
 
 /**
- * @Description LZFÑ¹Ëõ¼°½âÑ¹Ëã·¨
+ * @Description LZFå‹ç¼©åŠè§£å‹ç®—æ³•
  * @Classname LZF
  * @Date 2023/2/13 23:52
  * @Author clb
@@ -22,7 +22,7 @@ public class LZF {
     public static int compress(byte[] input, int inputLength, byte[] outPut, int outPutLength) {
         int iidx = 0;
         int oidx = 0;
-        int hval = ((input[iidx] << 8) | input[iidx + 1]);//16Î»  ¸ß8Î»Îª0
+        int hval = ((input[iidx] << 8) | input[iidx + 1]);//16Î»  ï¿½ï¿½8Î»Îª0
         int lit = 0;
 
         for (; ; ) {

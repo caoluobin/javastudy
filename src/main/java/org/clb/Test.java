@@ -1,31 +1,22 @@
 package org.clb;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONException;
-import com.alibaba.fastjson.JSONObject;
-import lombok.var;
-import org.clb.designpattern.decorator_pattern.Student;
-import org.clb.util.text.TextRead;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import org.clb.pojo.User;
+
+import java.nio.charset.StandardCharsets;
+
 
 public class Test {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Student  student = new Student("clothes","ssss");
-        List<Student> list2 = new LinkedList<>();
-        List<Student> list = new ArrayList<>();
-        long start = System.currentTimeMillis();
-//        for (int i = 0; i < 1000 * 3000; i++) {
-//            list2.add(student);
-//        }
-//        System.out.println(System.currentTimeMillis()-start);
-//        start = System.currentTimeMillis();
-        for (int i = 0; i < 1000 * 300; i++) {
-            list2.add(student);
-        }
-        System.out.println(System.currentTimeMillis()-start);
+        User user = new User();
+        user.setId("aa");
+        func(user);
+        System.out.println(user.getId());//aa
+        System.out.println("嘎达");
+    }
+    private static void func(User user) {
+        user = new User();
+        user.setId("ggg");
     }
 
     public static String[] getDeal(String object,String emailss) {

@@ -11,6 +11,6 @@ import org.clb.designpattern.abstract_factory.animal.Animal;
 public abstract class BigAnimal implements Animal {
 
     @Override public void shape() {
-        System.out.println("大型动物");
+        System.out.println("澶у瀷鍔ㄧ墿");
     }
 }
