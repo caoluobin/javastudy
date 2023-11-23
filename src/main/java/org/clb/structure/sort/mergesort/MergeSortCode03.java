@@ -1,8 +1,8 @@
 package org.clb.structure.sort.mergesort;
 
 /**
- * @Description numÓÒ±ßÓĞ¶àÉÙ¸öÊı*2<num Çó³öÊı×éÖĞµÄ¸öÊıºÍ
- * ·ÖÒ»°ë ×ó±ßµÄ¼ÓÓÒ±ßµÄ  ¼ÓÉÏmerge¹ı³ÌÖĞ²úÉúµÄ¸öÊı
+ * @Description numå³è¾¹æœ‰å¤šå°‘ä¸ªæ•°*2<num æ±‚å‡ºæ•°ç»„ä¸­çš„ä¸ªæ•°å’Œ
+ * åˆ†ä¸€åŠ å·¦è¾¹çš„åŠ å³è¾¹çš„  åŠ ä¸Šmergeè¿‡ç¨‹ä¸­äº§ç”Ÿçš„ä¸ªæ•°
  * @Classname MergeSortCode03
  * @Date 2021/5/13 5:53
  * @Author clb
@@ -22,7 +22,7 @@ public class MergeSortCode03 {
     }
 
     /**
-     * ºÏ²¢Êı×é
+     * åˆå¹¶æ•°ç»„
      * 146 237  1 2 3
      * @param array
      * @param l

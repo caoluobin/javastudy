@@ -18,25 +18,25 @@ public class Code_5 {
             int length = 1;
             left = i-1;
             right=i+1;
-            //ÖĞ¼ä¼¸¸öÏàµÈ´¦Àí
-            //×ó±ß´¦Àí
+            //ä¸­é—´å‡ ä¸ªç›¸ç­‰å¤„ç†
+            //å·¦è¾¹å¤„ç†
             while (left>=0&&chars[left]==chars[i]) {
                 left--;
                 length++;
             }
-            //ÓÒ±ß´¦Àí
+            //å³è¾¹å¤„ç†
             while (right<chars.length&&chars[right]==chars[i]) {
                 right++;
                 length++;
             }
-            //Á½±ßÀ©É¢´¦Àí
+            //ä¸¤è¾¹æ‰©æ•£å¤„ç†
             while (left>=0&&right<chars.length&&chars[left]==chars[right]) {
                 left--;
                 right++;
                 length+=2;
             }
 
-            System.out.println("i£º"+i+"  length"+length+" left"+left);
+            System.out.println("iï¼š"+i+"  length"+length+" left"+left);
             if (maxLen<length) {
                 maxLen=length;
                 start = left;

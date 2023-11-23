@@ -50,6 +50,6 @@ public class Letter implements Cloneable{
         return letter;
     }
     public void show(){
-        System.out.println("·¢ËÍ"+msg);
+        System.out.println("å‘é€"+msg);
     }
 }

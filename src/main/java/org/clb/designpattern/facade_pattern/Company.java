@@ -14,17 +14,17 @@ public class Company {
     }
 
     private boolean hrCheck(CurriculumVitae cv) {
-        System.out.println(cv.getLevel() > 6 ? cv.getName() + "¼òÀúÒÑÍ¨¹ý" : cv.getName() + "¼òÀú²»Í¨¹ý");
+        System.out.println(cv.getLevel() > 6 ? cv.getName() + "ç®€åŽ†å·²é€šè¿‡" : cv.getName() + "ç®€åŽ†ä¸é€šè¿‡");
         return cv.getLevel() > 6;
     }
 
     private boolean hrInterview(Interviewee interviewee) {
-        System.out.println(interviewee.getEQlevel() > 6 ? interviewee.getCv().getName() + "ÒÑÍ¨¹ýhrÃæÊÔ" : interviewee.getCv().getName() + "hrÃæÊÔ²»Í¨¹ý");
+        System.out.println(interviewee.getEQlevel() > 6 ? interviewee.getCv().getName() + "å·²é€šè¿‡hré¢è¯•" : interviewee.getCv().getName() + "hré¢è¯•ä¸é€šè¿‡");
         return interviewee.getEQlevel() > 6;
     }
 
     private boolean jsInterview(Interviewee interviewee) {
-        System.out.println(interviewee.getIQlevel() > 6 ? interviewee.getCv().getName() + "ÒÑÍ¨¹ý¼¼ÊõÃæÊÔ" : interviewee.getCv().getName() + "¼¼ÊõÃæÊÔ²»Í¨¹ý");
+        System.out.println(interviewee.getIQlevel() > 6 ? interviewee.getCv().getName() + "å·²é€šè¿‡æŠ€æœ¯é¢è¯•" : interviewee.getCv().getName() + "æŠ€æœ¯é¢è¯•ä¸é€šè¿‡");
         return interviewee.getIQlevel() > 6;
     }
 }

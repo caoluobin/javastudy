@@ -20,30 +20,30 @@ public class CglibProxy<T> implements MethodInterceptor {
         this.target = target;
     }
 
-    // ´´½¨´úÀí¶ÔÏó
+    // åˆ›å»ºä»£ç†å¯¹è±¡
 
     public Object getProxyInstance() {
 
-        // 1.cglib¹¤¾ßÀà
+        // 1.cglibå·¥å…·ç±»
         Enhancer en = new Enhancer();
-        // 2.ÉèÖÃ¸¸Àà
+        // 2.è®¾ç½®çˆ¶ç±»
         en.setSuperclass(this.target.getClass());
-        // 3.ÉèÖÃ»Øµ÷º¯Êı
+        // 3.è®¾ç½®å›è°ƒå‡½æ•°
         en.setCallback(this);
 
         return en.create();
     }
 
-    //À¹½Ø·½·¨
+    //æ‹¦æˆªæ–¹æ³•
     @Override
     public Object intercept(Object obj, Method method, Object[] args,
                             MethodProxy methodProxy) throws Throwable {
-        System.out.println("¿ªÊ¼ÊÂÎñ...");
+        System.out.println("å¼€å§‹äº‹åŠ¡...");
 
-        // Ö´ĞĞÄ¿±ê¶ÔÏóµÄ·½·¨
+        // æ‰§è¡Œç›®æ ‡å¯¹è±¡çš„æ–¹æ³•
         Object result = method.invoke(target, args);
 
-        System.out.println("Ìá½»ÊÂÎñ...");
+        System.out.println("æäº¤äº‹åŠ¡...");
         return result;
     }
 

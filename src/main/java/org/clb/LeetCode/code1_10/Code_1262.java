@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * ÇóÊı×éÖĞÄÜ±»3Õû³ıµÄ×î´óÕûÊıºÍ
+ * æ±‚æ•°ç»„ä¸­èƒ½è¢«3æ•´é™¤çš„æœ€å¤§æ•´æ•°å’Œ
  */
 public class Code_1262 {
     public static void main(String[] args) {
@@ -13,9 +13,9 @@ public class Code_1262 {
     }
 
     /**
-     * Ì°ĞÄ
+     * è´ªå¿ƒ
      *
-     * @param nums ÓàÊı
+     * @param nums ä½™æ•°
      * @return
      */
     public static int maxSumDivThree2(int[] nums) {
@@ -56,9 +56,9 @@ public class Code_1262 {
     }
 
     public static int secondMin(int a, int b, int c) {
-        // È¡×îĞ¡Öµ
+        // å–æœ€å°å€¼
         int min = Math.min(Math.min(a, b), c);
-        // È¡´ÎĞ¡Öµ
+        // å–æ¬¡å°å€¼
         int secondMin = Integer.MAX_VALUE;
         if (a > min && a < secondMin) {
             secondMin = a;
@@ -74,7 +74,7 @@ public class Code_1262 {
 
 
     /**
-     * ¶¯Ì¬¹æ»®
+     * åŠ¨æ€è§„åˆ’
      *
      * @param nums
      * @return
@@ -83,15 +83,15 @@ public class Code_1262 {
         int n = nums.length;
         int[][] memo = new int[n][3];
         for (int i = 0; i < n; i++)
-            Arrays.fill(memo[i], -1); // -1 ±íÊ¾Ã»ÓĞ¼ÆËã¹ı
+            Arrays.fill(memo[i], -1); // -1 è¡¨ç¤ºæ²¡æœ‰è®¡ç®—è¿‡
         return dfs(memo, nums, n - 1, 0);
     }
 
     /**
      * @param memo
      * @param nums
-     * @param i    µÚi¸öÔªËØÑ¡²»Ñ¡
-     * @param j    ÓàÊı
+     * @param i    ç¬¬iä¸ªå…ƒç´ é€‰ä¸é€‰
+     * @param j    ä½™æ•°
      * @return
      */
 
@@ -100,7 +100,7 @@ public class Code_1262 {
             return j == 0 ? 0 : Integer.MIN_VALUE;
         }
         if (memo[i][j] != -1) {
-            return memo[i][j]; // Ö®Ç°¼ÆËã¹ı
+            return memo[i][j]; // ä¹‹å‰è®¡ç®—è¿‡
         }
         return memo[i][j] = Math.max(dfs(memo, nums, i - 1, j),
                 dfs(memo, nums, i - 1, (j + nums[i]) % 3) + nums[i]);

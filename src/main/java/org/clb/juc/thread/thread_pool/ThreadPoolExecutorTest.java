@@ -38,16 +38,16 @@ public class ThreadPoolExecutorTest {
         ExecutorService executorService = Executors.newFixedThreadPool(16);
         List<User> list = new ArrayList<>();
         for (int i = 0; i < 1000; i++) {
-            list.add(new User(i + "", "Àî" + i, "aaa", (int) (Math.random() * i)));
+            list.add(new User(i + "", "æ" + i, "aaa", (int) (Math.random() * i)));
         }
         for (int i = 0; i < 1000; i++) {
             User user = list.get(i);
             int finalI = i;
             executorService.execute(() -> {
                 if (finalI < 50) {
-                    System.out.println("¼Ó¼±ÂíÁ¦²Ù×÷ÖĞ......½ø¶È" + finalI + "/1000");
+                    System.out.println("åŠ æ€¥é©¬åŠ›æ“ä½œä¸­......è¿›åº¦" + finalI + "/1000");
                 }
-                user.setName(user.getName() + "µ°");
+                user.setName(user.getName() + "è›‹");
             });
         }
         executorService.shutdown();
@@ -74,7 +74,7 @@ public class ThreadPoolExecutorTest {
         }
 
         List<Runnable> runnables = executorService.shutdownNow();
-        System.out.println("Î´Íê³ÉÊıÁ¿" + runnables.size());
+        System.out.println("æœªå®Œæˆæ•°é‡" + runnables.size());
     }
 
     public static void poolSizeTest() throws ExecutionException, InterruptedException {
@@ -83,7 +83,7 @@ public class ThreadPoolExecutorTest {
         for (int i = 0; i < 30; i++) {
             Future<String> future = threadPool.submit(() -> {
                 try {
-                    System.out.println("¿ªÊ¼Ë¯Ãß");
+                    System.out.println("å¼€å§‹ç¡çœ ");
                     TimeUnit.SECONDS.sleep(3);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);

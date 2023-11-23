@@ -16,6 +16,6 @@ public class CloseState extends State{
 
     @Override
     public void close() {
-        System.out.println("¹ØÃÅ");
+        System.out.println("å…³é—¨");
     }
 }

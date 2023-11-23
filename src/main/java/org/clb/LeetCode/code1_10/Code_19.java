@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ¸øÄãÒ»¸öÁ´±í£¬É¾³ýÁ´±íµÄµ¹ÊýµÚ n ¸ö½áµã£¬²¢ÇÒ·µ»ØÁ´±íµÄÍ·½áµã¡£
+ * ç»™ä½ ä¸€ä¸ªé“¾è¡¨ï¼Œåˆ é™¤é“¾è¡¨çš„å€’æ•°ç¬¬ n ä¸ªç»“ç‚¹ï¼Œå¹¶ä¸”è¿”å›žé“¾è¡¨çš„å¤´ç»“ç‚¹ã€‚
  */
 public class Code_19 {
     public ListNode removeNthFromEnd(ListNode head, int n) {

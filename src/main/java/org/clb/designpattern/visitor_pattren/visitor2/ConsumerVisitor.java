@@ -2,12 +2,12 @@ package org.clb.designpattern.visitor_pattren.visitor2;
 
 public class ConsumerVisitor implements Visitor{
     @Override
-    public void visit(Shop shop) {//Ïû·ÑÕß  ¾­ÏúÉÌ
-        System.out.println("Ïû·ÑÕß¹ºÂò"+shop.getProduct());
+    public void visit(Shop shop) {//æ¶ˆè´¹è€…  ç»é”€å•†
+        System.out.println("æ¶ˆè´¹è€…è´­ä¹°"+shop.getProduct());
     }
 
     @Override
     public void visit(FruitShop shop) {
-        System.out.println("Ïû·ÑÕß¹ºÂòË®¹ûA");
+        System.out.println("æ¶ˆè´¹è€…è´­ä¹°æ°´æœA");
     }
 }

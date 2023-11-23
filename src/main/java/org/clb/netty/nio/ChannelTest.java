@@ -12,10 +12,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * SocketChannel £ºÒ»¸ö¿Í»§¶ËÓÃÀ´·¢Æğ TCP µÄ Channel ¡£
- * ServerSocketChannel £ºÒ»¸ö·şÎñ¶ËÓÃÀ´¼àÌıĞÂ½øÀ´µÄÁ¬½ÓµÄ TCP µÄ Channel ¡£¶ÔÓÚÃ¿Ò»¸öĞÂ½øÀ´µÄÁ¬½Ó£¬¶¼»á´´½¨Ò»¸ö¶ÔÓ¦µÄ SocketChannel ¡£
- * DatagramChannel £ºÍ¨¹ı UDP ¶ÁĞ´Êı¾İ¡£
- * FileChannel £º´ÓÎÄ¼şÖĞ£¬¶ÁĞ´Êı¾İ¡£
+ * SocketChannel ï¼šä¸€ä¸ªå®¢æˆ·ç«¯ç”¨æ¥å‘èµ· TCP çš„ Channel ã€‚
+ * ServerSocketChannel ï¼šä¸€ä¸ªæœåŠ¡ç«¯ç”¨æ¥ç›‘å¬æ–°è¿›æ¥çš„è¿æ¥çš„ TCP çš„ Channel ã€‚å¯¹äºæ¯ä¸€ä¸ªæ–°è¿›æ¥çš„è¿æ¥ï¼Œéƒ½ä¼šåˆ›å»ºä¸€ä¸ªå¯¹åº”çš„ SocketChannel ã€‚
+ * DatagramChannel ï¼šé€šè¿‡ UDP è¯»å†™æ•°æ®ã€‚
+ * FileChannel ï¼šä»æ–‡ä»¶ä¸­ï¼Œè¯»å†™æ•°æ®ã€‚
  */
 public class ChannelTest {
 

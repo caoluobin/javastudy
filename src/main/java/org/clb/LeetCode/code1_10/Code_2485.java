@@ -4,9 +4,9 @@ package org.clb.LeetCode.code1_10;
 import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 
 /**
- * ¸øÄãÒ»¸öÕýÕûÊý n £¬ÕÒ³öÂú×ãÏÂÊöÌõ¼þµÄ ÖÐÊàÕûÊý x £º
- * 1 ºÍ x Ö®¼äµÄËùÓÐÔªËØÖ®ºÍµÈÓÚ x ºÍ n Ö®¼äËùÓÐÔªËØÖ®ºÍ¡£
- * ·µ»ØÖÐÊàÕûÊý x ¡£Èç¹û²»´æÔÚÖÐÊàÕûÊý£¬Ôò·µ»Ø -1 ¡£ÌâÄ¿±£Ö¤¶ÔÓÚ¸ø¶¨µÄÊäÈë£¬ÖÁ¶à´æÔÚÒ»¸öÖÐÊàÕûÊý¡£
+ * ç»™ä½ ä¸€ä¸ªæ­£æ•´æ•° n ï¼Œæ‰¾å‡ºæ»¡è¶³ä¸‹è¿°æ¡ä»¶çš„ ä¸­æž¢æ•´æ•° x ï¼š
+ * 1 å’Œ x ä¹‹é—´çš„æ‰€æœ‰å…ƒç´ ä¹‹å’Œç­‰äºŽ x å’Œ n ä¹‹é—´æ‰€æœ‰å…ƒç´ ä¹‹å’Œã€‚
+ * è¿”å›žä¸­æž¢æ•´æ•° x ã€‚å¦‚æžœä¸å­˜åœ¨ä¸­æž¢æ•´æ•°ï¼Œåˆ™è¿”å›ž -1 ã€‚é¢˜ç›®ä¿è¯å¯¹äºŽç»™å®šçš„è¾“å…¥ï¼Œè‡³å¤šå­˜åœ¨ä¸€ä¸ªä¸­æž¢æ•´æ•°ã€‚
  */
 public class Code_2485 {
 

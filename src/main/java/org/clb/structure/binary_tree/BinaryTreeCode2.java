@@ -5,7 +5,7 @@ import org.clb.pojo.list.BTreeNode;
 import java.util.Stack;
 
 /**
- * @Description ²»ÓÃµİ¹éÊµÏÖ¶ş²æÊ÷µÄÏÈĞò¡¢ÖĞĞò¡¢ºóĞò±éÀú
+ * @Description ä¸ç”¨é€’å½’å®ç°äºŒå‰æ ‘çš„å…ˆåºã€ä¸­åºã€ååºéå†
  * @Classname BinaryTreeCode2
  * @Date 2021/8/5 9:27
  * @Author clb
@@ -27,7 +27,7 @@ public class BinaryTreeCode2 extends BTreeUtil{
         Stack<BTreeNode> stack=new Stack<>();
         BTreeNode cur=head;
         while (stack.size()!=0||cur!=null){
-            //Èç¹ûµ±Ç°½Úµã²»»á¿ÕµÄ»°
+            //å¦‚æœå½“å‰èŠ‚ç‚¹ä¸ä¼šç©ºçš„è¯
             if (cur!=null) {
                 stack.push(cur);
                 cur=cur.left;

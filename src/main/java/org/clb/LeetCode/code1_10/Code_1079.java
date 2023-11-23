@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ÄãÓĞÒ»Ì×»î×Ö×ÖÄ£ tiles£¬ÆäÖĞÃ¿¸ö×ÖÄ£ÉÏ¶¼¿ÌÓĞÒ»¸ö×ÖÄ¸ tiles[i]¡£·µ»ØÄã¿ÉÒÔÓ¡³öµÄ·Ç¿Õ×ÖÄ¸ĞòÁĞµÄÊıÄ¿¡£
- * ÊäÈë£º"AAB"
- * Êä³ö£º8
- * ½âÊÍ£º¿ÉÄÜµÄĞòÁĞÎª "A", "B", "AA", "AB", "BA", "AAB", "ABA", "BAA"¡£
+ * ä½ æœ‰ä¸€å¥—æ´»å­—å­—æ¨¡ tilesï¼Œå…¶ä¸­æ¯ä¸ªå­—æ¨¡ä¸Šéƒ½åˆ»æœ‰ä¸€ä¸ªå­—æ¯ tiles[i]ã€‚è¿”å›ä½ å¯ä»¥å°å‡ºçš„éç©ºå­—æ¯åºåˆ—çš„æ•°ç›®ã€‚
+ * è¾“å…¥ï¼š"AAB"
+ * è¾“å‡ºï¼š8
+ * è§£é‡Šï¼šå¯èƒ½çš„åºåˆ—ä¸º "A", "B", "AA", "AB", "BA", "AAB", "ABA", "BAA"ã€‚
  */
 public class Code_1079 {
 
@@ -31,9 +31,9 @@ public class Code_1079 {
         int res = 0;
         for (char letter : freq.keySet()) {
             if (freq.get(letter) > 0) {
-                freq.put(letter, freq.get(letter) - 1); // Ñ¡Ôñµ±Ç°×ÖÄ¸
-                res += 1 + backtrack(freq); // »ØËİ¼ÆËã
-                freq.put(letter, freq.get(letter) + 1); // ³·ÏúÑ¡Ôñ
+                freq.put(letter, freq.get(letter) - 1); // é€‰æ‹©å½“å‰å­—æ¯
+                res += 1 + backtrack(freq); // å›æº¯è®¡ç®—
+                freq.put(letter, freq.get(letter) + 1); // æ’¤é”€é€‰æ‹©
             }
         }
         return res;

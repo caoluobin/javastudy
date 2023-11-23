@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Êý×Ö n ´ú±íÉú³ÉÀ¨ºÅµÄ¶ÔÊý£¬ÇëÄãÉè¼ÆÒ»¸öº¯Êý£¬ÓÃÓÚÄÜ¹»Éú³ÉËùÓÐ¿ÉÄÜµÄ²¢ÇÒ ÓÐÐ§µÄ À¨ºÅ×éºÏ¡£
+ * æ•°å­— n ä»£è¡¨ç”Ÿæˆæ‹¬å·çš„å¯¹æ•°ï¼Œè¯·ä½ è®¾è®¡ä¸€ä¸ªå‡½æ•°ï¼Œç”¨äºŽèƒ½å¤Ÿç”Ÿæˆæ‰€æœ‰å¯èƒ½çš„å¹¶ä¸” æœ‰æ•ˆçš„ æ‹¬å·ç»„åˆã€‚
  */
 public class Code_22 {
 

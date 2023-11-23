@@ -11,9 +11,9 @@ import java.util.*;
 public class WorkDateUtil {
     public static HashMap<Integer,String> thisYearWorkDayMap=new HashMap<>();
     public String calFinishTime(String acceptTime,String workdays){
-        if (!thisYearWorkDayMap.get(0).equals("µ±Ç°Äê")){
-            thisYearWorkDayMap.put(0,"µ±Ç°Äê");
-            //»ñÈ¡¹¤×÷Ìì
+        if (!thisYearWorkDayMap.get(0).equals("å½“å‰å¹´")){
+            thisYearWorkDayMap.put(0,"å½“å‰å¹´");
+            //è·å–å·¥ä½œå¤©
             List<String> workDayList=new ArrayList();
 //            workDayList.stream().sorted(Comparator.comparing(a));
 

@@ -8,10 +8,10 @@ package org.clb.designpattern.command_pattern.stock;
  */
 public class SportStock {
   public void run(){
-    System.out.println("ÅÜ²½³å³å³å");
+    System.out.println("è·‘æ­¥å†²å†²å†²");
   }
 
   public void basketball(){
-    System.out.println("´òÀºÇòÁË");
+    System.out.println("æ‰“ç¯®çƒäº†");
   }
 }

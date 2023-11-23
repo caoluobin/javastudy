@@ -7,9 +7,9 @@ public class Code_2850 {
     public int minimumMoves(int[][] grid) {
         return dfs(grid);
     }
-    //´ÓÃ¿¸ö´óÓÚ 1 µÄ¸ñ×ÓÏòÃ¿¸öµÈÓÚ 0 µÄ¸ñ×ÓÁ¬±ß£¬ÈÝÁ¿Îª 1£¬·ÑÓÃÎªÁ½¸ö¸ñ×ÓÖ®¼äµÄÂü¹þ¶Ù¾àÀë¡£
-    //´Ó³¬¼¶Ô´µãÏòÃ¿¸ö´óÓÚ 1 µÄ¸ñ×ÓÁ¬±ß£¬ÈÝÁ¿Îª¸ñ×ÓµÄÖµ¼õÒ»£¨¼´ÒÆ×ßµÄÊ¯×ÓÊý£©£¬·ÑÓÃÎª 0¡£
-    //´ÓÃ¿¸öµÈÓÚ 0 µÄ¸ñ×ÓÏò³¬¼¶»ãµãÁ¬±ß£¬ÈÝÁ¿ 1£¨¼´ÒÆÈëµÄÊ¯×ÓÊý£©£¬·ÑÓÃÎª 0¡£
+    //ä»Žæ¯ä¸ªå¤§äºŽ 1 çš„æ ¼å­å‘æ¯ä¸ªç­‰äºŽ 0 çš„æ ¼å­è¿žè¾¹ï¼Œå®¹é‡ä¸º 1ï¼Œè´¹ç”¨ä¸ºä¸¤ä¸ªæ ¼å­ä¹‹é—´çš„æ›¼å“ˆé¡¿è·ç¦»ã€‚
+    //ä»Žè¶…çº§æºç‚¹å‘æ¯ä¸ªå¤§äºŽ 1 çš„æ ¼å­è¿žè¾¹ï¼Œå®¹é‡ä¸ºæ ¼å­çš„å€¼å‡ä¸€ï¼ˆå³ç§»èµ°çš„çŸ³å­æ•°ï¼‰ï¼Œè´¹ç”¨ä¸º 0ã€‚
+    //ä»Žæ¯ä¸ªç­‰äºŽ 0 çš„æ ¼å­å‘è¶…çº§æ±‡ç‚¹è¿žè¾¹ï¼Œå®¹é‡ 1ï¼ˆå³ç§»å…¥çš„çŸ³å­æ•°ï¼‰ï¼Œè´¹ç”¨ä¸º 0ã€‚
     private int dfs(int[][] grid) {
         int res=0;
         for (int i = 0; i < grid.length; i++) {

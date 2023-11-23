@@ -9,7 +9,7 @@ public class Process {
     public void process(Object obj) {
         new Thread(()->{
             try {
-                System.out.println("执行业务逻辑");
+                System.out.println("鎵ц涓氬姟閫昏緫");
                 hookService.success(obj);
             } catch (Exception e) {
                 hookService.fail(obj);
@@ -22,12 +22,12 @@ public class Process {
         process.setHookService(new HookService() {
             @Override
             public void success(Object obj) {
-                System.out.println("成功执行");
+                System.out.println("鎴愬姛鎵ц");
             }
 
             @Override
             public void fail(Object obj) {
-                System.out.println("失败执行");
+                System.out.println("澶辫触鎵ц");
             }
         });
         process.process(null);

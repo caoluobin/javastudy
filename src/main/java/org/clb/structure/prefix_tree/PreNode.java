@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class PreNode {
     public Integer pass;
     public Integer end;
-    public HashMap<Integer, PreNode> nextNode;//ÓÃAscciÖµ±íÊ¾×Ö·û
+    public HashMap<Integer, PreNode> nextNode;//ç”¨Ascciå€¼è¡¨ç¤ºå­—ç¬¦
 
     public Integer getPass() {
         return pass;

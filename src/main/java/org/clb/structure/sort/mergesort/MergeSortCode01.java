@@ -1,7 +1,7 @@
 package org.clb.structure.sort.mergesort;
 
-/** ÇóĞ¡ºÍ
- * ÀıÈç 2 3 3 6 5  ºÍÎª 2*4 +3*2+3*2
+/** æ±‚å°å’Œ
+ * ä¾‹å¦‚ 2 3 3 6 5  å’Œä¸º 2*4 +3*2+3*2
  * @Description
  * @Classname MergeSortCode01
  * @Date 2021/5/13 4:06
@@ -16,10 +16,10 @@ public class MergeSortCode01 {
     }
 
     /**
-     * µİ¹éÇóĞ¡ºÍ
+     * é€’å½’æ±‚å°å’Œ
      * @param array
-     * @param l ×óÏÂ±ê
-     * @param r ÓÒÏÂ±ê
+     * @param l å·¦ä¸‹æ ‡
+     * @param r å³ä¸‹æ ‡
      * @return
      */
     private static int process(int[] array, int l, int r) {
@@ -27,14 +27,14 @@ public class MergeSortCode01 {
             return 0;
         }
         int mid=l+((r-l)>>1);
-        //Ğ¡ºÍµÈÓÚ×ó±ßµÄĞ¡ºÍ¼ÓÉÏÓÒ±ßµÄĞ¡ºÍ¼ÓÉÏºÏ²¢¹ı³ÌÖĞ²úÉúµÄĞ¡ºÍ
+        //å°å’Œç­‰äºå·¦è¾¹çš„å°å’ŒåŠ ä¸Šå³è¾¹çš„å°å’ŒåŠ ä¸Šåˆå¹¶è¿‡ç¨‹ä¸­äº§ç”Ÿçš„å°å’Œ
         return process(array,l,mid) +process(array,mid+1,r) +merge(array,l,mid,r);
 
     }
 
     /**
-     * ·ÖÎª×óÓÒÁ½×é  Ö»ÓĞµ±×ó×éÊı¾İĞ¡ÓÚÓÒ×éÊı¾İµÄÊ±ºò²úÉúĞ¡ºÍ
-     * 1357 2458 µ±ÏàµÈÊ±ÒªÏÈÒÆÓÒ±ßµÄÏÂ±ê
+     * åˆ†ä¸ºå·¦å³ä¸¤ç»„  åªæœ‰å½“å·¦ç»„æ•°æ®å°äºå³ç»„æ•°æ®çš„æ—¶å€™äº§ç”Ÿå°å’Œ
+     * 1357 2458 å½“ç›¸ç­‰æ—¶è¦å…ˆç§»å³è¾¹çš„ä¸‹æ ‡
      * 1
      * @param array
      * @param l
@@ -45,9 +45,9 @@ public class MergeSortCode01 {
     private static int merge(int[] array, int l, int mid, int r) {
         int[] h=new int[r-l+1];
         int res=0;
-        int a=0;//hµÄÏÂ±ê
-        int p=l;//×óÏÂ±ê 0
-        int q=mid+1;//ÓÒÏÂ±ê 4
+        int a=0;//hçš„ä¸‹æ ‡
+        int p=l;//å·¦ä¸‹æ ‡ 0
+        int q=mid+1;//å³ä¸‹æ ‡ 4
         while (p<=mid&&q<=r){
             res+=array[p]<array[q]?array[p]*(r-q+1):0;
             h[a++]=array[p]<array[q]?array[p++]:array[q++];

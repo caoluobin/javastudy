@@ -1,7 +1,7 @@
 package org.clb.LeetCode.code1_10;
 
 /**
- * ¸ø¶¨Ò»¸öÕûÊıÊı×é nums£¬½«Êı×éÖĞµÄÔªËØÏòÓÒÂÖ×ª k ¸öÎ»ÖÃ£¬ÆäÖĞ k ÊÇ·Ç¸ºÊı¡£
+ * ç»™å®šä¸€ä¸ªæ•´æ•°æ•°ç»„ numsï¼Œå°†æ•°ç»„ä¸­çš„å…ƒç´ å‘å³è½®è½¬ k ä¸ªä½ç½®ï¼Œå…¶ä¸­ k æ˜¯éè´Ÿæ•°ã€‚
  */
 public class Code_189 {
     public static void main(String[] args) {//   4 5 3 1 2
@@ -17,17 +17,17 @@ public class Code_189 {
     }
 
     /**
-     * Ã¿´ÎÒÆk¸ö Ã»ÒÆÍêµÄµİ¹éÏÂ´ÎÒÆ
+     * æ¯æ¬¡ç§»kä¸ª æ²¡ç§»å®Œçš„é€’å½’ä¸‹æ¬¡ç§»
      * @param nums
      * @param k
-     * @param end ĞèÒªÒÆ¶¯µÄÊı¾İ
+     * @param end éœ€è¦ç§»åŠ¨çš„æ•°æ®
      */
     public void rotate(int[] nums, int k,int end) {
         k = k%end;
         if (k==0) return;
         int i = 0;
         for (; i+k < end; i++) {
-            // (i+k)%k  Óë i+k ½»»»
+            // (i+k)%k  ä¸ i+k äº¤æ¢
             int target = (i+k)%k;
             int now =nums[target];
             int a =(i+k)%end;

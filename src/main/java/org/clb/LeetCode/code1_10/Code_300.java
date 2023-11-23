@@ -3,9 +3,9 @@ package org.clb.LeetCode.code1_10;
 import java.util.*;
 
 /**
- * ¸øÄãÒ»¸öÕûÊýÊý×é nums £¬ÕÒµ½ÆäÖÐ×î³¤ÑÏ¸ñµÝÔö×ÓÐòÁÐµÄ³¤¶È¡£
- * ×ÓÐòÁÐ ÊÇÓÉÊý×éÅÉÉú¶øÀ´µÄÐòÁÐ£¬É¾³ý£¨»ò²»É¾³ý£©Êý×éÖÐµÄÔªËØ
- * ¶ø²»¸Ä±äÆäÓàÔªËØµÄË³Ðò¡£ÀýÈç£¬[3,6,2,7] ÊÇÊý×é [0,3,1,6,2,2,7] µÄ×ÓÐòÁÐ¡£
+ * ç»™ä½ ä¸€ä¸ªæ•´æ•°æ•°ç»„ nums ï¼Œæ‰¾åˆ°å…¶ä¸­æœ€é•¿ä¸¥æ ¼é€’å¢žå­åºåˆ—çš„é•¿åº¦ã€‚
+ * å­åºåˆ— æ˜¯ç”±æ•°ç»„æ´¾ç”Ÿè€Œæ¥çš„åºåˆ—ï¼Œåˆ é™¤ï¼ˆæˆ–ä¸åˆ é™¤ï¼‰æ•°ç»„ä¸­çš„å…ƒç´ 
+ * è€Œä¸æ”¹å˜å…¶ä½™å…ƒç´ çš„é¡ºåºã€‚ä¾‹å¦‚ï¼Œ[3,6,2,7] æ˜¯æ•°ç»„ [0,3,1,6,2,2,7] çš„å­åºåˆ—ã€‚
  */
 public class Code_300 {
     public static void main(String[] args) {
@@ -42,7 +42,7 @@ public class Code_300 {
         return queue.peek().count;
     }
     public int lengthOfLIS2(int[] nums) {
-        // Ê¹ÓÃÊý×é±£´æ×ÓÐòÁÐ µ«Ò»¸öÊý×Ö´óÓÚ×îºóÒ»Î»Ê±ÔÚºóÃæ²åÈë  ·ñÔòÕÒµ½´óÓÚµÄ×îºóÒ»¸ö¸Ä³Éµ±Ç°Öµ
+        // ä½¿ç”¨æ•°ç»„ä¿å­˜å­åºåˆ— ä½†ä¸€ä¸ªæ•°å­—å¤§äºŽæœ€åŽä¸€ä½æ—¶åœ¨åŽé¢æ’å…¥  å¦åˆ™æ‰¾åˆ°å¤§äºŽçš„æœ€åŽä¸€ä¸ªæ”¹æˆå½“å‰å€¼
         return 0;
     }
     private static class Node {

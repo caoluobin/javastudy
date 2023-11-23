@@ -1,7 +1,7 @@
 package org.clb.designpattern.command_pattern.oreder;
 
 /**
- * @Description ÃüÁî½Ó¿Ú£ºÊµÏÖÀàµ÷ÓÃ¾ßÌåµÄÃüÁî
+ * @Description å‘½ä»¤æ¥å£ï¼šå®ç°ç±»è°ƒç”¨å…·ä½“çš„å‘½ä»¤
  * @Classname Order
  * @Date 2021/5/18 14:37
  * @Author clb

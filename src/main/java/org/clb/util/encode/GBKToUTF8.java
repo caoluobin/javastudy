@@ -14,17 +14,17 @@ public class GBKToUTF8 {
 
     public static void main(String[] args) throws Exception {
 
-        String gbkDirPath = "E:\\JavaProject\\javastudy";//GBK编码格式源码文件路径
-        String utf8DirPath = "E:\\JavaProject\\utf\\src";//转为UTF-8编码格式源码文件保存路径
+        String gbkDirPath = "E:\\JavaProject\\javastudy\\src";//GBK缂栫爜鏍煎紡婧愮爜鏂囦欢璺緞
+        String utf8DirPath = "E:\\JavaProject\\utf\\src";//杞负UTF-8缂栫爜鏍煎紡婧愮爜鏂囦欢淇濆瓨璺緞
 
         @SuppressWarnings("unchecked")
-        Collection<File> gbkFileList =  FileUtils.listFiles(new File(gbkDirPath), new String[]{"java"}, true);//获取所有java文件
+        Collection<File> gbkFileList =  FileUtils.listFiles(new File(gbkDirPath), new String[]{"java"}, true);//鑾峰彇鎵�鏈塲ava鏂囦欢
         for (File gbkFile : gbkFileList) {
             if ("UTF-8".equals(detectEncoding(gbkFile))) {
                 continue;
             }
-            String utf8FilePath = utf8DirPath + gbkFile.getAbsolutePath().substring(gbkDirPath.length());//UTF-8编码格式文件保存路径
-            FileUtils.writeLines(new File(utf8FilePath), "UTF-8", FileUtils.readLines(gbkFile, "GBK"));//使用GBK编码格式读取文件，然后用UTF-8编码格式写入数据
+            String utf8FilePath = utf8DirPath + gbkFile.getAbsolutePath().substring(gbkDirPath.length());//UTF-8缂栫爜鏍煎紡鏂囦欢淇濆瓨璺緞
+            FileUtils.writeLines(new File(utf8FilePath), "UTF-8", FileUtils.readLines(gbkFile, "GBK"));//浣跨敤GBK缂栫爜鏍煎紡璇诲彇鏂囦欢锛岀劧鍚庣敤UTF-8缂栫爜鏍煎紡鍐欏叆鏁版嵁
         }
     }
     public static String detectEncoding(File file) {
@@ -42,12 +42,12 @@ public class GBKToUTF8 {
             } else if (bytesRead >= 4 && bom[0] == (byte)0xFF && bom[1] == (byte)0xFE && bom[2] == (byte)0x00 && bom[3] == (byte)0x00) {
                 return "UTF-32LE";
             } else {
-                // 默认返回UTF-8编码格式
-                return "UTF-8";
+                // 榛樿杩斿洖UTF-8缂栫爜鏍煎紡
+                return "GBK";
             }
         } catch (IOException e) {
             e.printStackTrace();
-            // 返回空字符串表示判断失败
+            // 杩斿洖绌哄瓧绗︿覆琛ㄧず鍒ゆ柇澶辫触
             return "";
         }
     }

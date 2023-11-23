@@ -9,6 +9,6 @@ package org.clb.designpattern.abstract_factory.animal.small;
 public class Clownfish extends SmallAnimal {
 
     @Override public void getName() {
-        System.out.println("–°≥Û”„");
+        System.out.println("Â∞è‰∏ëÈ±º");
     }
 }

@@ -3,7 +3,7 @@ package org.clb.structure.list;
 import org.clb.pojo.list.DoubleNode;
 
 /**
- * @Description 反转双向链表
+ * @Description 鍙嶈浆鍙屽悜閾捐〃
  * @Classname ReverseDoubleList
  * @Date 2021/5/9 13:21
  * @Author clb

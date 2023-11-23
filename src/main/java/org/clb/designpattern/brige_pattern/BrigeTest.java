@@ -14,7 +14,7 @@ public class BrigeTest {
 
     Corp corp1=new AppleCorp(new AppleProduct());
     corp1.make();
-    //É½Õ¯¹«Ë¾É¶¶¼ÄÜÉú²ú
+    //å±±å¯¨å…¬å¸å•¥éƒ½èƒ½ç”Ÿäº§
     Corp corp2=new CopyCorp(new AppleProduct());
     corp2.make();
     Corp corp3=new CopyCorp(new HouseProduct());

@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @Description 是否是完全二叉树
+ * @Description 鏄惁鏄畬鍏ㄤ簩鍙夋爲
  * @Classname BinaryTreeCode13_1
  * @Date 2021/11/21 13:34
  * @Author clb
@@ -19,7 +19,7 @@ public class BinaryTreeCode13_1 {
         queue.add(head);
         BTreeNode l;
         BTreeNode r;
-        //是否是叶节点
+        //鏄惁鏄彾鑺傜偣
         boolean isleaf=false;
         while (!queue.isEmpty()){
             BTreeNode nowNode = queue.poll();

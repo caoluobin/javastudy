@@ -36,32 +36,32 @@ public class GetSqlString {
     }
 
     public static void main(String[] args) {
-        String a = "man_nurse_num'ÄĞĞÔ»¤ÀíÔ±' ;" +
-                "man_nurse_num_yes'ÄĞĞÔ»¤ÀíÔ±' ;" +
-                "woman_nurse_num'Å®ĞÔ»¤ÀíÔ±' ;" +
-                "woman_nurse_num_yes'Å®ĞÔ»¤ÀíÔ±' ;" +
-                "cz_yl_nurse_num'³õÖĞ»¤ÀíÔ±Êı' ;" +
-                "cz_yl_nurse_num_yes'³õÖĞ»¤ÀíÔ±Êı' ;" +
-                "gz_nurse_num'¸ßÖĞ»¤ÀíÔ±Êı' ;" +
-                "gz_nurse_num_yes'¸ßÖĞ»¤ÀíÔ±Êı' ;" +
-                "zz_nurse_num'ÖĞÖ°/ÖĞ×¨»¤ÀíÔ±' ;" +
-                "zz_nurse_num_yes'ÖĞÖ°/ÖĞ×¨»¤ÀíÔ±' ;" +
-                "dz_nurse_num'´ó×¨»¤ÀíÔ±Êı' ;" +
-                "dz_nurse_num_yes'´ó×¨»¤ÀíÔ±Êı' ;" +
-                "bk_nurse_num'±¾¿Æ»¤ÀíÔ±Êı' ;" +
-                "bk_nurse_num_yes'±¾¿Æ»¤ÀíÔ±Êı' ;" +
-                "yjs_nurse_num'ÑĞ¾¿Éú»¤ÀíÔ±Êı' ;" +
-                "yjs_nurse_num_yes'ÑĞ¾¿Éú»¤ÀíÔ±Êı' ;" +
-                "less_thirty_nurse_num'30ÒÔÏÂ»¤ÀíÔ±Êı' ;" +
-                "less_thirty_nurse_num_yes'30ÒÔÏÂ»¤ÀíÔ±Êı' ;" +
-                "thirty_nurse_num'30-39ÒÔÏÂ»¤ÀíÔ±Êı' ;" +
-                "thirty_nurse_num_yes'30-39ÒÔÏÂ»¤ÀíÔ±Êı' ;" +
-                "forty_nurse_num'40-49ÒÔÏÂ»¤ÀíÔ±Êı' ;" +
-                "forty_nurse_num_yes'40-49ÒÔÏÂ»¤ÀíÔ±Êı' ;" +
-                "more_fifty_nurse_num'50ÒÔÉÏ»¤ÀíÔ±Êı' ;" +
-                "more_fifty_nurse_num_yes'50ÒÔÉÏ»¤ÀíÔ±Êı' ;" +
-                "nurse_num'ÑøÀÏ»¤ÀíÔ±';" +
-                "nurse_num_yes'ÑøÀÏ»¤ÀíÔ±';";
+        String a = "man_nurse_num'ç”·æ€§æŠ¤ç†å‘˜' ;" +
+                "man_nurse_num_yes'ç”·æ€§æŠ¤ç†å‘˜' ;" +
+                "woman_nurse_num'å¥³æ€§æŠ¤ç†å‘˜' ;" +
+                "woman_nurse_num_yes'å¥³æ€§æŠ¤ç†å‘˜' ;" +
+                "cz_yl_nurse_num'åˆä¸­æŠ¤ç†å‘˜æ•°' ;" +
+                "cz_yl_nurse_num_yes'åˆä¸­æŠ¤ç†å‘˜æ•°' ;" +
+                "gz_nurse_num'é«˜ä¸­æŠ¤ç†å‘˜æ•°' ;" +
+                "gz_nurse_num_yes'é«˜ä¸­æŠ¤ç†å‘˜æ•°' ;" +
+                "zz_nurse_num'ä¸­èŒ/ä¸­ä¸“æŠ¤ç†å‘˜' ;" +
+                "zz_nurse_num_yes'ä¸­èŒ/ä¸­ä¸“æŠ¤ç†å‘˜' ;" +
+                "dz_nurse_num'å¤§ä¸“æŠ¤ç†å‘˜æ•°' ;" +
+                "dz_nurse_num_yes'å¤§ä¸“æŠ¤ç†å‘˜æ•°' ;" +
+                "bk_nurse_num'æœ¬ç§‘æŠ¤ç†å‘˜æ•°' ;" +
+                "bk_nurse_num_yes'æœ¬ç§‘æŠ¤ç†å‘˜æ•°' ;" +
+                "yjs_nurse_num'ç ”ç©¶ç”ŸæŠ¤ç†å‘˜æ•°' ;" +
+                "yjs_nurse_num_yes'ç ”ç©¶ç”ŸæŠ¤ç†å‘˜æ•°' ;" +
+                "less_thirty_nurse_num'30ä»¥ä¸‹æŠ¤ç†å‘˜æ•°' ;" +
+                "less_thirty_nurse_num_yes'30ä»¥ä¸‹æŠ¤ç†å‘˜æ•°' ;" +
+                "thirty_nurse_num'30-39ä»¥ä¸‹æŠ¤ç†å‘˜æ•°' ;" +
+                "thirty_nurse_num_yes'30-39ä»¥ä¸‹æŠ¤ç†å‘˜æ•°' ;" +
+                "forty_nurse_num'40-49ä»¥ä¸‹æŠ¤ç†å‘˜æ•°' ;" +
+                "forty_nurse_num_yes'40-49ä»¥ä¸‹æŠ¤ç†å‘˜æ•°' ;" +
+                "more_fifty_nurse_num'50ä»¥ä¸ŠæŠ¤ç†å‘˜æ•°' ;" +
+                "more_fifty_nurse_num_yes'50ä»¥ä¸ŠæŠ¤ç†å‘˜æ•°' ;" +
+                "nurse_num'å…»è€æŠ¤ç†å‘˜';" +
+                "nurse_num_yes'å…»è€æŠ¤ç†å‘˜';";
 
         String[] split = a.split(";");
         StringBuilder str = new StringBuilder();

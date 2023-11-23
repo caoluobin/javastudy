@@ -17,7 +17,7 @@ public class SocketClient implements Runnable {
         try(Socket socket = new Socket("127.0.0.1", 83);
             InputStream inputStream =socket.getInputStream();
             OutputStream outputStream =socket.getOutputStream();) {
-            outputStream.write("¿Í»§¶ËÏûÏ¢".getBytes());
+            outputStream.write("å®¢æˆ·ç«¯æ¶ˆæ¯".getBytes());
             outputStream.flush();
             int maxLen=2048;
             byte[] context = new byte[maxLen];
@@ -26,7 +26,7 @@ public class SocketClient implements Runnable {
             while ((realLen=inputStream.read(context,0,maxLen))!=-1) {
                 msg.append(new String(context,0,realLen));
             }
-            System.out.println("ÏûÏ¢");
+            System.out.println("æ¶ˆæ¯");
             System.out.println(msg);
         } catch (IOException e) {
             throw new RuntimeException(e);

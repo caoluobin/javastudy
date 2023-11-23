@@ -9,8 +9,8 @@ package org.clb.designpattern.chain_of_responsibility_pattern;
 public class Mother extends Handler {
 
     public void handler(Boy b) {
-        b.shape="Éµ×Ó";
-        System.out.println("Ä¸Ç×Ò»¶ÙÅÖ×á"+b);
+        b.shape="å‚»å­";
+        System.out.println("æ¯äº²ä¸€é¡¿èƒ–æ"+b);
         if (this.getNext()!=null){
             this.getNext().handler(b);
         }

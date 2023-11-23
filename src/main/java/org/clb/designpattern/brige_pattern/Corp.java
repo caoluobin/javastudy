@@ -6,14 +6,14 @@ package org.clb.designpattern.brige_pattern;
  * @Date 2021/5/18 14:03
  * @Author clb
  */
-public abstract class Corp {//³éÏóÀà
+public abstract class Corp {//æŠ½è±¡ç±»
   protected Product product;
 
   public Corp() {
   }
 
-  public Corp(Product product) {//µ÷ÓÃ½Ó¿Ú
+  public Corp(Product product) {//è°ƒç”¨æ¥å£
     this.product = product;
   }
-  public abstract void make();//³éÏó·½·¨ÓÉ×ÓÀà¾ßÌåÊµÏÖ
+  public abstract void make();//æŠ½è±¡æ–¹æ³•ç”±å­ç±»å…·ä½“å®ç°
 }

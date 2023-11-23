@@ -9,7 +9,7 @@ package org.clb.designpattern.template_pattern;
 public class GllrProgress extends Progress{
     @Override
     public int getStatus(String pkid, String type) {
-        //sql ²éÑ¯
+        //sql æŸ¥è¯¢
         return 0;
     }
 

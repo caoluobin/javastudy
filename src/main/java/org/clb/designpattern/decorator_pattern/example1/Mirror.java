@@ -14,7 +14,7 @@ public abstract class Mirror implements Gun{
     public abstract void aim();
 
     @Override
-    public void fire() {//µ¯¼Ð
+    public void fire() {//å¼¹å¤¹
         gun.fire();
     }
 }

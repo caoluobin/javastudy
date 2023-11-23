@@ -10,7 +10,7 @@ import java.util.concurrent.ScheduledExecutorService;
  */
 public class ShopB {
     public void operate(){
-        System.out.println("shopBÖ´ÐÐ");
+        System.out.println("shopBæ‰§è¡Œ");
 
     }
     public void accept(VisitorB b){

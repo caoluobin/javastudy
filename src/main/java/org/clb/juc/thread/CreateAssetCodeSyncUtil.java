@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 生成资产条码多线程工具类
+ * 鐢熸垚璧勪骇鏉＄爜澶氱嚎绋嬪伐鍏风被
  * Author jisai
  * Date 2022/2/17 11:15
  */

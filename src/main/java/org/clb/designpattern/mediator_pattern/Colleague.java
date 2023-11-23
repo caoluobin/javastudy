@@ -21,6 +21,6 @@ public class Colleague extends AbstractColleague {
 
     @Override
     public void receive(Colleague current) {
-        System.out.println(name+"½ÓÊÕµ½"+current.name+"µÄĞÅÏ¢£º"+current.msg);
+        System.out.println(name+"æ¥æ”¶åˆ°"+current.name+"çš„ä¿¡æ¯ï¼š"+current.msg);
     }
 }

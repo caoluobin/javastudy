@@ -29,7 +29,7 @@ public class QrcodeCreate {
 
     public static void main(String[] args) {
         try {
-            generateQRCodeImage("http://www.baidu.com", 100, 100, "F:/÷–Ã®/a.png");
+            generateQRCodeImage("http://www.baidu.com", 100, 100, "F:/‰∏≠Âè∞/a.png");
         } catch (WriterException e) {
             e.printStackTrace();
         } catch (IOException e) {

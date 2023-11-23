@@ -1,7 +1,7 @@
 package org.clb.util.enuma;
 
 public enum  ErrorCode {
-    WrongFactory("1001","选用工厂错误"),cd("","");
+    WrongFactory("1001","閫夌敤宸ュ巶閿欒"),cd("","");
      private String code;
      private String msg;
 

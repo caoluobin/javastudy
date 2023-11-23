@@ -1,9 +1,9 @@
 package org.clb.structure.binary_tree.complete_binary_tree.heap;
 
 /**
- * @Description ¸ø³öÒ»¸öÊı×é ĞÎ³ÉÒ»¸ö´ó¸ù¶Ñ ¸¸½ÚµãÎ»ÖÃ (i-1)/2 i:µ±Ç°½ÚµãÊı×éÏÂ±ê ×Ó½ÚµãÎ»ÖÃ 2i+1 2i+2
- * Èç¹ûÒ»¸öÎ»ÖÃµÄÊı¾İÍ»È»¸Ä±ä Ö»ĞèÒª·Ö±ğµ÷ÓÃadd():ÏòÉÏ±È½ÏÊÇ·ñ±ÈÉÏÃæ´ó½»»» ºÍ heapify():ÊÇ·ñ±ÈÏÂÃæĞ¡½»»» ·½·¨¼ÈÄÜ±ä³ÉÕıÈ·µÄ¶Ñ
- * ¸´ÔÓ¶È£ºO(logN)
+ * @Description ç»™å‡ºä¸€ä¸ªæ•°ç»„ å½¢æˆä¸€ä¸ªå¤§æ ¹å † çˆ¶èŠ‚ç‚¹ä½ç½® (i-1)/2 i:å½“å‰èŠ‚ç‚¹æ•°ç»„ä¸‹æ ‡ å­èŠ‚ç‚¹ä½ç½® 2i+1 2i+2
+ * å¦‚æœä¸€ä¸ªä½ç½®çš„æ•°æ®çªç„¶æ”¹å˜ åªéœ€è¦åˆ†åˆ«è°ƒç”¨add():å‘ä¸Šæ¯”è¾ƒæ˜¯å¦æ¯”ä¸Šé¢å¤§äº¤æ¢ å’Œ heapify():æ˜¯å¦æ¯”ä¸‹é¢å°äº¤æ¢ æ–¹æ³•æ—¢èƒ½å˜æˆæ­£ç¡®çš„å †
+ * å¤æ‚åº¦ï¼šO(logN)
  * @Classname HeapCode01
  * @Date 2021/5/22 19:02
  * @Author clb
@@ -11,8 +11,8 @@ package org.clb.structure.binary_tree.complete_binary_tree.heap;
 public class HeapCode01 {
 
     /**
-     * ½«´«ÈëµÄÊı×éarr±ä³É´ó¸ù¶Ñ
-     * ¸´ÔÓ¶È O(n*logn)
+     * å°†ä¼ å…¥çš„æ•°ç»„arrå˜æˆå¤§æ ¹å †
+     * å¤æ‚åº¦ O(n*logn)
      * @param arr
      */
     public static void heapMax(int[] arr) {
@@ -26,14 +26,14 @@ public class HeapCode01 {
     }
 
     /**
-     * ¶ÑÅÅĞò: ÏÈ½«Êı×é±ä³É×î´ó¶Ñ È»ºóÒÀ´ÎÒÆ³ıÍ·½áµãµ½Î²²¿ ×îºóµÃµ½µÄ¾ÍÊÇÒ»¸öÉıĞòµÄÊı×é
-     * Ê±¼ä¸´ÔÓ¶È O(N*logN)
+     * å †æ’åº: å…ˆå°†æ•°ç»„å˜æˆæœ€å¤§å † ç„¶åä¾æ¬¡ç§»é™¤å¤´ç»“ç‚¹åˆ°å°¾éƒ¨ æœ€åå¾—åˆ°çš„å°±æ˜¯ä¸€ä¸ªå‡åºçš„æ•°ç»„
+     * æ—¶é—´å¤æ‚åº¦ O(N*logN)
      * @param arr
      */
     public static void heapSort(int[] arr){
-        //´ÓÉÏÍùÏÂ½¨¶Ñ Ê±¼ä¸´ÔÓ¶È O(N*logN)
+        //ä»ä¸Šå¾€ä¸‹å»ºå † æ—¶é—´å¤æ‚åº¦ O(N*logN)
         //heapMax(arr);
-        //´ÓÏÂÍùÉÏ½¨¶Ñ Ê±¼ä¸´ÔÓ¶ÈO(N)
+        //ä»ä¸‹å¾€ä¸Šå»ºå † æ—¶é—´å¤æ‚åº¦O(N)
         for (int i = arr.length-1; i >0 ; i--) {
             heapify(arr,arr.length,i);
         }
@@ -43,21 +43,21 @@ public class HeapCode01 {
         }
     }
 
-    //ºÍ¸¸½Úµã±È½Ï Èç¹û±È¸¸½Úµã´óÔò½»»» ¼ÌĞøºÍ¸¸½Úµã±È½Ï
-    //Ö±µ½±È¸¸½ÚµãĞ¡
+    //å’Œçˆ¶èŠ‚ç‚¹æ¯”è¾ƒ å¦‚æœæ¯”çˆ¶èŠ‚ç‚¹å¤§åˆ™äº¤æ¢ ç»§ç»­å’Œçˆ¶èŠ‚ç‚¹æ¯”è¾ƒ
+    //ç›´åˆ°æ¯”çˆ¶èŠ‚ç‚¹å°
     public static void add(int[] arr, int index,int value) {
         arr[index]=value;
-        while (arr[index] > arr[(index - 1) / 2]) {//µ±Ç°½Úµã±È¸¸½Úµã´óÇÒ´óÓÚ0
+        while (arr[index] > arr[(index - 1) / 2]) {//å½“å‰èŠ‚ç‚¹æ¯”çˆ¶èŠ‚ç‚¹å¤§ä¸”å¤§äº0
             swap(arr, index, (index - 1) / 2);
             index = (index - 1) / 2;
         }
     }
 
     /**
-     * É¾³ı×î´óÖµ ½«arr[0]:×î´óÖµ Óëarr[heapsize]:×îºóÒ»¸ö½»»» È»ºóheapsize--
-     * È»ºó½«ÕâÊ±µÄÍ·½Úµã arr[0] ²»¶ÏÓë×Ó½ÚµãÖĞ½Ï´óµÄ½»»» Ö±µ½±È×Ó½Úµã¶¼´óÎªÖ¹
+     * åˆ é™¤æœ€å¤§å€¼ å°†arr[0]:æœ€å¤§å€¼ ä¸arr[heapsize]:æœ€åä¸€ä¸ªäº¤æ¢ ç„¶åheapsize--
+     * ç„¶åå°†è¿™æ—¶çš„å¤´èŠ‚ç‚¹ arr[0] ä¸æ–­ä¸å­èŠ‚ç‚¹ä¸­è¾ƒå¤§çš„äº¤æ¢ ç›´åˆ°æ¯”å­èŠ‚ç‚¹éƒ½å¤§ä¸ºæ­¢
      * @param arr
-     * @param heapsize µ±Ç°µÄÏÂ±ê
+     * @param heapsize å½“å‰çš„ä¸‹æ ‡
      * @return
      */
     public static int removeMax(int[] arr, int heapsize) {
@@ -72,7 +72,7 @@ public class HeapCode01 {
         }
         return max;
     }
-    //½«indexÎ»ÖÃµÄÊıÍùÏÂÒÆ¶¯µ½ÕıÈ·µÄÎ»ÖÃ
+    //å°†indexä½ç½®çš„æ•°å¾€ä¸‹ç§»åŠ¨åˆ°æ­£ç¡®çš„ä½ç½®
     public static void heapify(int[] arr, int heapsize,int index) {
 //        int max = arr[0];
 //        swap(arr, heapsize--, 0);

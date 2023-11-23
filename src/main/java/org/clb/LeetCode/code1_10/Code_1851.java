@@ -3,10 +3,10 @@ package org.clb.LeetCode.code1_10;
 import java.util.*;
 
 /**
- * ¸øÄãÒ»¸ö¶şÎ¬ÕûÊıÊı×é intervals £¬ÆäÖĞ intervals[i] = [lefti, righti] ±íÊ¾µÚ i ¸öÇø¼ä¿ªÊ¼ÓÚ lefti ¡¢½áÊøÓÚ righti£¨°üº¬Á½²àÈ¡Öµ£¬±ÕÇø¼ä£©¡£
- * Çø¼äµÄ ³¤¶È ¶¨ÒåÎªÇø¼äÖĞ°üº¬µÄÕûÊıÊıÄ¿£¬¸üÕıÊ½µØ±í´ïÊÇ righti - lefti + 1 ¡£
- * ÔÙ¸øÄãÒ»¸öÕûÊıÊı×é queries ¡£µÚ j ¸ö²éÑ¯µÄ´ğ°¸ÊÇÂú×ã lefti <= queries[j] <= righti µÄ ³¤¶È×îĞ¡Çø¼ä i µÄ³¤¶È ¡£Èç¹û²»´æÔÚÕâÑùµÄÇø¼ä£¬ÄÇÃ´´ğ°¸ÊÇ -1 ¡£
- * ÒÔÊı×éĞÎÊ½·µ»Ø¶ÔÓ¦²éÑ¯µÄËùÓĞ´ğ°¸¡£
+ * ç»™ä½ ä¸€ä¸ªäºŒç»´æ•´æ•°æ•°ç»„ intervals ï¼Œå…¶ä¸­ intervals[i] = [lefti, righti] è¡¨ç¤ºç¬¬ i ä¸ªåŒºé—´å¼€å§‹äº lefti ã€ç»“æŸäº rightiï¼ˆåŒ…å«ä¸¤ä¾§å–å€¼ï¼Œé—­åŒºé—´ï¼‰ã€‚
+ * åŒºé—´çš„ é•¿åº¦ å®šä¹‰ä¸ºåŒºé—´ä¸­åŒ…å«çš„æ•´æ•°æ•°ç›®ï¼Œæ›´æ­£å¼åœ°è¡¨è¾¾æ˜¯ righti - lefti + 1 ã€‚
+ * å†ç»™ä½ ä¸€ä¸ªæ•´æ•°æ•°ç»„ queries ã€‚ç¬¬ j ä¸ªæŸ¥è¯¢çš„ç­”æ¡ˆæ˜¯æ»¡è¶³ lefti <= queries[j] <= righti çš„ é•¿åº¦æœ€å°åŒºé—´ i çš„é•¿åº¦ ã€‚å¦‚æœä¸å­˜åœ¨è¿™æ ·çš„åŒºé—´ï¼Œé‚£ä¹ˆç­”æ¡ˆæ˜¯ -1 ã€‚
+ * ä»¥æ•°ç»„å½¢å¼è¿”å›å¯¹åº”æŸ¥è¯¢çš„æ‰€æœ‰ç­”æ¡ˆã€‚
  */
 public class Code_1851 {
 
@@ -20,7 +20,7 @@ public class Code_1851 {
         int[] ints = Arrays.copyOf(queries, queries.length);
         Arrays.sort(queries);
         int[] res = new int[queries.length];
-        // 0:±£´æ³¤¶È 1£º±£´æintervalµÄÓÒ±ß½ç
+        // 0:ä¿å­˜é•¿åº¦ 1ï¼šä¿å­˜intervalçš„å³è¾¹ç•Œ
         PriorityQueue<int[]> queue = new PriorityQueue<>(new intArrayComparator());
         Map<Integer,Integer> map = new HashMap<>();
 

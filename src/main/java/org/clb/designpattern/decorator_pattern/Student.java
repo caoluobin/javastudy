@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
  */
 public class Student implements Stu,Cloneable {
     String name;
-    String clothes="¿ÕÆø";
+    String clothes="ç©ºæ°”";
     String a = "cccasfagajwoprqwporqpworiqpw j alksjaljdfalksjflkajwrriq i j jaljfalksfla2 g";
     String b = "cccasfagajwoprqwporqpworiqpw j alksjaljdfalksjflkajwrriq i j jaljfalksfla2s";
     String v = "cccasfagajwoprqwporqpworiqpw j alksjaljdfalksjflkajwrriq i j jaljfalksfla2 t";
@@ -35,7 +35,7 @@ public class Student implements Stu,Cloneable {
 
     @Override
     public String toString() {
-        return "ÎÒ½Ğ'" + name + '\'' + ", ÊÇÒ»¸ö´©ÁË'" + clothes + '\'' + "µÄÑ§Éú";
+        return "æˆ‘å«'" + name + '\'' + ", æ˜¯ä¸€ä¸ªç©¿äº†'" + clothes + '\'' + "çš„å­¦ç”Ÿ";
     }
 
     public void setName(String name) {
@@ -48,6 +48,6 @@ public class Student implements Stu,Cloneable {
 
     @Override
     public void dress() {
-        this.setClothes("¿ÕÆø");
+        this.setClothes("ç©ºæ°”");
     }
 }

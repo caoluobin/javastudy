@@ -25,7 +25,7 @@ public class MyThreadPool extends ThreadPoolExecutor {
         if (r instanceof MyFutureTask) {
             MyFutureTask futureTask = (MyFutureTask) r;
             String token = futureTask.getToken();
-            System.out.println("»ñÈ¡token"+token);
+            System.out.println("è·å–token"+token);
             tokenThreadLocal.set(token);
         }else {
             try {
@@ -38,7 +38,7 @@ public class MyThreadPool extends ThreadPoolExecutor {
                         if (task instanceof MySupplierTask){
                             MySupplierTask futureTask = (MySupplierTask)task ;
                             String token = futureTask.getToken();
-                            System.out.println("»ñÈ¡token"+token);
+                            System.out.println("è·å–token"+token);
                             tokenThreadLocal.set(token);
                         }
                     }
@@ -60,7 +60,7 @@ public class MyThreadPool extends ThreadPoolExecutor {
         tokenThreadLocal.remove();
 //        r.run();
         System.out.println("after  poolSize"+super.getPoolSize());
-        System.out.println("after ÒÑÍê³ÉÈÎÎñ==>"+super.getCompletedTaskCount());
+        System.out.println("after å·²å®Œæˆä»»åŠ¡==>"+super.getCompletedTaskCount());
     }
 
     public <T> Future<T> submit(MyFutureTask task) {

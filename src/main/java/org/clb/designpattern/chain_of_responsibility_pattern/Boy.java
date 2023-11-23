@@ -17,7 +17,7 @@ public class Boy {
 
     @Override
     public String toString() {
-        String a=name+"被打成了"+shape;
+        String a=name+"琚墦鎴愪簡"+shape;
         return a;
     }
 }

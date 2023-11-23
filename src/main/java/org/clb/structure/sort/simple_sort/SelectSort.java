@@ -4,17 +4,17 @@ import org.clb.structure.sort.Sort;
 import org.clb.structure.sort.SortType;
 
 /**
- * @Description Ñ¡ÔñÅÅÐò
+ * @Description é€‰æ‹©æŽ’åº
  * @Classname SelectSort
  * @Date 2021/6/30 15:30
  * @Author clb
  */
 public class SelectSort extends Sort {
     public static void selectSort(int[] arr, SortType sortType){
-        for (int i = 0; i < arr.length; i++) {//ÏÂÒ»¸öÐèÒªÅÅÐòµÄÏÂ±ê
+        for (int i = 0; i < arr.length; i++) {//ä¸‹ä¸€ä¸ªéœ€è¦æŽ’åºçš„ä¸‹æ ‡
             int num=arr[i];
             int flag=i;
-            for (int j = i; j < arr.length; j++) {//Ñ¡Ôñ×îÐ¡£¨×î´óÖµ£©
+            for (int j = i; j < arr.length; j++) {//é€‰æ‹©æœ€å°ï¼ˆæœ€å¤§å€¼ï¼‰
                 flag=sortType.getType()==1?num>arr[j]?j:flag
                         :num>arr[j]?flag:j;
                 num=sortType.getType()==1?Math.min(arr[j],num):Math.max(arr[j],num);

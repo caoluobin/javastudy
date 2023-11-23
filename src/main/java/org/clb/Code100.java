@@ -17,11 +17,11 @@ public class Code100 {
         System.out.println(a.equals(b));
     }
 
-    // 1 5 95 98 2  ·¶Î§-100 ~ 100
+    // 1 5 95 98 2  èŒƒå›´-100 ~ 100
     public static int getSum100(List<Integer> list) {
         Map<Integer,Integer> map = new HashMap<>();
         Map<Integer,Integer> map2= new HashMap<>();
-        //»ñµÃ Ã¿¸öÊıÓĞ¶àÉÙ¸ö
+        //è·å¾— æ¯ä¸ªæ•°æœ‰å¤šå°‘ä¸ª
         for (Integer integer : list) {
                 map.put(integer,map.getOrDefault(integer,0)+1);
 
@@ -29,7 +29,7 @@ public class Code100 {
         int count = 0;
         for (Integer integer : list) {
             if (integer!=50)
-                count+=map.getOrDefault(100-integer,0);//»ñµÃ
+                count+=map.getOrDefault(100-integer,0);//è·å¾—
         }
         count = count/2;
         Integer count2 = map.getOrDefault(50, 0);

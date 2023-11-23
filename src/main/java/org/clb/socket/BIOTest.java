@@ -15,10 +15,10 @@ public class BIOTest {
         ServerSocket socket = new ServerSocket(6542);
 
         while (true) {
-            System.out.println("等待连接");
+            System.out.println("绛夊緟杩炴帴");
             Socket accept = socket.accept();
 //            InputStream inputStream = accept.getInputStream();
-            System.out.println("连接成功");
+            System.out.println("杩炴帴鎴愬姛");
         }
 
     }

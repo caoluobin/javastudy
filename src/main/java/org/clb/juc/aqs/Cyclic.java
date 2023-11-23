@@ -31,7 +31,7 @@ public class Cyclic {
     /* The command to run when tripped */
     private final Runnable barrierCommand;
     /** The current generation */
-    private Cyclic.Generation generation = new Cyclic.Generation();
+    private Generation generation = new Generation();
 
 
     private int count;
@@ -42,7 +42,7 @@ public class Cyclic {
         trip.signalAll();
         // set up next generation
         count = parties;
-        generation = new Cyclic.Generation();
+        generation = new Generation();
     }
 
 
@@ -59,7 +59,7 @@ public class Cyclic {
         final ReentrantLock lock = this.lock;
         lock.lock();
         try {
-            final Cyclic.Generation g = generation;
+            final Generation g = generation;
 
             if (g.broken)
                 throw new BrokenBarrierException();
@@ -76,7 +76,7 @@ public class Cyclic {
                     final Runnable command = barrierCommand;
                     if (command != null)
                         command.run();
-                    System.out.println(Thread.currentThread().getName()+"执行任务");
+                    System.out.println(Thread.currentThread().getName()+"鎵ц浠诲姟");
                     ranAction = true;
                     nextGeneration();
                     return 0;
@@ -90,9 +90,9 @@ public class Cyclic {
             for (;;) {
                 try {
                     if (!timed){
-                        System.out.println(Thread.currentThread().getName()+"开始await");
+                        System.out.println(Thread.currentThread().getName()+"寮�濮媋wait");
                         trip.await();
-                        System.out.println(Thread.currentThread().getName()+"结束await");
+                        System.out.println(Thread.currentThread().getName()+"缁撴潫await");
                     }
                     else if (nanos > 0L)
                         nanos = trip.awaitNanos(nanos);

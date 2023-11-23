@@ -21,8 +21,8 @@ public class SocketServer {
             byte[]  context = new byte[2048];
             int realLen = inputStream.read(context);
             String msg = new String(context,0,realLen);
-            System.out.println("·şÎñÆ÷ÊÕµ½À´×Ô¶Ë¿Ú"+port+" µÄÏûÏ¢£º"+msg);
-            outputStream.write("ÒÑÊÕµ½ÏûÏ¢".getBytes("GBK"));
+            System.out.println("æœåŠ¡å™¨æ”¶åˆ°æ¥è‡ªç«¯å£"+port+" çš„æ¶ˆæ¯ï¼š"+msg);
+            outputStream.write("å·²æ”¶åˆ°æ¶ˆæ¯".getBytes("GBK"));
             outputStream.close();
             inputStream.close();
             socket.close();

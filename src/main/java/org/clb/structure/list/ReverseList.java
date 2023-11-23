@@ -3,7 +3,7 @@ package org.clb.structure.list;
 import org.clb.pojo.list.Node;
 
 /**
- * ½«Á´±í·´×ª
+ * å°†é“¾è¡¨åè½¬
  */
 public class ReverseList {
     public static Node reverseMyListByIterate(Node head){

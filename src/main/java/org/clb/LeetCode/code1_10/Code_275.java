@@ -1,7 +1,7 @@
 package org.clb.LeetCode.code1_10;
 
 /**
- * Ò»Ãû¿ÆÑÐÈËÔ±µÄ h Ö¸ÊýÊÇÖ¸Ëû£¨Ëý£©µÄ £¨n ÆªÂÛÎÄÖÐ£©×Ü¹²ÓÐ h ÆªÂÛÎÄ·Ö±ð±»ÒýÓÃÁËÖÁÉÙ h ´Î¡£
+ * ä¸€åç§‘ç ”äººå‘˜çš„ h æŒ‡æ•°æ˜¯æŒ‡ä»–ï¼ˆå¥¹ï¼‰çš„ ï¼ˆn ç¯‡è®ºæ–‡ä¸­ï¼‰æ€»å…±æœ‰ h ç¯‡è®ºæ–‡åˆ†åˆ«è¢«å¼•ç”¨äº†è‡³å°‘ h æ¬¡ã€‚
  */
 public class Code_275 {
 

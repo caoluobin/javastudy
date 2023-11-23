@@ -10,10 +10,10 @@ public class AgeCalculate {
         int age = 0;
         try {
             Calendar now = Calendar.getInstance();
-            now.setTime(new Date());// µ±Ç°Ê±¼ä
+            now.setTime(new Date());// å½“å‰æ—¶é—´
             Calendar birth = Calendar.getInstance();
             birth.setTime(birthday);
-            if (birth.after(now)) {//Èç¹û´«ÈëµÄÊ±¼ä£¬ÔÚµ±Ç°Ê±¼äµÄºóÃæ£¬·µ»Ø0Ëê
+            if (birth.after(now)) {//å¦‚æœä¼ å…¥çš„æ—¶é—´ï¼Œåœ¨å½“å‰æ—¶é—´çš„åé¢ï¼Œè¿”å›0å²
                 age = 0;
             } else {
                 age = now.get(Calendar.YEAR) - birth.get(Calendar.YEAR)-1;
@@ -25,7 +25,7 @@ public class AgeCalculate {
 
             }
             return age;
-        } catch (Exception e) {//¼æÈİĞÔ¸üÇ¿,Òì³£ºó·µ»ØÊı¾İ
+        } catch (Exception e) {//å…¼å®¹æ€§æ›´å¼º,å¼‚å¸¸åè¿”å›æ•°æ®
             return 0;
         }
     }

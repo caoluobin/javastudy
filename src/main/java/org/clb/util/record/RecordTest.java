@@ -4,10 +4,10 @@ import lombok.Data;
 
 @Data
 public class RecordTest {
-    @RecordAnnotation(name = "ÊÖ»úºÅ")
+    @RecordAnnotation(name = "æ‰‹æœºå·")
     private String phone;
 
-    @RecordAnnotation(name = "ĞÔ±ğ")
+    @RecordAnnotation(name = "æ€§åˆ«")
     private String sex;
 
     public RecordTest(String phone, String sex) {

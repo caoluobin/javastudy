@@ -3,9 +3,9 @@ package org.clb.LeetCode.code1_10;
 import java.util.Arrays;
 
 /**
- * ¸øÄãÒ»¸ö³¤¶ÈÎª n µÄÕûÊıÊı×é nums ºÍ Ò»¸öÄ¿±êÖµ target¡£ÇëÄã´Ó nums ÖĞÑ¡³öÈı¸öÕûÊı£¬Ê¹ËüÃÇµÄºÍÓë target ×î½Ó½ü¡£
- * ·µ»ØÕâÈı¸öÊıµÄºÍ¡£
- * ¼Ù¶¨Ã¿×éÊäÈëÖ»´æÔÚÇ¡ºÃÒ»¸ö½â¡£
+ * ç»™ä½ ä¸€ä¸ªé•¿åº¦ä¸º n çš„æ•´æ•°æ•°ç»„ nums å’Œ ä¸€ä¸ªç›®æ ‡å€¼ targetã€‚è¯·ä½ ä» nums ä¸­é€‰å‡ºä¸‰ä¸ªæ•´æ•°ï¼Œä½¿å®ƒä»¬çš„å’Œä¸ target æœ€æ¥è¿‘ã€‚
+ * è¿”å›è¿™ä¸‰ä¸ªæ•°çš„å’Œã€‚
+ * å‡å®šæ¯ç»„è¾“å…¥åªå­˜åœ¨æ°å¥½ä¸€ä¸ªè§£ã€‚
  */
 public class Code_16 {
 
@@ -14,7 +14,7 @@ public class Code_16 {
     }
 
     /**
-     * Ë«Ö¸Õë·¨ È»ºó¶ÔÒ»Ğ©±ß½çÌõ¼ş½øĞĞÓÅ»¯
+     * åŒæŒ‡é’ˆæ³• ç„¶åå¯¹ä¸€äº›è¾¹ç•Œæ¡ä»¶è¿›è¡Œä¼˜åŒ–
      * @param nums
      * @param target
      * @return
@@ -39,7 +39,7 @@ public class Code_16 {
                     break;
                 }
                 int sum = nums[i] + nums[left] + nums[right];
-                // ÅĞ¶ÏÈıÊıÖ®ºÍÊÇ·ñµÈÓÚtarget
+                // åˆ¤æ–­ä¸‰æ•°ä¹‹å’Œæ˜¯å¦ç­‰äºtarget
                 if(sum == target)
                     return sum;
                 if(Math.abs(sum - target) < Math.abs(result - target))

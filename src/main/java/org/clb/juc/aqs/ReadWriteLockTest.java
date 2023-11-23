@@ -35,10 +35,10 @@ public class ReadWriteLockTest {
     public static void test1() {
         new Thread(()->{
             try {
-                System.out.println("»ñÈ¡Ğ´Ëø");
+                System.out.println("è·å–å†™é”");
                 writeLock.lock();
                 TimeUnit.SECONDS.sleep(2);
-                System.out.println("ÊÍ·ÅĞ´Ëø");
+                System.out.println("é‡Šæ”¾å†™é”");
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } finally {
@@ -53,10 +53,10 @@ public class ReadWriteLockTest {
         for (int i = 0; i < 10; i++) {
             new Thread(()->{
                 try {
-                    System.out.println("¶ÁËø"+Thread.currentThread().getName()+"½øÈë");
+                    System.out.println("è¯»é”"+Thread.currentThread().getName()+"è¿›å…¥");
                     readLock.lock();
                     TimeUnit.SECONDS.sleep(1);
-                    System.out.println("¶ÁËø"+Thread.currentThread().getName()+"»ñÈ¡");
+                    System.out.println("è¯»é”"+Thread.currentThread().getName()+"è·å–");
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 } finally {
@@ -71,12 +71,12 @@ public class ReadWriteLockTest {
             new Thread(()->{
                 try {
                     readLock.lock();
-                    System.out.println("¶ÁËø"+Thread.currentThread().getName()+"»ñÈ¡");
+                    System.out.println("è¯»é”"+Thread.currentThread().getName()+"è·å–");
                     TimeUnit.SECONDS.sleep(2);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 } finally {
-                    System.out.println("¶ÁËø"+Thread.currentThread().getName()+"ÊÍ·Å");
+                    System.out.println("è¯»é”"+Thread.currentThread().getName()+"é‡Šæ”¾");
                     readLock.unlock();
                 }
             },"thread"+i).start();
@@ -90,12 +90,12 @@ public class ReadWriteLockTest {
         new Thread(()->{
             try {
                 writeLock.lock();
-                System.out.println("»ñÈ¡Ğ´Ëø");
+                System.out.println("è·å–å†™é”");
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } finally {
-                System.out.println("ÊÍ·ÅĞ´Ëø");
+                System.out.println("é‡Šæ”¾å†™é”");
                 writeLock.unlock();
             }
         }).start();
@@ -103,12 +103,12 @@ public class ReadWriteLockTest {
             new Thread(()->{
                 try {
                     readLock.lock();
-                    System.out.println("¶ÁËø"+Thread.currentThread().getName()+"»ñÈ¡");
+                    System.out.println("è¯»é”"+Thread.currentThread().getName()+"è·å–");
                     TimeUnit.SECONDS.sleep(2);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 } finally {
-                    System.out.println("¶ÁËø"+Thread.currentThread().getName()+"ÊÍ·Å");
+                    System.out.println("è¯»é”"+Thread.currentThread().getName()+"é‡Šæ”¾");
                     readLock.unlock();
                 }
             },"thread"+i).start();
@@ -116,39 +116,39 @@ public class ReadWriteLockTest {
     }
 
     public static void test3() throws InterruptedException {
-        //ÏÈÓĞ¶ÁËø Í¬Ò»Ïß³ÌÒ²²»ÄÜ±»Ğ´ËøÖØÈë
+        //å…ˆæœ‰è¯»é” åŒä¸€çº¿ç¨‹ä¹Ÿä¸èƒ½è¢«å†™é”é‡å…¥
 
         new Thread(()->{
             String name = Thread.currentThread().getName();
             try {
                 readLock.lock();
-                System.out.println(name+"¼Ó¶ÁËø");
+                System.out.println(name+"åŠ è¯»é”");
                 writeLock.lock();
-                System.out.println(name+"¼ÓĞ´Ëø");
+                System.out.println(name+"åŠ å†™é”");
                 TimeUnit.SECONDS.sleep(4);
 
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } finally {
                 readLock.unlock();
-                System.out.println(name+"ÊÍ·Å¶ÁËø");
+                System.out.println(name+"é‡Šæ”¾è¯»é”");
                 writeLock.unlock();
-                System.out.println(name+"ÊÍ·ÅĞ´Ëø");
+                System.out.println(name+"é‡Šæ”¾å†™é”");
             }
-        },"Ïß³Ì1").start();
+        },"çº¿ç¨‹1").start();
         TimeUnit.SECONDS.sleep(1);
         new Thread(()->{
             String name = Thread.currentThread().getName();
             try {
                 readLock.lock();
-                System.out.println(name+"¼Ó¶ÁËø");
+                System.out.println(name+"åŠ è¯»é”");
                 TimeUnit.SECONDS.sleep(1);
 
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } finally {
                 readLock.unlock();
-                System.out.println(name+"ÊÍ·Å¶ÁËø");
+                System.out.println(name+"é‡Šæ”¾è¯»é”");
             }
         }).start();
     }

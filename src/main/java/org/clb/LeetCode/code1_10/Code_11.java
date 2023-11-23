@@ -4,14 +4,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * ¸ø¶¨Ò»¸ö³¤¶ÈÎª n µÄÕûÊýÊý×é height ¡£ÓÐ n Ìõ´¹Ïß£¬µÚ i ÌõÏßµÄÁ½¸ö¶ËµãÊÇ (i, 0) ºÍ (i, height[i]) ¡£
- * ÕÒ³öÆäÖÐµÄÁ½ÌõÏß£¬Ê¹µÃËüÃÇÓë x Öá¹²Í¬¹¹³ÉµÄÈÝÆ÷¿ÉÒÔÈÝÄÉ×î¶àµÄË®¡£
- * ·µ»ØÈÝÆ÷¿ÉÒÔ´¢´æµÄ×î´óË®Á¿¡£
+ * ç»™å®šä¸€ä¸ªé•¿åº¦ä¸º n çš„æ•´æ•°æ•°ç»„ height ã€‚æœ‰ n æ¡åž‚çº¿ï¼Œç¬¬ i æ¡çº¿çš„ä¸¤ä¸ªç«¯ç‚¹æ˜¯ (i, 0) å’Œ (i, height[i]) ã€‚
+ * æ‰¾å‡ºå…¶ä¸­çš„ä¸¤æ¡çº¿ï¼Œä½¿å¾—å®ƒä»¬ä¸Ž x è½´å…±åŒæž„æˆçš„å®¹å™¨å¯ä»¥å®¹çº³æœ€å¤šçš„æ°´ã€‚
+ * è¿”å›žå®¹å™¨å¯ä»¥å‚¨å­˜çš„æœ€å¤§æ°´é‡ã€‚
  */
 public class Code_11 {
 
     public static void main(String[] args) {
-        //Éú³ÉËæ»úÊý×é¶ÔmaxAreaºÍmaxArea2µÄ·µ»Ø½á¹û½øÐÐ²âÊÔ Èç¹û²»Ò»ÖÂÊä³ö
+        //ç”Ÿæˆéšæœºæ•°ç»„å¯¹maxAreaå’ŒmaxArea2çš„è¿”å›žç»“æžœè¿›è¡Œæµ‹è¯• å¦‚æžœä¸ä¸€è‡´è¾“å‡º
         for (int i = 0; i < 100; i++) {
             int[] ints = generateRandomArray(100, 100);
             int maxArea = new Code_11().maxArea(ints);
@@ -26,9 +26,9 @@ public class Code_11 {
     }
 
     /**
-     * Éú³ÉËæ»úÊý×é
-     * @param length Êý×é³¤¶È
-     * @param max Êý×éÔªËØ×î´óÖµ
+     * ç”Ÿæˆéšæœºæ•°ç»„
+     * @param length æ•°ç»„é•¿åº¦
+     * @param max æ•°ç»„å…ƒç´ æœ€å¤§å€¼
      * @return
      */
     private static int[] generateRandomArray(int length, int max) {
@@ -39,7 +39,7 @@ public class Code_11 {
         return ints;
     }
     /**
-     * Ë«Ö¸Õë ´ÓÁ½±ßÏòÖÐ¼äÒÆ¶¯ ÒÆ¶¯¶ÌµÄÄÇÒ»±ß ÒòÎªÒÆ¶¯³¤µÄÄÇÒ»±ß²»¿ÉÄÜÊ¹Ãæ»ýÔö´ó Ö»ÓÐÒÆ¶¯¶ÌµÄÄÇÒ»±ß²ÅÓÐ¿ÉÄÜÊ¹Ãæ»ýÔö´ó µ«ÊÇÒÆ¶¯¶ÌµÄÄÇÒ»±ßÒ²²»Ò»¶¨ÄÜÊ¹Ãæ»ýÔö´ó ËùÒÔÒÆ¶¯¶ÌµÄÄÇÒ»±ß
+     * åŒæŒ‡é’ˆ ä»Žä¸¤è¾¹å‘ä¸­é—´ç§»åŠ¨ ç§»åŠ¨çŸ­çš„é‚£ä¸€è¾¹ å› ä¸ºç§»åŠ¨é•¿çš„é‚£ä¸€è¾¹ä¸å¯èƒ½ä½¿é¢ç§¯å¢žå¤§ åªæœ‰ç§»åŠ¨çŸ­çš„é‚£ä¸€è¾¹æ‰æœ‰å¯èƒ½ä½¿é¢ç§¯å¢žå¤§ ä½†æ˜¯ç§»åŠ¨çŸ­çš„é‚£ä¸€è¾¹ä¹Ÿä¸ä¸€å®šèƒ½ä½¿é¢ç§¯å¢žå¤§ æ‰€ä»¥ç§»åŠ¨çŸ­çš„é‚£ä¸€è¾¹
      * @param height
      * @return
      */

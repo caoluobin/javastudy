@@ -14,14 +14,14 @@ public class Code_1488 {
 
     public int[] avoidFlood(int[] rains) {//1,2,0,1,2   -1 -1 0 -1 -1
         int[] res = new int[rains.length];
-        //key : 池子 value:day
+        //key : 姹犲瓙 value:day
         Map<Integer,Integer> map = new HashMap<>();
-        //key:可抽取湖水的时间
+        //key:鍙娊鍙栨箹姘寸殑鏃堕棿
         LinkedList<Integer> list = new LinkedList<>();
         for (int i = 0; i < rains.length; i++) {
             int rain = rains[i];
             if (rain > 0) {
-                if (map.containsKey(rain)) { //如果已经满了
+                if (map.containsKey(rain)) { //濡傛灉宸茬粡婊′簡
                     if (!list.isEmpty()) {
                         int day = map.get(rain);
                         Iterator<Integer> iterator = list.iterator();

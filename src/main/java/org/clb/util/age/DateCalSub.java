@@ -9,11 +9,11 @@ import java.util.regex.Pattern;
 public class DateCalSub {
     private static Calendar calS = Calendar.getInstance();
 
-    private static Pattern p = Pattern.compile("\\d{4}-\\d{2}-\\d{2}");//¶¨ÒåÕûÔò±í´ïÊ½
+    private static Pattern p = Pattern.compile("\\d{4}-\\d{2}-\\d{2}");//å®šä¹‰æ•´åˆ™è¡¨è¾¾å¼
 
     /**
 
-     * ¼ÆËãÊ£ÓàÊ±¼ä
+     * è®¡ç®—å‰©ä½™æ—¶é—´
 
      *
 
@@ -21,7 +21,7 @@ public class DateCalSub {
 
      * @param endDateStr yyyy-MM-dd
 
-     * @return £¿Äê£¿¸öÔÂ£¿Ìì
+     * @return ï¼Ÿå¹´ï¼Ÿä¸ªæœˆï¼Ÿå¤©
 
      */
 
@@ -66,7 +66,7 @@ public class DateCalSub {
 
         int endM = calS.get(Calendar.MONTH);
 
-//´¦Àí2011-01-10µ½2011-01-10£¬ÈÏÎª·şÎñÎªÒ»Ìì
+//å¤„ç†2011-01-10åˆ°2011-01-10ï¼Œè®¤ä¸ºæœåŠ¡ä¸ºä¸€å¤©
 
         int endD = calS.get(Calendar.DATE) + 1;
 
@@ -75,7 +75,7 @@ public class DateCalSub {
         StringBuilder sBuilder = new StringBuilder();
 
         if (endDate.compareTo(startDate) < 0) {
-            return sBuilder.append("¹ıÆÚ").toString();
+            return sBuilder.append("è¿‡æœŸ").toString();
 
         }
 
@@ -88,7 +88,7 @@ public class DateCalSub {
 
         }
 
-//´¦ÀíÌìÊıÎÊÌâ£¬Èç£º2011-01-01 µ½2013-12-31 2Äê11¸öÔÂ31Ìì Êµ¼ÊÉÏ¾ÍÊÇ3Äê
+//å¤„ç†å¤©æ•°é—®é¢˜ï¼Œå¦‚ï¼š2011-01-01 åˆ°2013-12-31 2å¹´11ä¸ªæœˆ31å¤© å®é™…ä¸Šå°±æ˜¯3å¹´
 
         if (lday == endDayOfMonth) {
             endM = endM + 1;
@@ -104,19 +104,19 @@ public class DateCalSub {
         int lmonth = mos % 12;
 
         if (lyear > 0) {
-            sBuilder.append(lyear + "Äê");
+            sBuilder.append(lyear + "å¹´");
 
         }
 
         if (lmonth > 0) {
-            sBuilder.append(lmonth + "¸öÔÂ");
+            sBuilder.append(lmonth + "ä¸ªæœˆ");
 
         }
 
-// if(lyear==0)//Âú×ãÏîÄ¿ĞèÇó ÂúÒ»Äê²»ÏÔÊ¾ÌìÊı
+// if(lyear==0)//æ»¡è¶³é¡¹ç›®éœ€æ±‚ æ»¡ä¸€å¹´ä¸æ˜¾ç¤ºå¤©æ•°
 
         if (lday > 0) {
-            sBuilder.append(lday + "Ìì");
+            sBuilder.append(lday + "å¤©");
 
         }
 
@@ -126,7 +126,7 @@ public class DateCalSub {
 
     /*
 
-     * ×ª»» dataAndTime 2013-12-31 23:59:59 µ½
+     * è½¬æ¢ dataAndTime 2013-12-31 23:59:59 åˆ°
 
      * date 2013-12-31
 

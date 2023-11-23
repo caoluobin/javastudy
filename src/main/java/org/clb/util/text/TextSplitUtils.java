@@ -7,8 +7,8 @@ import java.util.List;
 
 public class TextSplitUtils {
     public static void main(String[] args) {
-        //Ô¼500m -3000000ĞĞ
-        splitDataToSaveFile(300000,new File("F:\\SRdata\\ÔËÎ¬ÎÊÌâ´¦Àí\\11ÔÂ\\11.17\\syslog.log"),"F:\\SRdata\\ÔËÎ¬ÎÊÌâ´¦Àí\\11ÔÂ\\11.17\\2");
+        //çº¦500m -3000000è¡Œ
+        splitDataToSaveFile(300000,new File("F:\\SRdata\\è¿ç»´é—®é¢˜å¤„ç†\\11æœˆ\\11.17\\syslog.log"),"F:\\SRdata\\è¿ç»´é—®é¢˜å¤„ç†\\11æœˆ\\11.17\\2");
     }
     public static List<File> splitDataToSaveFile(int rows, File sourceFile, String targetDirectoryPath) {
         long startTime = System.currentTimeMillis();
@@ -32,7 +32,7 @@ public class TextSplitUtils {
                 stringBuilder.append(lineStr).append("");
                 if (lineNo % rows == 0) {
                     File file = new File(targetDirectoryPath + File.separator + fileNum + sourceFile.getName());
-                    writeFile(stringBuilder.toString(), file);     //Çå¿ÕÎÄ±¾
+                    writeFile(stringBuilder.toString(), file);     //æ¸…ç©ºæ–‡æœ¬
                     stringBuilder.delete(0, stringBuilder.length());
                     fileNum++;
                     fileList.add(file);

@@ -1,7 +1,7 @@
 package org.clb.designpattern.composite_pattern;
 
 /**
- * @Description �ӽڵ�
+ * @Description 子节点
  * @Classname leaf
  * @Date 2021/5/21 16:37
  * @Author clb

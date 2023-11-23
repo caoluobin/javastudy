@@ -10,7 +10,7 @@ public class ConcretObserverList extends OberverList {
 
     @Override
     public void notifyAllObserver() {
-        System.out.println("¿ªÊ¼Ö´ÐÐ");
+        System.out.println("å¼€å§‹æ‰§è¡Œ");
         for (int i = 0; i < list.size(); i++) {
             list.get(i).response();
         }

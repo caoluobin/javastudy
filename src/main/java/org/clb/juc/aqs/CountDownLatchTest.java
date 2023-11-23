@@ -17,7 +17,7 @@ public class CountDownLatchTest {
         }
     }
     /**
-     * ²âÊÔCountDownLatch  awaitµÄÏß³ÌÊÇ±»Ïà¼Ì»½ĞÑµÄ
+     * æµ‹è¯•CountDownLatch  awaitçš„çº¿ç¨‹æ˜¯è¢«ç›¸ç»§å”¤é†’çš„
      */
     public static void test1(){
         CountDownLatch count=new CountDownLatch(1);
@@ -29,9 +29,9 @@ public class CountDownLatchTest {
             }
             Thread thread = new Thread(()->{
                 try {
-                    System.out.println(Thread.currentThread().getName()+"¿ªÊ¼µÈ´ı");
+                    System.out.println(Thread.currentThread().getName()+"å¼€å§‹ç­‰å¾…");
                     count.await();
-                    System.out.println(Thread.currentThread().getName()+"µÈ´ı½áÊø");
+                    System.out.println(Thread.currentThread().getName()+"ç­‰å¾…ç»“æŸ");
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

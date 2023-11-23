@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ¸ø¶¨ n ¸ö·Ç¸ºÕûÊı±íÊ¾Ã¿¸ö¿í¶ÈÎª 1 µÄÖù×ÓµÄ¸ß¶ÈÍ¼£¬¼ÆËã°´´ËÅÅÁĞµÄÖù×Ó£¬ÏÂÓêÖ®ºóÄÜ½Ó¶àÉÙÓêË®¡£
+ * ç»™å®š n ä¸ªéè´Ÿæ•´æ•°è¡¨ç¤ºæ¯ä¸ªå®½åº¦ä¸º 1 çš„æŸ±å­çš„é«˜åº¦å›¾ï¼Œè®¡ç®—æŒ‰æ­¤æ’åˆ—çš„æŸ±å­ï¼Œä¸‹é›¨ä¹‹åèƒ½æ¥å¤šå°‘é›¨æ°´ã€‚
  */
 public class Code_42 {
 
@@ -21,8 +21,8 @@ public class Code_42 {
 
             }
             if (height[i]<last) {
-                //Èç¹û´óÓÚµÈÓÚleftMaxIndexµÄÖµ leftMaxIndex==i ½áÇå×ó±ßµÄÖµ
-                //maxList¼Ói
+                //å¦‚æœå¤§äºç­‰äºleftMaxIndexçš„å€¼ leftMaxIndex==i ç»“æ¸…å·¦è¾¹çš„å€¼
+                //maxListåŠ i
             }
         }
         return 0;

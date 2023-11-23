@@ -1,8 +1,8 @@
 package org.clb.LeetCode.code1_10;
 
 /**
- * ¸øÄãÒ»¸öÕûÊıÊı×é nums £¬ÇëÄãÕÒ³öÒ»¸ö¾ßÓĞ×î´óºÍµÄÁ¬Ğø×ÓÊı×é£¨×ÓÊı×é×îÉÙ°üº¬Ò»¸öÔªËØ£©£¬·µ»ØÆä×î´óºÍ¡£
- * ×ÓÊı×é ÊÇÊı×éÖĞµÄÒ»¸öÁ¬Ğø²¿·Ö¡£
+ * ç»™ä½ ä¸€ä¸ªæ•´æ•°æ•°ç»„ nums ï¼Œè¯·ä½ æ‰¾å‡ºä¸€ä¸ªå…·æœ‰æœ€å¤§å’Œçš„è¿ç»­å­æ•°ç»„ï¼ˆå­æ•°ç»„æœ€å°‘åŒ…å«ä¸€ä¸ªå…ƒç´ ï¼‰ï¼Œè¿”å›å…¶æœ€å¤§å’Œã€‚
+ * å­æ•°ç»„ æ˜¯æ•°ç»„ä¸­çš„ä¸€ä¸ªè¿ç»­éƒ¨åˆ†ã€‚
  */
 public class Code_53 {
     int count =0;
@@ -14,8 +14,8 @@ public class Code_53 {
     }
     public int maxSubArray2(int[] nums) {
 
-        int d = 0;//´øµ±Ç°ÖµµÄ×î´óÖµ
-        int f= Integer.MIN_VALUE;//×î´óÖµ
+        int d = 0;//å¸¦å½“å‰å€¼çš„æœ€å¤§å€¼
+        int f= Integer.MIN_VALUE;//æœ€å¤§å€¼
 
         for (int i = 0; i < nums.length; i++) {
             int now =nums[i];
@@ -29,7 +29,7 @@ public class Code_53 {
         return f;
     }
     public int maxSubArray(int[] nums) {
-        // 0: ´øµ±Ç°ÖµµÄ×î´óÖµ  ×î´óÖµ
+        // 0: å¸¦å½“å‰å€¼çš„æœ€å¤§å€¼  æœ€å¤§å€¼
         Integer[][] maxs = new Integer[nums.length][2];
         dfs(nums,maxs,0);
         return maxs[0][1];

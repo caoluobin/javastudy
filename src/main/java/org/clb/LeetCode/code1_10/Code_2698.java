@@ -4,10 +4,10 @@ package org.clb.LeetCode.code1_10;
 import java.util.*;
 
 /**
- * ¸øÄãÒ»¸öÕıÕûÊı n £¬ÇëÄã·µ»Ø n µÄ ³Í·£Êı ¡£
- * n µÄ ³Í·£Êı ¶¨ÒåÎªËùÓĞÂú×ãÒÔÏÂÌõ¼ş i µÄÊıµÄÆ½·½ºÍ£º
+ * ç»™ä½ ä¸€ä¸ªæ­£æ•´æ•° n ï¼Œè¯·ä½ è¿”å› n çš„ æƒ©ç½šæ•° ã€‚
+ * n çš„ æƒ©ç½šæ•° å®šä¹‰ä¸ºæ‰€æœ‰æ»¡è¶³ä»¥ä¸‹æ¡ä»¶ i çš„æ•°çš„å¹³æ–¹å’Œï¼š
  * 1 <= i <= n
- * i * i µÄÊ®½øÖÆ±íÊ¾µÄ×Ö·û´®¿ÉÒÔ·Ö¸î³ÉÈô¸ÉÁ¬Ğø×Ó×Ö·û´®£¬ÇÒÕâĞ©×Ó×Ö·û´®¶ÔÓ¦µÄÕûÊıÖµÖ®ºÍµÈÓÚ i ¡£
+ * i * i çš„åè¿›åˆ¶è¡¨ç¤ºçš„å­—ç¬¦ä¸²å¯ä»¥åˆ†å‰²æˆè‹¥å¹²è¿ç»­å­å­—ç¬¦ä¸²ï¼Œä¸”è¿™äº›å­å­—ç¬¦ä¸²å¯¹åº”çš„æ•´æ•°å€¼ä¹‹å’Œç­‰äº i ã€‚
  */
 public class Code_2698 {
     public static void main(String[] args) {
@@ -46,7 +46,7 @@ public class Code_2698 {
     }
 
 
-    // key µ±Ç°Öµ  set: ËùÓĞÓµÓĞµÄºÍ
+    // key å½“å‰å€¼  set: æ‰€æœ‰æ‹¥æœ‰çš„å’Œ
     private static Map<Integer, Set<Integer>> map = new HashMap<>();
     public int punishmentNumber(int n) {
         int res=0;
@@ -59,7 +59,7 @@ public class Code_2698 {
         return res;
     }
     private boolean isM(Integer count,Integer m) {
-        //Èç¹û°üº¬
+        //å¦‚æœåŒ…å«
         Set<Integer> set = map.get(m);
         if (set!=null) {
             return set.contains(count);
@@ -70,7 +70,7 @@ public class Code_2698 {
     }
 
     /**
-     * ¼ÆËãmµÄËùÓĞ½á¹ûÖÁmapÖĞ
+     * è®¡ç®—mçš„æ‰€æœ‰ç»“æœè‡³mapä¸­
      * @param m
      */
     private Set<Integer> dfs(Integer m) {

@@ -9,9 +9,9 @@ package org.clb.designpattern.command_pattern.stock;
 public class ShopStock {
 
   public void buy(){
-    System.out.println("付钱");
+    System.out.println("浠橀挶");
   }
   public void take(){
-    System.out.println("选好了想要的东西");
+    System.out.println("閫夊ソ浜嗘兂瑕佺殑涓滆タ");
   }
 }

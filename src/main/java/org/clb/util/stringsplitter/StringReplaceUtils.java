@@ -6,8 +6,8 @@ import java.util.List;
 public class StringReplaceUtils {
 
     /**
-     * @description: Ìæ»»×Ö·û´®ÖĞÃ¿Á½¸öbÖĞ¼äµÄÄÚÈİ(°üÀ¨b)Îª c
-     *               Àı£ºupdate table set a='123' ==>update table set a=?
+     * @description: æ›¿æ¢å­—ç¬¦ä¸²ä¸­æ¯ä¸¤ä¸ªbä¸­é—´çš„å†…å®¹(åŒ…æ‹¬b)ä¸º c
+     *               ä¾‹ï¼šupdate table set a='123' ==>update table set a=?
      * @author: clb
      * @date:  8:59
      * @since:
@@ -23,7 +23,7 @@ public class StringReplaceUtils {
         return result.toString();
     }
     /**
-     * @description: Ìæ»»aÖĞ[b,c]Ö®¼äµÄ×Ö·û´®Îªd
+     * @description: æ›¿æ¢aä¸­[b,c]ä¹‹é—´çš„å­—ç¬¦ä¸²ä¸ºd
      * @author: clb
      * @date:  9:16
      * @since:

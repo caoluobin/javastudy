@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ¸ø¶¨Ò»¸öº¬ÓĞ n ¸öÕıÕûÊıµÄÊı×éºÍÒ»¸öÕıÕûÊı target ¡£
- * ÕÒ³ö¸ÃÊı×éÖĞÂú×ãÆäºÍ ¡İ target µÄ³¤¶È×îĞ¡µÄ
- * Á¬Ğø×ÓÊı×é [numsl, numsl+1, ..., numsr-1, numsr] £¬²¢·µ»ØÆä³¤¶È¡£Èç¹û²»´æÔÚ·ûºÏÌõ¼şµÄ×ÓÊı×é£¬·µ»Ø 0 ¡£
+ * ç»™å®šä¸€ä¸ªå«æœ‰ n ä¸ªæ­£æ•´æ•°çš„æ•°ç»„å’Œä¸€ä¸ªæ­£æ•´æ•° target ã€‚
+ * æ‰¾å‡ºè¯¥æ•°ç»„ä¸­æ»¡è¶³å…¶å’Œ â‰¥ target çš„é•¿åº¦æœ€å°çš„
+ * è¿ç»­å­æ•°ç»„ [numsl, numsl+1, ..., numsr-1, numsr] ï¼Œå¹¶è¿”å›å…¶é•¿åº¦ã€‚å¦‚æœä¸å­˜åœ¨ç¬¦åˆæ¡ä»¶çš„å­æ•°ç»„ï¼Œè¿”å› 0 ã€‚
  */
 public class Code_209 {
     public static void main(String[] args) {
@@ -39,7 +39,7 @@ public class Code_209 {
         return 0;
     }
     public int max1(int[] nums,int count) {
-        //»ñÈ¡numsÖĞcount¸öÁ¬ĞøÊıµÄ×î´óºÍ
+        //è·å–numsä¸­countä¸ªè¿ç»­æ•°çš„æœ€å¤§å’Œ
         int max=0;
         for (int i = 0; i < nums.length-count+1; i++) {
             int sum=0;
@@ -68,7 +68,7 @@ public class Code_209 {
     }
 
     public int max2(int[] nums,int count,Map<String,Integer> map,int target) {
-        //»ñÈ¡numsÖĞcount¸öÁ¬ĞøÊıµÄ×î´óºÍ
+        //è·å–numsä¸­countä¸ªè¿ç»­æ•°çš„æœ€å¤§å’Œ
         int max=0;
         for (int i = 0; i < nums.length-count+1; i++) {
             Integer lastSum = map.getOrDefault((i+1)+"-"+(i+count-1), 0);

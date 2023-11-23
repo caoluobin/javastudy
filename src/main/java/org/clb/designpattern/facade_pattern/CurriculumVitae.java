@@ -1,7 +1,7 @@
 package org.clb.designpattern.facade_pattern;
 
 /**
- * @Description ¼òÀú
+ * @Description ç®€å†
  * @Classname CurriculumVitae
  * @Date 2021/6/10 17:25
  * @Author clb

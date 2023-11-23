@@ -8,6 +8,6 @@ public class ClothesShop implements Shop{
 
     @Override
     public String getProduct() {
-        return "ÒÂ·ş";
+        return "è¡£æœ";
     }
 }

@@ -41,7 +41,7 @@ public class CompletableFutureTest {
     }
 
     /**
-     * 正常串式调用
+     * 姝ｅ父涓插紡璋冪敤
      */
     public static void test1(List<String> products) {
         long start = System.currentTimeMillis();
@@ -51,7 +51,7 @@ public class CompletableFutureTest {
     }
 
     /**
-     * CompletableFuture并行调用
+     * CompletableFuture骞惰璋冪敤
      */
     public static void test2(List<String> products) {
         long start = System.currentTimeMillis();
@@ -63,7 +63,7 @@ public class CompletableFutureTest {
 
     public static BigDecimal taskGetPrice(String product) {
         try {
-            //模拟查询时间
+            //妯℃嫙鏌ヨ鏃堕棿
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();

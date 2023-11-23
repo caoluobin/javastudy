@@ -1,13 +1,13 @@
 package org.clb.LeetCode.code1_10;
 
 /**
- * ´ü×ÓÖÐ×°ÓÐÒ»Ð©ÎïÆ·£¬Ã¿¸öÎïÆ·ÉÏ¶¼±ê¼Ç×ÅÊý×Ö 1 ¡¢0 »ò -1 ¡£
- * ¸øÄãËÄ¸ö·Ç¸ºÕûÊý numOnes ¡¢numZeros ¡¢numNegOnes ºÍ k ¡£
- * ´ü×Ó×î³õ°üº¬£º
- * numOnes ¼þ±ê¼ÇÎª 1 µÄÎïÆ·¡£
- * numZeroes ¼þ±ê¼ÇÎª 0 µÄÎïÆ·¡£
- * numNegOnes ¼þ±ê¼ÇÎª -1 µÄÎïÆ·¡£
- * ÏÖ¼Æ»®´ÓÕâÐ©ÎïÆ·ÖÐÇ¡ºÃÑ¡³ö k ¼þÎïÆ·¡£·µ»ØËùÓÐ¿ÉÐÐ·½°¸ÖÐ£¬ÎïÆ·ÉÏËù±ê¼ÇÊý×ÖÖ®ºÍµÄ×î´óÖµ¡£
+ * è¢‹å­ä¸­è£…æœ‰ä¸€äº›ç‰©å“ï¼Œæ¯ä¸ªç‰©å“ä¸Šéƒ½æ ‡è®°ç€æ•°å­— 1 ã€0 æˆ– -1 ã€‚
+ * ç»™ä½ å››ä¸ªéžè´Ÿæ•´æ•° numOnes ã€numZeros ã€numNegOnes å’Œ k ã€‚
+ * è¢‹å­æœ€åˆåŒ…å«ï¼š
+ * numOnes ä»¶æ ‡è®°ä¸º 1 çš„ç‰©å“ã€‚
+ * numZeroes ä»¶æ ‡è®°ä¸º 0 çš„ç‰©å“ã€‚
+ * numNegOnes ä»¶æ ‡è®°ä¸º -1 çš„ç‰©å“ã€‚
+ * çŽ°è®¡åˆ’ä»Žè¿™äº›ç‰©å“ä¸­æ°å¥½é€‰å‡º k ä»¶ç‰©å“ã€‚è¿”å›žæ‰€æœ‰å¯è¡Œæ–¹æ¡ˆä¸­ï¼Œç‰©å“ä¸Šæ‰€æ ‡è®°æ•°å­—ä¹‹å’Œçš„æœ€å¤§å€¼ã€‚
  */
 public class Code_2600 {
 

@@ -31,14 +31,14 @@ public class SemaphoreTest {
             }
             Thread thread = new Thread(()->{
                 semaphore.acquireUninterruptibly();
-                System.out.println(Thread.currentThread().getName()+"得到资源");
+                System.out.println(Thread.currentThread().getName()+"寰楀埌璧勬簮");
                 semaphore.release();
             },"thread"+i);
             thread.start();
             map.put(i,thread);
         }
         Thread thread = map.get(2);
-        System.out.println("打断");
+        System.out.println("鎵撴柇");
         thread.interrupt();
 
     }
@@ -57,13 +57,13 @@ public class SemaphoreTest {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.println(Thread.currentThread().getName()+"得到资源");
+                System.out.println(Thread.currentThread().getName()+"寰楀埌璧勬簮");
             },"thread"+i);
             thread.start();
             map.put(i,thread);
         }
         Thread thread = map.get(2);
-        System.out.println("打断");
+        System.out.println("鎵撴柇");
         thread.interrupt();
 
     }
@@ -75,7 +75,7 @@ public class SemaphoreTest {
             new Thread(()->{
                 try {
                     semaphore.acquire();
-                    System.out.println(Thread.currentThread().getName()+"获取资源");
+                    System.out.println(Thread.currentThread().getName()+"鑾峰彇璧勬簮");
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

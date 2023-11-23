@@ -3,11 +3,11 @@ package org.clb.LeetCode.code1_10;
 import java.util.List;
 
 /**
- * ¸øÄãÁ½×éµã£¬ÆäÖÐµÚÒ»×éÖÐÓÐ size1 ¸öµã£¬µÚ¶þ×éÖÐÓÐ size2 ¸öµã£¬ÇÒ size1 >= size2 ¡£
- * ÈÎÒâÁ½µã¼äµÄÁ¬½Ó³É±¾ cost ÓÉ´óÐ¡Îª size1 x size2 ¾ØÕó¸ø³ö£¬ÆäÖÐ cost[i][j] ÊÇµÚÒ»×éÖÐµÄµã i
- * ºÍµÚ¶þ×éÖÐµÄµã j µÄÁ¬½Ó³É±¾¡£Èç¹ûÁ½¸ö×éÖÐµÄÃ¿¸öµã¶¼ÓëÁíÒ»×éÖÐµÄÒ»¸ö»ò¶à¸öµãÁ¬½Ó£¬Ôò³ÆÕâÁ½×éµãÊÇÁ¬Í¨µÄ¡£
- * »»ÑÔÖ®£¬µÚÒ»×éÖÐµÄÃ¿¸öµã±ØÐëÖÁÉÙÓëµÚ¶þ×éÖÐµÄÒ»¸öµãÁ¬½Ó£¬ÇÒµÚ¶þ×éÖÐµÄÃ¿¸öµã±ØÐëÖÁÉÙÓëµÚÒ»×éÖÐµÄÒ»¸öµãÁ¬½Ó¡£
- * ·µ»ØÁ¬Í¨Á½×éµãËùÐèµÄ×îÐ¡³É±¾¡£
+ * ç»™ä½ ä¸¤ç»„ç‚¹ï¼Œå…¶ä¸­ç¬¬ä¸€ç»„ä¸­æœ‰ size1 ä¸ªç‚¹ï¼Œç¬¬äºŒç»„ä¸­æœ‰ size2 ä¸ªç‚¹ï¼Œä¸” size1 >= size2 ã€‚
+ * ä»»æ„ä¸¤ç‚¹é—´çš„è¿žæŽ¥æˆæœ¬ cost ç”±å¤§å°ä¸º size1 x size2 çŸ©é˜µç»™å‡ºï¼Œå…¶ä¸­ cost[i][j] æ˜¯ç¬¬ä¸€ç»„ä¸­çš„ç‚¹ i
+ * å’Œç¬¬äºŒç»„ä¸­çš„ç‚¹ j çš„è¿žæŽ¥æˆæœ¬ã€‚å¦‚æžœä¸¤ä¸ªç»„ä¸­çš„æ¯ä¸ªç‚¹éƒ½ä¸Žå¦ä¸€ç»„ä¸­çš„ä¸€ä¸ªæˆ–å¤šä¸ªç‚¹è¿žæŽ¥ï¼Œåˆ™ç§°è¿™ä¸¤ç»„ç‚¹æ˜¯è¿žé€šçš„ã€‚
+ * æ¢è¨€ä¹‹ï¼Œç¬¬ä¸€ç»„ä¸­çš„æ¯ä¸ªç‚¹å¿…é¡»è‡³å°‘ä¸Žç¬¬äºŒç»„ä¸­çš„ä¸€ä¸ªç‚¹è¿žæŽ¥ï¼Œä¸”ç¬¬äºŒç»„ä¸­çš„æ¯ä¸ªç‚¹å¿…é¡»è‡³å°‘ä¸Žç¬¬ä¸€ç»„ä¸­çš„ä¸€ä¸ªç‚¹è¿žæŽ¥ã€‚
+ * è¿”å›žè¿žé€šä¸¤ç»„ç‚¹æ‰€éœ€çš„æœ€å°æˆæœ¬ã€‚
  */
 public class Code_1595 {
 
@@ -20,7 +20,7 @@ public class Code_1595 {
     /**
      *
      * @param cost
-     * @param size2 µÚ¶þ×é³¤¶È
+     * @param size2 ç¬¬äºŒç»„é•¿åº¦
      * @param size1
      * @param index
      * @return

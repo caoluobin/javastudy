@@ -8,7 +8,7 @@ public class DictDataTest {
     public static void main(String[] args) {
         System.out.println(String.format("13%04d",  1));
 //        System.out.println("123".substring(2,"123".length()));
-//        test("0-Ò»°ãÉçÔ±1-³ÉÔ±´ú±í2-ÀíÊÂ³¤3-ÀíÊÂ4-Ö´ĞĞ¼àÊÂ5-¼àÊÂ»á³ÉÔ±");
+//        test("0-ä¸€èˆ¬ç¤¾å‘˜1-æˆå‘˜ä»£è¡¨2-ç†äº‹é•¿3-ç†äº‹4-æ‰§è¡Œç›‘äº‹5-ç›‘äº‹ä¼šæˆå‘˜");
     }
     public static void test(String text){
         String[] split = text.split("-");

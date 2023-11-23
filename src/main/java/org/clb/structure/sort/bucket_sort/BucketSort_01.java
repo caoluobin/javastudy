@@ -12,7 +12,7 @@ public class BucketSort_01 extends Sort {
 
     /**
      * 
-     * @param arr ·Ç¸ºÕûĞÎÊı×é
+     * @param arr éè´Ÿæ•´å½¢æ•°ç»„
      */
     public static void sort(int[] arr){
         if (arr==null||arr.length<=1)return;
@@ -35,16 +35,16 @@ public class BucketSort_01 extends Sort {
     /**
      *
      * @param arr
-     * @param L ×óÏÂ±ê
-     * @param R ÓÒÏÂ±ê
-     * @param digit arrÊı×éÖĞ×î´óµÄÊıµÄÎ»Êı Èç103 Îª3 ¶ÔarrÊı×é½øĞĞdigit´ÎÅÅĞò
+     * @param L å·¦ä¸‹æ ‡
+     * @param R å³ä¸‹æ ‡
+     * @param digit arræ•°ç»„ä¸­æœ€å¤§çš„æ•°çš„ä½æ•° å¦‚103 ä¸º3 å¯¹arræ•°ç»„è¿›è¡Œdigitæ¬¡æ’åº
      */
     private static void bucketSort(int[] arr, int L, int R, int digit) {
         int[] help=new int[R-L+1];
-        for (int i = 0; i < digit; i++) {//·Ö±ğ¶Ô10^digitÎ»ÉÏµÄÊı½øĞĞÅÅĞò
-            int[] count=new int[10];//Ê®¸öÎ»ÖÃ·Ö±ğ¼ÇÂ¼0-9ÉÏÓĞ¶àÉÙ¸öÊı
+        for (int i = 0; i < digit; i++) {//åˆ†åˆ«å¯¹10^digitä½ä¸Šçš„æ•°è¿›è¡Œæ’åº
+            int[] count=new int[10];//åä¸ªä½ç½®åˆ†åˆ«è®°å½•0-9ä¸Šæœ‰å¤šå°‘ä¸ªæ•°
             for (int j =L; j < R+1; j++) {
-                int index=arr[j]/((int)Math.pow(10,i))%10;//È¡arrÊı×éÖĞ¸öÊ®°Ù..Î»ÊıÉÏµÄÖµ
+                int index=arr[j]/((int)Math.pow(10,i))%10;//å–arræ•°ç»„ä¸­ä¸ªåç™¾..ä½æ•°ä¸Šçš„å€¼
                 count[index]=count[index]+1;
             }
             for (int j = 1; j < count.length; j++) {

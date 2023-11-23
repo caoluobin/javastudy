@@ -6,7 +6,7 @@ public class Code_283 {
         if (nums.length==1) {
             return;
         }
-        //¼ÇÂ¼×îÇ°Ãæ0µÄÎ»ÖÃ
+        //è®°å½•æœ€å‰é¢0çš„ä½ç½®
         int index=-1;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i]==0) {

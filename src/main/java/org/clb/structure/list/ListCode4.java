@@ -5,7 +5,7 @@ import org.clb.pojo.list.Node;
 import org.clb.util.Asserts;
 
 /**
- * @Description ¸ø¶¨Ò»¸ö¿ÉÄÜÓĞ»·Ò²¿ÉÄÜÎŞ»·µÄ, ·µ»ØµÚÒ»¸ö»·½Úµã»òÕßnull
+ * @Description ç»™å®šä¸€ä¸ªå¯èƒ½æœ‰ç¯ä¹Ÿå¯èƒ½æ— ç¯çš„, è¿”å›ç¬¬ä¸€ä¸ªç¯èŠ‚ç‚¹æˆ–è€…null
  * @Classname ListCode04
  * @Date 2021/8/2 9:40
  * @Author clb
@@ -39,7 +39,7 @@ public class ListCode4 {
         node3.setNext(node4);
         node4.setNext(node5);
 //        node5.setNext(node2);
-        System.out.println(Asserts.objectNotNull2(getFirstLoopNode(node1))?getFirstLoopNode(node1).getName():"·Ç»·Á´±í");
+        System.out.println(Asserts.objectNotNull2(getFirstLoopNode(node1))?getFirstLoopNode(node1).getName():"éç¯é“¾è¡¨");
     }
 
 }

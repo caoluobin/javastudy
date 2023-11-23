@@ -5,7 +5,7 @@ import lombok.Data;
 import org.clb.pojo.list.BTreeNode;
 
 /**
- * @Description 给定一颗二叉树的头结点x, 获取左右子树都为搜索二叉树的子树的节点数
+ * @Description 缁欏畾涓�棰椾簩鍙夋爲鐨勫ご缁撶偣x, 鑾峰彇宸﹀彸瀛愭爲閮戒负鎼滅储浜屽弶鏍戠殑瀛愭爲鐨勮妭鐐规暟
  * @Classname BinaryTreeCode13_1
  * @Date 2021/11/21 13:34
  * @Author clb

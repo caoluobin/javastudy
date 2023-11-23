@@ -16,7 +16,7 @@ public class LinkedBlockingQueueTest {
             for (int i = 0; i < 1000; i++) {
                 try {
                     queue.put("cc"+i);
-                    System.out.println("放入cc"+i);
+                    System.out.println("鏀惧叆cc"+i);
                     TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
@@ -27,7 +27,7 @@ public class LinkedBlockingQueueTest {
             for (int i = 0; i < 1000; i++) {
                 try {
                     Object take = queue.take();
-                    System.out.println("取出"+take);
+                    System.out.println("鍙栧嚭"+take);
                     TimeUnit.SECONDS.sleep(2);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);

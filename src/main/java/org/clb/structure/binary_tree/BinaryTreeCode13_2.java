@@ -5,7 +5,7 @@ import lombok.Data;
 import org.clb.pojo.list.BTreeNode;
 
 /**
- * @Description ÊÇ·ñÊÇÆ½ºâ¶þ²æÊ÷
+ * @Description æ˜¯å¦æ˜¯å¹³è¡¡äºŒå‰æ ‘
  * @Classname BinaryTreeCode13_1
  * @Date 2021/11/21 13:34
  * @Author clb
@@ -21,9 +21,9 @@ public class BinaryTreeCode13_2 {
         process(head.right);
         boolean isBalance = true;
         int height = 0;
-        // ¼ÆËãµ±Ç°½ÚµãµÄ¸ß¶È
+        // è®¡ç®—å½“å‰èŠ‚ç‚¹çš„é«˜åº¦
         height = Math.max(process(head.left).getHeight(), process(head.right).getHeight());
-        // ÅÐ¶Ïµ±Ç°½ÚµãÊÇ·ñÊÇÆ½ºâ¶þ²æÊ÷
+        // åˆ¤æ–­å½“å‰èŠ‚ç‚¹æ˜¯å¦æ˜¯å¹³è¡¡äºŒå‰æ ‘
         if (!process(head.left).isBalanceTree
                 || !process(head.right).isBalanceTree
                 || Math.abs(process(head.left).getHeight() - process(head.right).getHeight()) > 1) {

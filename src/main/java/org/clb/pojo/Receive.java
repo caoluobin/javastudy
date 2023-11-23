@@ -9,7 +9,7 @@ package org.clb.pojo;
  */
 public class Receive {
     String title;
-    //Éê±¨ºÅ
+    //ç”³æŠ¥å·
     String pid;
     String createTime;
     String type;

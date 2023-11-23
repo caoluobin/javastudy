@@ -15,20 +15,20 @@ import java.util.List;
  */
 public class ClassUtils {
 
-    //¸øÒ»¸ö½Ó¿Ú£¬·µ»ØÕâ¸ö½Ó¿ÚµÄËùÓĞÊµÏÖÀà
+    //ç»™ä¸€ä¸ªæ¥å£ï¼Œè¿”å›è¿™ä¸ªæ¥å£çš„æ‰€æœ‰å®ç°ç±»
     public static List<Class> getAllClassByInterface(Class c) {
-        List<Class> returnClassList = new ArrayList<Class>(); //·µ»Ø½á¹û
+        List<Class> returnClassList = new ArrayList<Class>(); //è¿”å›ç»“æœ
 
-        //Èç¹û²»ÊÇÒ»¸ö½Ó¿Ú£¬Ôò²»×ö´¦Àí
+        //å¦‚æœä¸æ˜¯ä¸€ä¸ªæ¥å£ï¼Œåˆ™ä¸åšå¤„ç†
         if (c.isInterface()) {
-            String packageName = c.getPackage().getName(); //»ñµÃµ±Ç°µÄ°üÃû
+            String packageName = c.getPackage().getName(); //è·å¾—å½“å‰çš„åŒ…å
             try {
-                List<Class> allClass = getClasses(packageName); //»ñµÃµ±Ç°°üÏÂÒÔ¼°×Ó°üÏÂµÄËùÓĞÀà
+                List<Class> allClass = getClasses(packageName); //è·å¾—å½“å‰åŒ…ä¸‹ä»¥åŠå­åŒ…ä¸‹çš„æ‰€æœ‰ç±»
 
-                //ÅĞ¶ÏÊÇ·ñÊÇÍ¬Ò»¸ö½Ó¿Ú
+                //åˆ¤æ–­æ˜¯å¦æ˜¯åŒä¸€ä¸ªæ¥å£
                 for (int i = 0; i < allClass.size(); i++) {
-                    if (c.isAssignableFrom(allClass.get(i))) { //ÅĞ¶ÏÊÇ²»ÊÇÒ»¸ö½Ó¿Ú
-                        if (!c.equals(allClass.get(i))) { //±¾Éí²»¼Ó½øÈ¥
+                    if (c.isAssignableFrom(allClass.get(i))) { //åˆ¤æ–­æ˜¯ä¸æ˜¯ä¸€ä¸ªæ¥å£
+                        if (!c.equals(allClass.get(i))) { //æœ¬èº«ä¸åŠ è¿›å»
                             returnClassList.add(allClass.get(i));
                         }
                     }
@@ -42,7 +42,7 @@ public class ClassUtils {
         return returnClassList;
     }
 
-    //´ÓÒ»¸ö°üÖĞ²éÕÒ³öËùÓĞµÄÀà£¬ÔÚjar°üÖĞ²»ÄÜ²éÕÒ
+    //ä»ä¸€ä¸ªåŒ…ä¸­æŸ¥æ‰¾å‡ºæ‰€æœ‰çš„ç±»ï¼Œåœ¨jaråŒ…ä¸­ä¸èƒ½æŸ¥æ‰¾
     private static List<Class> getClasses(String packageName)
         throws ClassNotFoundException, IOException {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();

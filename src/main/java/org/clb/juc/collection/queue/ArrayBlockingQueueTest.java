@@ -6,8 +6,8 @@ import org.apache.ibatis.reflection.SystemMetaObject;
 import java.util.concurrent.ArrayBlockingQueue;
 
 /**
- * add ²»×èÈûÂúÁËÅ×´í  offer ²»×èÈû»ò¸ù¾İÊ±¼ä×èÈû·µ»Ø²¼¶ûÖµ  put ×èÈû
- *                  poll  ²»×èÈû»ò¸ù¾İÊ±¼ä×èÈû·µ»Ø²¼¶ûÖµ  take ×èÈû   peek Ö±½Ó·µ»ØÍ·½Úµã²»³ö¶ÓÁĞ
+ * add ä¸é˜»å¡æ»¡äº†æŠ›é”™  offer ä¸é˜»å¡æˆ–æ ¹æ®æ—¶é—´é˜»å¡è¿”å›å¸ƒå°”å€¼  put é˜»å¡
+ *                  poll  ä¸é˜»å¡æˆ–æ ¹æ®æ—¶é—´é˜»å¡è¿”å›å¸ƒå°”å€¼  take é˜»å¡   peek ç›´æ¥è¿”å›å¤´èŠ‚ç‚¹ä¸å‡ºé˜Ÿåˆ—
  */
 public class ArrayBlockingQueueTest {
 

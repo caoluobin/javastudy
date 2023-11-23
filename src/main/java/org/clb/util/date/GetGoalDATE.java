@@ -9,7 +9,7 @@ import java.util.List;
 import org.clb.util.stringsplitter.SplitterUtil;
 
 /**
- * @Description ÈÕÆÚ²Ù×÷Àà
+ * @Description æ—¥æœŸæ“ä½œç±»
  * @Classname GetGoalDATE
  * @Date 2021/5/10 14:56
  * @Author clb
@@ -22,16 +22,16 @@ public class GetGoalDATE {
         cal.set(Integer.parseInt(list.get(0)), Integer.parseInt(list.get(1)) - 1,
             Integer.parseInt(list.get(2)));
         Date time = cal.getTime();
-        //System.out.println("µ±Ç°Ö¸¶¨ÈÕÆÚÊÇ£º"+new SimpleDateFormat("yyyy-MM-dd").format(time));
+        //System.out.println("å½“å‰æŒ‡å®šæ—¥æœŸæ˜¯ï¼š"+new SimpleDateFormat("yyyy-MM-dd").format(time));
         cal.add(Calendar.DAY_OF_MONTH, a);
         cal.getTime();
-        //System.out.println("Ç°Á½ÌìµÄÈÕÆÚÊÇ "+new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime()));
+        //System.out.println("å‰ä¸¤å¤©çš„æ—¥æœŸæ˜¯ "+new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime()));
         return new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime());
     }
 
 
     /**
-     * ²é¿´ÊÇ·ñÊÇ×îºóÒ»Ìì
+     * æŸ¥çœ‹æ˜¯å¦æ˜¯æœ€åä¸€å¤©
      *
      * @param a
      * @return
@@ -46,7 +46,7 @@ public class GetGoalDATE {
 
     /**
      * @param date
-     * @param a    ÍùÇ°¼¸¸öÔÂ
+     * @param a    å¾€å‰å‡ ä¸ªæœˆ
      * @return
      */
     public static String getGoalMontLastDay(String date, int a) {
@@ -86,13 +86,13 @@ public class GetGoalDATE {
         }
     }
     /**
-     * »ñÈ¡ÏÂÔÂÒ»ºÅ
+     * è·å–ä¸‹æœˆä¸€å·
      * @param cal
      */
     public static String getNextMonthFirstDay(Calendar cal){
         System.out.println(getDateStringByCal(cal));
         cal.add(Calendar.MONTH,1);
-        //½«¿ªÊ¼ÈÕÆÚÉèÖÃÎªÏÂÖÜµÄÖÜÒ»
+        //å°†å¼€å§‹æ—¥æœŸè®¾ç½®ä¸ºä¸‹å‘¨çš„å‘¨ä¸€
         cal.add(Calendar.DAY_OF_YEAR,-(cal.get(Calendar.DAY_OF_MONTH)-1));
         System.out.println(getDateStringByCal(cal));
         return getDateStringByCal(cal);
@@ -100,15 +100,15 @@ public class GetGoalDATE {
     public static String getNextQuarterFirstDay(Calendar cal){
         int month = cal.get(Calendar.MONTH);
         int count = 3-month%3;
-        //½«¿ªÊ¼ÈÕÆÚÔö¼ÓÈıÔÂ
+        //å°†å¼€å§‹æ—¥æœŸå¢åŠ ä¸‰æœˆ
         cal.add(Calendar.MONTH,count);
-        //½«¿ªÊ¼ÈÕÆÚÉèÖÃÎªÏÂÔÂµÄÒ»ºÅ
+        //å°†å¼€å§‹æ—¥æœŸè®¾ç½®ä¸ºä¸‹æœˆçš„ä¸€å·
         cal.add(Calendar.DAY_OF_YEAR,-(cal.get(Calendar.DAY_OF_MONTH)-1));
         System.out.println(getDateStringByCal(cal));
         return getDateStringByCal(cal);
     }
     /**
-     * »ñÈ¡ÏÂÖÜÖÜÒ»
+     * è·å–ä¸‹å‘¨å‘¨ä¸€
      * @param cal
      */
     public static String getNextWeekMonDay(Calendar cal){
@@ -133,10 +133,10 @@ public class GetGoalDATE {
         cal.set(Integer.parseInt(list.get(0)), Integer.parseInt(list.get(1)) - 1,
             Integer.parseInt(list.get(2)));
         Date time = cal.getTime();
-        //System.out.println("µ±Ç°Ö¸¶¨ÈÕÆÚÊÇ£º"+new SimpleDateFormat("yyyy-MM-dd").format(time));
+        //System.out.println("å½“å‰æŒ‡å®šæ—¥æœŸæ˜¯ï¼š"+new SimpleDateFormat("yyyy-MM-dd").format(time));
         cal.add(Calendar.DAY_OF_MONTH, a);
         cal.getTime();
-        //System.out.println("Ç°Á½ÌìµÄÈÕÆÚÊÇ "+new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime()));
+        //System.out.println("å‰ä¸¤å¤©çš„æ—¥æœŸæ˜¯ "+new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime()));
         return new SimpleDateFormat("yyyyMMdd").format(cal.getTime());
     }
 

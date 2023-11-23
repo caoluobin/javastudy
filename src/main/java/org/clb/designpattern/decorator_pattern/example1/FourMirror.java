@@ -10,6 +10,6 @@ public class FourMirror extends Mirror{
 
     @Override
     public void aim() {
-        System.out.println(this.getMirrorName()+"进入瞄准模式");
+        System.out.println(this.getMirrorName()+"杩涘叆鐬勫噯妯″紡");
     }
 }

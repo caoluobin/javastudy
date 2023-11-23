@@ -31,10 +31,10 @@ public class ProTest {
         int len = word.length();
         String tmp = "";
         String head = word.substring(0, 1);
-        ;//ÏÔÊ¾µÚÒ»Î»
-        String foot = word.substring(len - 1, len);//ÏÔÊ¾×îºóÒ»Î»
-        String body = "";//ÖĞ¼ä²¿·Ö
-        String bodySt = "";//ĞÇºÅ²¿·Ö
+        ;//æ˜¾ç¤ºç¬¬ä¸€ä½
+        String foot = word.substring(len - 1, len);//æ˜¾ç¤ºæœ€åä¸€ä½
+        String body = "";//ä¸­é—´éƒ¨åˆ†
+        String bodySt = "";//æ˜Ÿå·éƒ¨åˆ†
 
 
         if (len == 1) {
@@ -47,10 +47,10 @@ public class ProTest {
             }
             tmp = head + bodySt + foot;
         } else if (len == 15) {
-            body = word.substring(1, 12);//µİ10Î»Êı
+            body = word.substring(1, 12);//é€’10ä½æ•°
             tmp = head + body + "***" + foot;
         } else if (len == 18) {
-            //            body = "*************";//µİ12Î»Êı
+            //            body = "*************";//é€’12ä½æ•°
             //            String a = ;
             tmp = head + "***" + word.substring(4, 12) + "*****" + foot;
         } else {

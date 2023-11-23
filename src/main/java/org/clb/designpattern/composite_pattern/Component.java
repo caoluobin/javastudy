@@ -3,7 +3,7 @@ package org.clb.designpattern.composite_pattern;
 import org.clb.designpattern.decorator_pattern.Student;
 
 /**
- * @Description 组合模式接口
+ * @Description 缁勫悎妯″紡鎺ュ彛
  * @Classname component
  * @Date 2021/5/21 16:31
  * @Author clb

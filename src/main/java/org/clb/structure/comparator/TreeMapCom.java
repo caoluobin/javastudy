@@ -11,13 +11,13 @@ import java.util.TreeMap;
 public class TreeMapCom {
 
     public static void main(String[] args) {
-        //传入自己创建的比较器以后 如果放入对于比较器而言相等的数据就不会插入
+        //浼犲叆鑷繁鍒涘缓鐨勬瘮杈冨櫒浠ュ悗 濡傛灉鏀惧叆瀵逛簬姣旇緝鍣ㄨ�岃█鐩哥瓑鐨勬暟鎹氨涓嶄細鎻掑叆
         TreeMap<Student,String> map=new TreeMap<>(new StudengCom());
-        map.put(new Student(1,2),"学生1");
-        map.put(new Student(2,20),"学生1");
-        map.put(new Student(3,12),"学生1");
-        map.put(new Student(4,33),"学生1");
-        map.put(new Student(5,20),"学生1");
+        map.put(new Student(1,2),"瀛︾敓1");
+        map.put(new Student(2,20),"瀛︾敓1");
+        map.put(new Student(3,12),"瀛︾敓1");
+        map.put(new Student(4,33),"瀛︾敓1");
+        map.put(new Student(5,20),"瀛︾敓1");
         for (Student s:map.keySet()) {
             System.out.println(s);
         }

@@ -5,19 +5,19 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 /**
- * @Description ¼ÓÇ¿¶Ñ£¬¶Ô¶ÑÊı×é¼ÓÈë·´ÏòË÷Òı£¬Ê¹µÃ¿ÉÒÔÍ¨¹ıÖµÕÒµ½ÏÂ±êµÄÎ»ÖÃ
- * T²»ÄÜÊÇ»ù´¡ÀàĞÍ
+ * @Description åŠ å¼ºå †ï¼Œå¯¹å †æ•°ç»„åŠ å…¥åå‘ç´¢å¼•ï¼Œä½¿å¾—å¯ä»¥é€šè¿‡å€¼æ‰¾åˆ°ä¸‹æ ‡çš„ä½ç½®
+ * Tä¸èƒ½æ˜¯åŸºç¡€ç±»å‹
  * @Classname HeapGreater
  * @Date 2021/5/23 21:41
  * @Author clb
  */
 
 public class HeapGreater<T> {
-    //¶¨ÒåÄÚ²¿Àà ±ÜÃâµ±TÊÇ»ù´¡ÀàĞÍÊ±ÔÚHashMapÖĞ±»¸²¸Ç£¬Ê¹µÃÃ¿¸öÖµ¶¼ÓĞ¶ÀÒ»ÎŞ¶şµÄÄÚ´æÖµ
+    //å®šä¹‰å†…éƒ¨ç±» é¿å…å½“Tæ˜¯åŸºç¡€ç±»å‹æ—¶åœ¨HashMapä¸­è¢«è¦†ç›–ï¼Œä½¿å¾—æ¯ä¸ªå€¼éƒ½æœ‰ç‹¬ä¸€æ— äºŒçš„å†…å­˜å€¼
     private ArrayList<T> heap;
-    //·´ÏòË÷Òı±í ¼ÇÂ¼ÁË¶ÔÓ¦¶ÔÏóµÄÏÂ±ê
+    //åå‘ç´¢å¼•è¡¨ è®°å½•äº†å¯¹åº”å¯¹è±¡çš„ä¸‹æ ‡
     private HashMap<T,Integer> indexMap;
-    //¶Ñ´óĞ¡
+    //å †å¤§å°
     private int heapSize;
     private Comparator<? super T> comp;
 
@@ -46,7 +46,7 @@ public class HeapGreater<T> {
     }
     public T pop(){
         T ans= heap.get(0);
-        swap(0,heapSize-1);//Í·Î²½Úµã½»»»Î»ÖÃ
+        swap(0,heapSize-1);//å¤´å°¾èŠ‚ç‚¹äº¤æ¢ä½ç½®
         indexMap.remove(--heapSize);
         heapify(0);
         return ans;
@@ -57,10 +57,10 @@ public class HeapGreater<T> {
             index=(index-1)/2;
         }
     }
-    //¶Ôobj½øĞĞÖØÅÅĞò
+    //å¯¹objè¿›è¡Œé‡æ’åº
     private void resign(T obj){
-        heapInsert(indexMap.get(obj));//ÏòÉÏ±È½ÏÅÅĞò
-        heapify(indexMap.get(obj));//ÏòÏÂ±È½ÏÅÅĞò
+        heapInsert(indexMap.get(obj));//å‘ä¸Šæ¯”è¾ƒæ’åº
+        heapify(indexMap.get(obj));//å‘ä¸‹æ¯”è¾ƒæ’åº
     }
 
     private void heapify(int index) {

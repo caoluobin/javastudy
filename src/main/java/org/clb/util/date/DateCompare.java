@@ -14,7 +14,7 @@ import java.util.Date;
 public class DateCompare {
     /**
      *
-     * @param workTime ÉÏ°àÊ±¼ä
+     * @param workTime ä¸Šç­æ—¶é—´
      * @return
      */
     public static boolean compare(String workTime,String quitTime) throws ParseException {

@@ -1,7 +1,7 @@
 package org.clb.LeetCode.code1_10;
 
 /**
- * 是否回文链表
+ * 鏄惁鍥炴枃閾捐〃
  */
 public class Code_234 {
     public static void main(String[] args) {

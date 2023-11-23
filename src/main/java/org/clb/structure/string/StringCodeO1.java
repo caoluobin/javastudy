@@ -3,7 +3,7 @@ package org.clb.structure.string;
 import java.util.HashMap;
 
 /**
- * @Description ¸ø¶¨Ò»¸ö×Ö·û´®£¬ÇëÄãÕÒ³öÆäÖĞ²»º¬ÓĞÖØ¸´×Ö·ûµÄ ×î³¤×Ó´® µÄ³¤¶È¡£
+ * @Description ç»™å®šä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œè¯·ä½ æ‰¾å‡ºå…¶ä¸­ä¸å«æœ‰é‡å¤å­—ç¬¦çš„ æœ€é•¿å­ä¸² çš„é•¿åº¦ã€‚
  * @Classname StringCodeO1
  * @Date 2021/5/18 8:52
  * @Author clb
@@ -36,17 +36,17 @@ public class StringCodeO1 {
     abbcdefbcs
      */
     public static int lengthOfLongestSubstring(String s) {
-        // ¼ÇÂ¼×Ö·ûÉÏÒ»´Î³öÏÖµÄÎ»ÖÃ
+        // è®°å½•å­—ç¬¦ä¸Šä¸€æ¬¡å‡ºç°çš„ä½ç½®
         int[] last = new int[128];
         for (int i = 0; i < 128; i++) {
             last[i] = -1;
         }
         int n = s.length();
 
-        int res = 0; //¼ÇÂ¼×î´óÖµ
-        int start = 0; // ´°¿Ú¿ªÊ¼Î»ÖÃ
+        int res = 0; //è®°å½•æœ€å¤§å€¼
+        int start = 0; // çª—å£å¼€å§‹ä½ç½®
         for (int i = 0; i < n; i++) {
-            int index = s.charAt(i);//ÒÔASCIIÖµ´æ´¢
+            int index = s.charAt(i);//ä»¥ASCIIå€¼å­˜å‚¨
             start = Math.max(start, last[index] + 1);
             res = Math.max(res, i - start + 1);
             last[index] = i;

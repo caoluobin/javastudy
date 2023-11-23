@@ -20,13 +20,13 @@ public class FileUtils {
         ZipOutputStream zipOutputStream = new ZipOutputStream(new FileOutputStream(compresspath+".zip"));
         File file = new File(compresspath);
         compressZip(zipOutputStream, file, "");
-        //必须关闭,否则压缩后的zip包有问题,不能解压
+        //蹇呴』鍏抽棴,鍚﹀垯鍘嬬缉鍚庣殑zip鍖呮湁闂,涓嶈兘瑙ｅ帇
         zipOutputStream.closeEntry();
         zipOutputStream.close();
     }
 
     private static void compressZip(ZipOutputStream zipOutput, File file, String suffixpath) {
-        File[] listFiles = file.listFiles();// 列出所有的文件
+        File[] listFiles = file.listFiles();// 鍒楀嚭鎵�鏈夌殑鏂囦欢
         for(File fi : listFiles){
             if(fi.isDirectory()){
                 if(suffixpath.equals("")){
@@ -53,14 +53,14 @@ public class FileUtils {
             }else{
                 zEntry = new ZipEntry(suffixpath + File.separator + file.getName());
             }
-            //核心代码
+            //鏍稿績浠ｇ爜
             zipOutput.putNextEntry(zEntry);
-            //将给定文件写入到压缩包中
+            //灏嗙粰瀹氭枃浠跺啓鍏ュ埌鍘嬬缉鍖呬腑
             BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
             byte[] buffer = new byte[1024];
             int read = 0;
             while((read = bis.read(buffer)) != -1){
-                //会自动压缩流数据
+                //浼氳嚜鍔ㄥ帇缂╂祦鏁版嵁
                 zipOutput.write(buffer, 0, read);
             }
             bis.close();
@@ -76,15 +76,15 @@ public class FileUtils {
             }else{
                 zEntry = new ZipEntry(suffixpath + File.separator + fileName);
             }
-            //核心代码
+            //鏍稿績浠ｇ爜
             zipOutput.putNextEntry(zEntry);
-            //将给定文件写入到压缩包中
+            //灏嗙粰瀹氭枃浠跺啓鍏ュ埌鍘嬬缉鍖呬腑
             InputStream inputStream = new ByteArrayInputStream(fileBytes);
             BufferedInputStream bis = new BufferedInputStream(inputStream);
             byte[] buffer = new byte[1024];
             int read = 0;
             while((read = bis.read(buffer)) != -1){
-                //会自动压缩流数据
+                //浼氳嚜鍔ㄥ帇缂╂祦鏁版嵁
                 zipOutput.write(buffer, 0, read);
             }
             bis.close();

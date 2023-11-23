@@ -5,15 +5,15 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 /**
- * @Description ¼ÓÇ¿¶Ñ£¬¶Ô¶ÑÊı×é¼ÓÈë·´ÏòË÷Òı£¬Ê¹µÃ¿ÉÒÔÍ¨¹ıÖµÕÒµ½ÏÂ±êµÄÎ»ÖÃ
- * Õë¶Ô»ù´¡ÀàĞÍ½øĞĞ°üÒ»²ã
+ * @Description åŠ å¼ºå †ï¼Œå¯¹å †æ•°ç»„åŠ å…¥åå‘ç´¢å¼•ï¼Œä½¿å¾—å¯ä»¥é€šè¿‡å€¼æ‰¾åˆ°ä¸‹æ ‡çš„ä½ç½®
+ * é’ˆå¯¹åŸºç¡€ç±»å‹è¿›è¡ŒåŒ…ä¸€å±‚
  * @Classname HeapGreater
  * @Date 2021/5/23 21:41
  * @Author clb
  */
 
 public class HeapGreater2<T> {
-    //¶¨ÒåÄÚ²¿Àà ±ÜÃâµ±TÊÇ»ù´¡ÀàĞÍÊ±ÔÚHashMapÖĞ±»¸²¸Ç£¬Ê¹µÃÃ¿¸öÖµ¶¼ÓĞ¶ÀÒ»ÎŞ¶şµÄÄÚ´æÖµ
+    //å®šä¹‰å†…éƒ¨ç±» é¿å…å½“Tæ˜¯åŸºç¡€ç±»å‹æ—¶åœ¨HashMapä¸­è¢«è¦†ç›–ï¼Œä½¿å¾—æ¯ä¸ªå€¼éƒ½æœ‰ç‹¬ä¸€æ— äºŒçš„å†…å­˜å€¼
     class Inner<T>{
         public T value;
 
@@ -22,9 +22,9 @@ public class HeapGreater2<T> {
         }
     }
     private ArrayList<Inner<T>> heap;
-    //·´ÏòË÷Òı±í ¼ÇÂ¼ÁË¶ÔÓ¦¶ÔÏóµÄÏÂ±ê
+    //åå‘ç´¢å¼•è¡¨ è®°å½•äº†å¯¹åº”å¯¹è±¡çš„ä¸‹æ ‡
     private HashMap<Inner<T>,Integer> indexMap;
-    //¶Ñ´óĞ¡
+    //å †å¤§å°
     private int heapSize;
     private Comparator<? super Inner<T>> comp;
 

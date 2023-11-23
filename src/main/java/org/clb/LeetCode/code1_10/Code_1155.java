@@ -3,9 +3,9 @@ package org.clb.LeetCode.code1_10;
 import java.util.Arrays;
 
 /**
- * ÕâÀïÓĞ n ¸öÒ»ÑùµÄ÷»×Ó£¬Ã¿¸ö÷»×ÓÉÏ¶¼ÓĞ k ¸öÃæ£¬·Ö±ğ±êºÅÎª 1 µ½ k ¡£
- * ¸ø¶¨Èı¸öÕûÊı n ,  k ºÍ target £¬·µ»Ø¿ÉÄÜµÄ·½Ê½(´Ó×Ü¹² kn ÖÖ·½Ê½ÖĞ)¹ö¶¯÷»×ÓµÄÊıÁ¿£¬Ê¹ÕıÃæ³¯ÉÏµÄÊı×ÖÖ®ºÍµÈÓÚ target ¡£
- * ´ğ°¸¿ÉÄÜºÜ´ó£¬ÄãĞèÒª¶Ô 109 + 7 È¡Ä£ ¡£
+ * è¿™é‡Œæœ‰ n ä¸ªä¸€æ ·çš„éª°å­ï¼Œæ¯ä¸ªéª°å­ä¸Šéƒ½æœ‰ k ä¸ªé¢ï¼Œåˆ†åˆ«æ ‡å·ä¸º 1 åˆ° k ã€‚
+ * ç»™å®šä¸‰ä¸ªæ•´æ•° n ,  k å’Œ target ï¼Œè¿”å›å¯èƒ½çš„æ–¹å¼(ä»æ€»å…± kn ç§æ–¹å¼ä¸­)æ»šåŠ¨éª°å­çš„æ•°é‡ï¼Œä½¿æ­£é¢æœä¸Šçš„æ•°å­—ä¹‹å’Œç­‰äº target ã€‚
+ * ç­”æ¡ˆå¯èƒ½å¾ˆå¤§ï¼Œä½ éœ€è¦å¯¹ 109 + 7 å–æ¨¡ ã€‚
  */
 public class Code_1155 {
 
@@ -16,11 +16,11 @@ public class Code_1155 {
 
     public int numRollsToTarget(int n, int k, int target) {
         if (target < n || target > n * k) {
-            return 0; // ÎŞ·¨×é³É target
+            return 0; // æ— æ³•ç»„æˆ target
         }
         int[][] memo = new int[n + 1][target - n + 1];
         for (int[] m : memo) {
-            Arrays.fill(m, -1); // -1 ±íÊ¾Ã»ÓĞ¼ÆËã¹ı
+            Arrays.fill(m, -1); // -1 è¡¨ç¤ºæ²¡æœ‰è®¡ç®—è¿‡
         }
         return dfs(n, target - n, memo, k);
     }
@@ -29,14 +29,14 @@ public class Code_1155 {
         if (i == 0) {
             return j == 0 ? 1 : 0;
         }
-        if (memo[i][j] != -1) { // Ö®Ç°¼ÆËã¹ı
+        if (memo[i][j] != -1) { // ä¹‹å‰è®¡ç®—è¿‡
             return memo[i][j];
         }
         int res = 0;
-        for (int x = 0; x < k && x <= j; x++) { // ÖÀ³öÁË x
+        for (int x = 0; x < k && x <= j; x++) { // æ·å‡ºäº† x
             res = (res + dfs(i - 1, j - x, memo, k)) % MOD;
         }
-        return memo[i][j] = res; // ¼ÇÒä»¯
+        return memo[i][j] = res; // è®°å¿†åŒ–
     }
 
 

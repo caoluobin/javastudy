@@ -1,9 +1,9 @@
 package org.clb.LeetCode.code1_10;
 
 /**
- * ����һ�� n x n �� ���� �������� matrix �������ҳ�������ͨ�� matrix ���½�·�� �� ��С�� ��
- * �½�·�� ���Դӵ�һ���е��κ�Ԫ�ؿ�ʼ������ÿһ����ѡ��һ��Ԫ�ء�����һ��ѡ���Ԫ�غ͵�ǰ����ѡԪ��������һ�У���λ�����·������ضԽ�������������ҵĵ�һ��Ԫ�أ���
- * ������˵��λ�� (row, col) ����һ��Ԫ��Ӧ���� (row + 1, col - 1)��(row + 1, col) ���� (row + 1, col + 1) ��
+ * 给你一个 n x n 的 方形 整数数组 matrix ，请你找出并返回通过 matrix 的下降路径 的 最小和 。
+ * 下降路径 可以从第一行中的任何元素开始，并从每一行中选择一个元素。在下一行选择的元素和当前行所选元素最多相隔一列（即位于正下方或者沿对角线向左或者向右的第一个元素）。
+ * 具体来说，位置 (row, col) 的下一个元素应当是 (row + 1, col - 1)、(row + 1, col) 或者 (row + 1, col + 1) 。
  */
 public class Code_931 {
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Code_931 {
     }
 
     /**
-     * ���شӵ�i�е�j�п�ʼ����С·����
+     * 返回从第i行第j列开始的最小路径和
      */
     public int minFallingPathSum(int[][] matrix,Integer[][] dfs,int i,int j) {
         if (dfs[i][j]!=null) return dfs[i][j];

@@ -3,21 +3,21 @@ package org.clb.LeetCode.code1_10;
 import java.util.*;
 
 /**
- * ¹²ÓĞ k Î»¹¤ÈË¼Æ»®½« n ¸öÏä×Ó´Ó¾É²Ö¿âÒÆ¶¯µ½ĞÂ²Ö¿â¡£¸øÄãÁ½¸öÕûÊı n ºÍ k£¬ÒÔ¼°Ò»¸ö¶şÎ¬ÕûÊıÊı×é time £¬Êı×éµÄ´óĞ¡Îª k x 4 £¬
- * ÆäÖĞ time[i] = [leftToRighti, pickOldi, rightToLefti, putNewi] ¡£
- * Ò»ÌõºÓ½«Á½×ù²Ö¿â·Ö¸ô£¬Ö»ÄÜÍ¨¹ıÒ»×ùÇÅÍ¨ĞĞ¡£¾É²Ö¿âÎ»ÓÚºÓµÄÓÒ°¶£¬ĞÂ²Ö¿âÔÚºÓµÄ×ó°¶¡£¿ªÊ¼Ê±£¬ËùÓĞ k Î»¹¤ÈË¶¼ÔÚÇÅµÄ×ó²àµÈ´ı¡£ÎªÁËÒÆ¶¯ÕâĞ©Ïä×Ó£¬µÚ i Î»¹¤ÈË£¨ÏÂ±ê´Ó 0 ¿ªÊ¼£©¿ÉÒÔ£º
- * ´Ó×ó°¶£¨ĞÂ²Ö¿â£©¿ç¹ıÇÅµ½ÓÒ°¶£¨¾É²Ö¿â£©£¬ÓÃÊ± leftToRighti ·ÖÖÓ¡£
- * ´Ó¾É²Ö¿âÑ¡ÔñÒ»¸öÏä×Ó£¬²¢·µ»Øµ½ÇÅ±ß£¬ÓÃÊ± pickOldi ·ÖÖÓ¡£²»Í¬¹¤ÈË¿ÉÒÔÍ¬Ê±°áÆğËùÑ¡µÄÏä×Ó¡£
- * ´ÓÓÒ°¶£¨¾É²Ö¿â£©¿ç¹ıÇÅµ½×ó°¶£¨ĞÂ²Ö¿â£©£¬ÓÃÊ± rightToLefti ·ÖÖÓ¡£
- * ½«Ïä×Ó·ÅÈëĞÂ²Ö¿â£¬²¢·µ»Øµ½ÇÅ±ß£¬ÓÃÊ± putNewi ·ÖÖÓ¡£²»Í¬¹¤ÈË¿ÉÒÔÍ¬Ê±·ÅÏÂËùÑ¡µÄÏä×Ó¡£
- * Èç¹ûÂú×ãÏÂÃæÈÎÒ»Ìõ¼ş£¬ÔòÈÏÎª¹¤ÈË i µÄ Ğ§ÂÊµÍÓÚ ¹¤ÈË j £º
+ * å…±æœ‰ k ä½å·¥äººè®¡åˆ’å°† n ä¸ªç®±å­ä»æ—§ä»“åº“ç§»åŠ¨åˆ°æ–°ä»“åº“ã€‚ç»™ä½ ä¸¤ä¸ªæ•´æ•° n å’Œ kï¼Œä»¥åŠä¸€ä¸ªäºŒç»´æ•´æ•°æ•°ç»„ time ï¼Œæ•°ç»„çš„å¤§å°ä¸º k x 4 ï¼Œ
+ * å…¶ä¸­ time[i] = [leftToRighti, pickOldi, rightToLefti, putNewi] ã€‚
+ * ä¸€æ¡æ²³å°†ä¸¤åº§ä»“åº“åˆ†éš”ï¼Œåªèƒ½é€šè¿‡ä¸€åº§æ¡¥é€šè¡Œã€‚æ—§ä»“åº“ä½äºæ²³çš„å³å²¸ï¼Œæ–°ä»“åº“åœ¨æ²³çš„å·¦å²¸ã€‚å¼€å§‹æ—¶ï¼Œæ‰€æœ‰ k ä½å·¥äººéƒ½åœ¨æ¡¥çš„å·¦ä¾§ç­‰å¾…ã€‚ä¸ºäº†ç§»åŠ¨è¿™äº›ç®±å­ï¼Œç¬¬ i ä½å·¥äººï¼ˆä¸‹æ ‡ä» 0 å¼€å§‹ï¼‰å¯ä»¥ï¼š
+ * ä»å·¦å²¸ï¼ˆæ–°ä»“åº“ï¼‰è·¨è¿‡æ¡¥åˆ°å³å²¸ï¼ˆæ—§ä»“åº“ï¼‰ï¼Œç”¨æ—¶ leftToRighti åˆ†é’Ÿã€‚
+ * ä»æ—§ä»“åº“é€‰æ‹©ä¸€ä¸ªç®±å­ï¼Œå¹¶è¿”å›åˆ°æ¡¥è¾¹ï¼Œç”¨æ—¶ pickOldi åˆ†é’Ÿã€‚ä¸åŒå·¥äººå¯ä»¥åŒæ—¶æ¬èµ·æ‰€é€‰çš„ç®±å­ã€‚
+ * ä»å³å²¸ï¼ˆæ—§ä»“åº“ï¼‰è·¨è¿‡æ¡¥åˆ°å·¦å²¸ï¼ˆæ–°ä»“åº“ï¼‰ï¼Œç”¨æ—¶ rightToLefti åˆ†é’Ÿã€‚
+ * å°†ç®±å­æ”¾å…¥æ–°ä»“åº“ï¼Œå¹¶è¿”å›åˆ°æ¡¥è¾¹ï¼Œç”¨æ—¶ putNewi åˆ†é’Ÿã€‚ä¸åŒå·¥äººå¯ä»¥åŒæ—¶æ”¾ä¸‹æ‰€é€‰çš„ç®±å­ã€‚
+ * å¦‚æœæ»¡è¶³ä¸‹é¢ä»»ä¸€æ¡ä»¶ï¼Œåˆ™è®¤ä¸ºå·¥äºº i çš„ æ•ˆç‡ä½äº å·¥äºº j ï¼š
  * leftToRighti + rightToLefti > leftToRightj + rightToLeftj
- * leftToRighti + rightToLefti == leftToRightj + rightToLeftj ÇÒ i > j
- * ¹¤ÈËÍ¨¹ıÇÅÊ±ĞèÒª×ñÑ­ÒÔÏÂ¹æÔò£º
- * Èç¹û¹¤ÈË x µ½´ïÇÅ±ßÊ±£¬¹¤ÈË y ÕıÔÚ¹ıÇÅ£¬ÄÇÃ´¹¤ÈË x ĞèÒªÔÚÇÅ±ßµÈ´ı¡£
- * Èç¹ûÃ»ÓĞÕıÔÚ¹ıÇÅµÄ¹¤ÈË£¬ÄÇÃ´ÔÚÇÅÓÒ±ßµÈ´ıµÄ¹¤ÈË¿ÉÒÔÏÈ¹ıÇÅ¡£Èç¹ûÍ¬Ê±ÓĞ¶à¸ö¹¤ÈËÔÚÓÒ±ßµÈ´ı£¬ÄÇÃ´ Ğ§ÂÊ×îµÍ µÄ¹¤ÈË»áÏÈ¹ıÇÅ¡£
- * Èç¹ûÃ»ÓĞÕıÔÚ¹ıÇÅµÄ¹¤ÈË£¬ÇÒÇÅÓÒ±ßÒ²Ã»ÓĞÔÚµÈ´ıµÄ¹¤ÈË£¬Í¬Ê±¾É²Ö¿â»¹Ê£ÏÂÖÁÉÙÒ»¸öÏä×ÓĞèÒª°áÔË£¬´ËÊ±ÔÚÇÅ×ó±ßµÄ¹¤ÈË¿ÉÒÔ¹ıÇÅ¡£Èç¹ûÍ¬Ê±ÓĞ¶à¸ö¹¤ÈËÔÚ×ó±ßµÈ´ı£¬ÄÇÃ´ Ğ§ÂÊ×îµÍ µÄ¹¤ÈË»áÏÈ¹ıÇÅ¡£
- * ËùÓĞ n ¸öºĞ×Ó¶¼ĞèÒª·ÅÈëĞÂ²Ö¿â£¬ÇëÄã·µ»Ø×îºóÒ»¸ö°áÔËÏä×ÓµÄ¹¤ÈË µ½´ïºÓ×ó°¶ µÄÊ±¼ä¡£
+ * leftToRighti + rightToLefti == leftToRightj + rightToLeftj ä¸” i > j
+ * å·¥äººé€šè¿‡æ¡¥æ—¶éœ€è¦éµå¾ªä»¥ä¸‹è§„åˆ™ï¼š
+ * å¦‚æœå·¥äºº x åˆ°è¾¾æ¡¥è¾¹æ—¶ï¼Œå·¥äºº y æ­£åœ¨è¿‡æ¡¥ï¼Œé‚£ä¹ˆå·¥äºº x éœ€è¦åœ¨æ¡¥è¾¹ç­‰å¾…ã€‚
+ * å¦‚æœæ²¡æœ‰æ­£åœ¨è¿‡æ¡¥çš„å·¥äººï¼Œé‚£ä¹ˆåœ¨æ¡¥å³è¾¹ç­‰å¾…çš„å·¥äººå¯ä»¥å…ˆè¿‡æ¡¥ã€‚å¦‚æœåŒæ—¶æœ‰å¤šä¸ªå·¥äººåœ¨å³è¾¹ç­‰å¾…ï¼Œé‚£ä¹ˆ æ•ˆç‡æœ€ä½ çš„å·¥äººä¼šå…ˆè¿‡æ¡¥ã€‚
+ * å¦‚æœæ²¡æœ‰æ­£åœ¨è¿‡æ¡¥çš„å·¥äººï¼Œä¸”æ¡¥å³è¾¹ä¹Ÿæ²¡æœ‰åœ¨ç­‰å¾…çš„å·¥äººï¼ŒåŒæ—¶æ—§ä»“åº“è¿˜å‰©ä¸‹è‡³å°‘ä¸€ä¸ªç®±å­éœ€è¦æ¬è¿ï¼Œæ­¤æ—¶åœ¨æ¡¥å·¦è¾¹çš„å·¥äººå¯ä»¥è¿‡æ¡¥ã€‚å¦‚æœåŒæ—¶æœ‰å¤šä¸ªå·¥äººåœ¨å·¦è¾¹ç­‰å¾…ï¼Œé‚£ä¹ˆ æ•ˆç‡æœ€ä½ çš„å·¥äººä¼šå…ˆè¿‡æ¡¥ã€‚
+ * æ‰€æœ‰ n ä¸ªç›’å­éƒ½éœ€è¦æ”¾å…¥æ–°ä»“åº“ï¼Œè¯·ä½ è¿”å›æœ€åä¸€ä¸ªæ¬è¿ç®±å­çš„å·¥äºº åˆ°è¾¾æ²³å·¦å²¸ çš„æ—¶é—´ã€‚
  */
 public class Code_253 {
     public static void main(String[] args) {
@@ -45,14 +45,14 @@ public class Code_253 {
         int timeCost = 0;
         while (n > 0&&(!leftWorkerPriorityQueue.isEmpty()||!rightWorkerPriorityQueue.isEmpty())) {
             Worker finalBridgeWorker = bridgeWorker;
-            //ÇÅÉÏÓĞÈËÍùÓÒ×ß
+            //æ¡¥ä¸Šæœ‰äººå¾€å³èµ°
             if (bridgeWorker.leftToRightSurplus != 0) {
                 bridgeWorker.leftToRightSurplus = 0;
                 timeCost+= bridgeWorker.leftToRight;
                 leftWorkerList.forEach(a -> a.putNew = Math.max(a.putNew - finalBridgeWorker.leftToRight, 0));
                 rightWorkerList.forEach(a -> a.pickOld = Math.max(a.pickOld - finalBridgeWorker.leftToRight, 0));
                 rightWorkerList.add(bridgeWorker);
-            } else if (bridgeWorker.rightToLeftSurplus != 0){//ÇÅÉÏÓĞÈËÍù×ó×ß
+            } else if (bridgeWorker.rightToLeftSurplus != 0){//æ¡¥ä¸Šæœ‰äººå¾€å·¦èµ°
                 bridgeWorker.rightToLeftSurplus = 0;
                 timeCost+= bridgeWorker.rightToLeft;
                 leftWorkerList.forEach(a -> a.putNew = Math.max(a.putNew - finalBridgeWorker.rightToLeft, 0));
@@ -60,18 +60,18 @@ public class Code_253 {
                 leftWorkerList.add(bridgeWorker);
             }
             addSurplusWordToQueue(leftWorkerList, rightWorkerList, leftWorkerPriorityQueue, rightWorkerPriorityQueue);
-            //Èç¹ûÓÒ±ßÓĞÈËÔÚµÈ
+            //å¦‚æœå³è¾¹æœ‰äººåœ¨ç­‰
             if (!rightWorkerPriorityQueue.isEmpty()) {
                 bridgeWorker = rightWorkerPriorityQueue.poll();
             } else if (!leftWorkerPriorityQueue.isEmpty()&&n>1) {
                 bridgeWorker = leftWorkerPriorityQueue.poll();
                 n--;
             } else {
-                //Èç¹ûÓÒ±ßÃ»ÈËÔÚµÈ£¬×ó±ßÒ²Ã»ÈËÔÚµÈ£¬µ«ÊÇ»¹ÓĞÏä×ÓÃ»°áÍê
-                //»ñÈ¡leftWorkerListÖĞputNew×îĞ¡µÄ
+                //å¦‚æœå³è¾¹æ²¡äººåœ¨ç­‰ï¼Œå·¦è¾¹ä¹Ÿæ²¡äººåœ¨ç­‰ï¼Œä½†æ˜¯è¿˜æœ‰ç®±å­æ²¡æ¬å®Œ
+                //è·å–leftWorkerListä¸­putNewæœ€å°çš„
                 Optional<Integer> minLeft = leftWorkerList.stream().map(a -> a.putNew).min(Integer::compareTo);
                 Optional<Integer> minRight = rightWorkerList.stream().map(a -> a.pickOld).min(Integer::compareTo);
-                //»ñÈ¡minLeftºÍminRightÖĞ×îĞ¡µÄ
+                //è·å–minLeftå’ŒminRightä¸­æœ€å°çš„
                 int min = Math.min(minLeft.get(), minRight.get());
                 leftWorkerList.forEach(a -> a.putNew = Math.max(a.putNew - min, 0));
                 rightWorkerList.forEach(a -> a.pickOld = Math.max(a.pickOld - min, 0));
@@ -103,7 +103,7 @@ public class Code_253 {
     }
     class Worker {
         int leftToRight;
-        //Ê£Óà
+        //å‰©ä½™
         int leftToRightSurplus;
         int pickOld;
         int rightToLeft;

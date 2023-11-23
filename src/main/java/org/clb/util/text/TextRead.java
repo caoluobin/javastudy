@@ -14,7 +14,7 @@ public class TextRead {
 
     public static List<String> read(String filePath) {
         File file = new File(filePath);
-        //¶ÁÈ¡filePath  txtÎÄ¼ş×ª»»³Élist
+        //è¯»å–filePath  txtæ–‡ä»¶è½¬æ¢æˆlist
         List<String> lines = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -30,11 +30,11 @@ public class TextRead {
     }
 
     public static void write(String filePath, List<String> lines) {
-        //Ğ´ÈëfilePath  txtÎÄ¼ş
+        //å†™å…¥filePath  txtæ–‡ä»¶
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             for (String line : lines) {
                 writer.write(line);
-                writer.newLine(); // »»ĞĞ·û
+                writer.newLine(); // æ¢è¡Œç¬¦
             }
         } catch (IOException e) {
             e.printStackTrace();

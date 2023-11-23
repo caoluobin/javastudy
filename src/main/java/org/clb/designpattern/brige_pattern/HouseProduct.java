@@ -6,15 +6,15 @@ package org.clb.designpattern.brige_pattern;
  * @Date 2021/5/17 15:58
  * @Author clb
  */
-public class HouseProduct implements Product{//接口具体实现
+public class HouseProduct implements Product{//鎺ュ彛鍏蜂綋瀹炵幇
 
   @Override
   public void selled() {
-    System.out.println("买了房子");
+    System.out.println("涔颁簡鎴垮瓙");
   }
 
   @Override
   public void producted() {
-    System.out.println("生产房子");
+    System.out.println("鐢熶骇鎴垮瓙");
   }
 }

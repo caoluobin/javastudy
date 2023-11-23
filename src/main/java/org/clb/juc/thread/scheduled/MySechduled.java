@@ -46,14 +46,14 @@ public class MySechduled  extends ScheduledThreadPoolExecutor {
     @Override
     protected <V> RunnableScheduledFuture<V> decorateTask(Runnable runnable,
         RunnableScheduledFuture<V> task) {
-        System.out.println("调用钩子函数");
+        System.out.println("璋冪敤閽╁瓙鍑芥暟");
         return super.decorateTask(runnable, task);
     }
 
     @Override
     protected <V> RunnableScheduledFuture<V> decorateTask(Callable<V> callable,
         RunnableScheduledFuture<V> task) {
-        System.out.println("调用钩子函数");
+        System.out.println("璋冪敤閽╁瓙鍑芥暟");
         return super.decorateTask(callable, task);
     }
 

@@ -3,7 +3,7 @@ package org.clb.structure.binary_tree;
 import org.clb.pojo.list.BTreeNode;
 
 /**
- * @Description ¶ş²æÊ÷ÀûÓÃµİ¹éÍê³ÉÏÈĞò¡¢ÖĞĞò¡¢ºóĞò±éÀú
+ * @Description äºŒå‰æ ‘åˆ©ç”¨é€’å½’å®Œæˆå…ˆåºã€ä¸­åºã€ååºéå†
  * @Classname BinaryTreeCode1
  * @Date 2021/8/5 9:16
  * @Author clb

@@ -32,7 +32,7 @@ public class VolatileTest {
             while (pv.flag) {
 
             }
-            System.out.println("flag值被改为" + flag1);
+            System.out.println("flag鍊艰鏀逛负" + flag1);
 
         }, "t1").start();
 
@@ -47,7 +47,7 @@ public class VolatileTest {
             while (map.get("1").flag) {
 
             }
-            System.out.println("flag值被改为" + map.get("1"));
+            System.out.println("flag鍊艰鏀逛负" + map.get("1"));
 
         }, "t1").start();
 

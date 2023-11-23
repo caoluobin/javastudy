@@ -10,7 +10,7 @@ public class ThreadLocalTest {
     }
 
     /**
-     * threadLocal set完需要及时remove  防止内存泄漏
+     * threadLocal set瀹岄渶瑕佸強鏃秗emove  闃叉鍐呭瓨娉勬紡
      */
     public static void test1() {
         threadLocal.set(10);

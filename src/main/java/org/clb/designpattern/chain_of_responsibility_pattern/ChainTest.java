@@ -11,7 +11,7 @@ public class ChainTest {
     public static void main(String[] args) {
         Handler father=new Father();
         father.setNext(new Mother());
-        Boy boy=new Boy("","Ğ¡Ã÷");
+        Boy boy=new Boy("","å°æ˜");
         father.handler(boy);
     }
 

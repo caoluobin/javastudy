@@ -30,12 +30,12 @@ public class NIOTest {
                     byteBuffer.clear();
                 }
             }
-            System.out.println("等待连接");
+            System.out.println("绛夊緟杩炴帴");
             SocketChannel accept = socketChannel.accept();
             if (accept!=null) {
                 accept.configureBlocking(false);
                 list.add(accept);
-                System.out.println("连接成功");
+                System.out.println("杩炴帴鎴愬姛");
             }
 //            InputStream inputStream = accept.getInputStream();
         }

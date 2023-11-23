@@ -1,7 +1,7 @@
 package org.clb.structure.sort.mergesort;
 
 /**
- * @Description ¸ø¶¨Á½¸ö´óĞ¡·Ö±ğÎª m ºÍ n µÄÕıĞò£¨´ÓĞ¡µ½´ó£©Êı×é nums1 ºÍ nums2¡£ÇëÄãÕÒ³ö²¢·µ»ØÕâÁ½¸öÕıĞòÊı×éµÄ ÖĞÎ»Êı ¡£
+ * @Description ç»™å®šä¸¤ä¸ªå¤§å°åˆ†åˆ«ä¸º m å’Œ n çš„æ­£åºï¼ˆä»å°åˆ°å¤§ï¼‰æ•°ç»„ nums1 å’Œ nums2ã€‚è¯·ä½ æ‰¾å‡ºå¹¶è¿”å›è¿™ä¸¤ä¸ªæ­£åºæ•°ç»„çš„ ä¸­ä½æ•° ã€‚
  * @Classname MergeSortCode05
  * @Date 2021/5/18 13:34
  * @Author clb
@@ -20,13 +20,13 @@ public class MergeSortCode05 {
     int[] a=new int[m+n];
     int result=0;
     int count=0;
-    //Å¼ÊıÇé¿ö
+    //å¶æ•°æƒ…å†µ
     if ((m/2==1&&n/2==1)||(m/2==0&&n/2==0)){
       while (count!=m+n/2){
 
       }
       return 0;
-    }else {//ÆæÊıÇé¿ö
+    }else {//å¥‡æ•°æƒ…å†µ
 
     }
 

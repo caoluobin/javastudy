@@ -10,8 +10,8 @@ public class Father  extends Handler{
 
     @Override
     public void handler(Boy b) {
-        b.shape="Çò";
-        System.out.println("¸¸Ç×Ò»¶ÙÅÖ×á"+b);
+        b.shape="çƒ";
+        System.out.println("çˆ¶äº²ä¸€é¡¿èƒ–æ"+b);
         if (this.getNext()!=null){
             this.getNext().handler(b);
         }

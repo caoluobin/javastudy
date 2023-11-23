@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ¸øÄãÒ»¸ö m ĞĞ n ÁĞµÄ¾ØÕó matrix £¬Çë°´ÕÕ Ë³Ê±ÕëÂİĞıË³Ğò £¬·µ»Ø¾ØÕóÖĞµÄËùÓĞÔªËØ¡£
+ * ç»™ä½ ä¸€ä¸ª m è¡Œ n åˆ—çš„çŸ©é˜µ matrix ï¼Œè¯·æŒ‰ç…§ é¡ºæ—¶é’ˆèºæ—‹é¡ºåº ï¼Œè¿”å›çŸ©é˜µä¸­çš„æ‰€æœ‰å…ƒç´ ã€‚
  */
 public class Code_54 {
 
@@ -15,12 +15,12 @@ public class Code_54 {
         int rColumn = matrix[0].length - 1;
         List<Integer> res = new ArrayList<>();
         while (dRow >= uRow && rColumn >= lColumn) {
-            //Ö»ÓĞÒ»ĞĞ
+            //åªæœ‰ä¸€è¡Œ
             if (uRow == dRow) {
                 for (int i = lColumn; i < rColumn + 1; i++) {
                     res.add(matrix[uRow][i]);
                 }
-            } else if (lColumn == rColumn) {//Ö»ÓĞÒ»ÁĞ
+            } else if (lColumn == rColumn) {//åªæœ‰ä¸€åˆ—
                 for (int i = uRow; i < dRow + 1; i++) {
                     res.add(matrix[i][lColumn]);
                 }

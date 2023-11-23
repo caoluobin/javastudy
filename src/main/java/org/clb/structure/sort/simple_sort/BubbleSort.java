@@ -1,7 +1,7 @@
 package org.clb.structure.sort.simple_sort;
 
 /**
- * @Description ц╟ещеепР
+ * @Description Е├▓ФЁ║Ф▌▓Е╨▐
  * @Classname BubbleSort
  * @Date 2021/6/13 16:40
  * @Author clb

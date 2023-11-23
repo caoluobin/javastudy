@@ -14,7 +14,7 @@ public class ThreadTest {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println("thread ½áÊø");
+            System.out.println("thread ç»“æŸ");
         });
         thread.start();
         thread.join();
@@ -28,7 +28,7 @@ public class ThreadTest {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println("thread ½áÊø");
+            System.out.println("thread ç»“æŸ");
         });
         thread.start();
 

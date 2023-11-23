@@ -3,11 +3,11 @@ package org.clb.structure.comparator;
 import java.util.Comparator;
 
 /**
- * @Description ±È½ÏÆ÷
- * compare ·½·¨Àï£¬×ñÑ­Í³Ò»¹æ·¶
- * ·µ»Ø¸ºÊıµÄÊ±ºò£¬µÚÒ»¸ö²ÎÊıÅÅÇ°Ãæ
- * ·µ»ØÕıÊıµÄÊ±ºò£¬µÚ¶ş¸ö²ÎÊıÅÅÇ°Ãæ
- * ·µ»Ø0µÄÊ±ºò ÎŞËùÎ½
+ * @Description æ¯”è¾ƒå™¨
+ * compare æ–¹æ³•é‡Œï¼Œéµå¾ªç»Ÿä¸€è§„èŒƒ
+ * è¿”å›è´Ÿæ•°çš„æ—¶å€™ï¼Œç¬¬ä¸€ä¸ªå‚æ•°æ’å‰é¢
+ * è¿”å›æ­£æ•°çš„æ—¶å€™ï¼Œç¬¬äºŒä¸ªå‚æ•°æ’å‰é¢
+ * è¿”å›0çš„æ—¶å€™ æ— æ‰€è°“
  * @Classname StudengCom
  * @Date 2021/5/21 0:01
  * @Author clb
@@ -15,7 +15,7 @@ import java.util.Comparator;
 public class  StudengCom implements Comparator<Student> {
 
 
-    //°´ageÉıĞò Èç¹ûageÏàÍ¬Ôò°´idÉıĞòÅÅĞò
+    //æŒ‰ageå‡åº å¦‚æœageç›¸åŒåˆ™æŒ‰idå‡åºæ’åº
     @Override
     public int compare(Student o1, Student o2) {
 //        if (o1.age<o2.age){

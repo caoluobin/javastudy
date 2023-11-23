@@ -12,12 +12,12 @@ public class Code_2560 {
     }
     public int minCapability(int[] nums, int k) {
         int left = 0, right = 0;
-        //ÕÒµ½×î´óÖµ
+        //æ‰¾åˆ°æœ€å¤§å€¼
         for (int x : nums) {
             right = Math.max(right, x);
         }
 
-        while (left + 1 < right) { // ¿ªÇø¼äÐ´·¨
+        while (left + 1 < right) { // å¼€åŒºé—´å†™æ³•
             int mid = (left + right) >>> 1;
             if (check(nums, k, mid)) {
                 right = mid;

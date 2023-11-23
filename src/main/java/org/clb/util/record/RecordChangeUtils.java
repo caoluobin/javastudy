@@ -24,7 +24,7 @@ public class RecordChangeUtils {
                      RecordAnnotation recordAnnotation = ((RecordAnnotation) annotation);
                      if (newObject.getValue(field.getName())!=null&&
                              !newObject.getValue(field.getName()).equals(oldObject.getValue(field.getName()))){
-                         System.out.println(field.getName()+"÷µ≤ªµ»");
+                         System.out.println(field.getName()+"ÂÄº‰∏çÁ≠â");
                      }
                  }
              }

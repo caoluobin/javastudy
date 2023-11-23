@@ -1,7 +1,7 @@
 package org.clb.structure.list;
 
 /**
- * @Description спа╫╦Ж©идэсп╩╥р╡©идэнч╩╥╣да╢╠Мё╛гСа╫а╢╠М╣д╫╩╣Ц
+ * @Description Ф°┴Д╦╓Д╦╙Е▐╞Х┐╫Ф°┴Г▌╞Д╧÷Е▐╞Х┐╫Ф≈═Г▌╞Г └И⌠╬Х║╗О╪▄Ф╠┌Д╦╓И⌠╬Х║╗Г └Д╨╓Г┌╧
  * @Classname ListCode5
  * @Date 2021/8/3 14:01
  * @Author clb

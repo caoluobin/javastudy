@@ -14,7 +14,7 @@ public class Sort {
     }
 
     public static int[] getIntArray(int size,int max) {
-        //数组的长度为0-100的随机数
+        //鏁扮粍鐨勯暱搴︿负0-100鐨勯殢鏈烘暟
         //int size=(int)(Math.random()*10)+90;
         int[] res = new int[size];
         int index = 0;

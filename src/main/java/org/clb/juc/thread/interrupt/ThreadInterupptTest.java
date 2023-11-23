@@ -12,16 +12,16 @@ public class ThreadInterupptTest {
             while (System.currentTimeMillis() - l < 1) {
 
             }
-            System.out.println("µÚÒ»´Î");
+            System.out.println("ç¬¬ä¸€æ¬¡");
 
 
         });
         thread.start();
-        thread.interrupt();//ÖÐ¶ÏÏß³ÌÊ¹±ê¼ÇÎ»Îªtrue
+        thread.interrupt();//ä¸­æ–­çº¿ç¨‹ä½¿æ ‡è®°ä½ä¸ºtrue
         //Thread.currentThread().sleep(1000*3);
         //System.out.println(Thread.currentThread().getName());
-        Thread.interrupted();//Çå³ý±ê¼ÇÎ» Ê¹±ê¼ÇÎ»Îªfalse
-        thread.isInterrupted();//²é¿´±ê¼ÇÎ»
+        Thread.interrupted();//æ¸…é™¤æ ‡è®°ä½ ä½¿æ ‡è®°ä½ä¸ºfalse
+        thread.isInterrupted();//æŸ¥çœ‹æ ‡è®°ä½
         //System.out.println(thread.interrupted());
         for (int i = 0; i < 1000; i++) {
 

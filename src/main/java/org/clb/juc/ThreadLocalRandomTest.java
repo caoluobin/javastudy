@@ -42,7 +42,7 @@ public class ThreadLocalRandomTest {
         for (int i = 0; i < 10; i++) {
             TimeUnit.SECONDS.sleep(1);
             new Thread(() ->{
-                //ÒòÎªµ±Ç°×ÓÏß³ÌµÄseedÖµÃ»ÓĞ±»³õÊ¼»¯  ËùÒÔ¶¼ÊÇ´Ó0¿ªÊ¼ĞÂÔö Òò´Ë¶¼Ò»Ñù
+                //å› ä¸ºå½“å‰å­çº¿ç¨‹çš„seedå€¼æ²¡æœ‰è¢«åˆå§‹åŒ–  æ‰€ä»¥éƒ½æ˜¯ä»0å¼€å§‹æ–°å¢ å› æ­¤éƒ½ä¸€æ ·
                 MetaObject metaObject2 = SystemMetaObject.forObject(Thread.currentThread());
                 System.out.println(current.nextInt());
                 System.out.println("threadLocalRandomSeed"+metaObject2.getValue("threadLocalRandomSeed"));

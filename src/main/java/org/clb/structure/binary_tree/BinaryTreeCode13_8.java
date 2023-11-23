@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @Description 给定一颗二叉树的头结点head，返回这颗二叉树中最大的二叉搜索子树的头结点
+ * @Description 缁欏畾涓�棰椾簩鍙夋爲鐨勫ご缁撶偣head锛岃繑鍥炶繖棰椾簩鍙夋爲涓渶澶х殑浜屽弶鎼滅储瀛愭爲鐨勫ご缁撶偣
  * @Classname BinaryTreeCode13_1
  * @Date 2021/11/21 13:34
  * @Author clb

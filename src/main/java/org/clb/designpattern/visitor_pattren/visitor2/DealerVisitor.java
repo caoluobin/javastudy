@@ -3,11 +3,11 @@ package org.clb.designpattern.visitor_pattren.visitor2;
 public class DealerVisitor implements Visitor{
     @Override
     public void visit(Shop shop) {
-        System.out.println("¾­ÏúÉÌ½ø»õ"+shop.getProduct());
+        System.out.println("ç»é”€å•†è¿›è´§"+shop.getProduct());
     }
 
     @Override
     public void visit(FruitShop shop) {
-        System.out.println("¾­ÏúÉÌ¸øË®¹ûµê½ø»õ");
+        System.out.println("ç»é”€å•†ç»™æ°´æœåº—è¿›è´§");
     }
 }

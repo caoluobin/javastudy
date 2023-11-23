@@ -19,7 +19,7 @@ public class LinkedTransferQueueTest {
                 int seed = current.nextInt();
                 try {
                     queue.transfer(seed);
-                    System.out.println("ÍùqueueÖĞ¼ÓÈë:"+seed);
+                    System.out.println("å¾€queueä¸­åŠ å…¥:"+seed);
                     TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
@@ -31,7 +31,7 @@ public class LinkedTransferQueueTest {
                 try {
                     TimeUnit.SECONDS.sleep(2);
                     Integer take = queue.take();
-                    System.out.println("»ñÈ¡Êı¾İ:"+take);
+                    System.out.println("è·å–æ•°æ®:"+take);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

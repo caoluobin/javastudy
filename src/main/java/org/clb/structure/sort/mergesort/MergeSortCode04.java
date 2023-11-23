@@ -1,8 +1,8 @@
 package org.clb.structure.sort.mergesort;
 
 /**
- * @Description ¸ø¶¨Ò»¸öÊı×éarr,Á½¸öÕûÊılowerºÍUpper
- * ·µ»ØarrÖĞÓĞ¶àÉÙ¸ö×ÓÊı×éµÄÀÛ¼ÓºÍÔÚ[lower,upper]·¶Î§ÉÏ
+ * @Description ç»™å®šä¸€ä¸ªæ•°ç»„arr,ä¸¤ä¸ªæ•´æ•°lowerå’ŒUpper
+ * è¿”å›arrä¸­æœ‰å¤šå°‘ä¸ªå­æ•°ç»„çš„ç´¯åŠ å’Œåœ¨[lower,upper]èŒƒå›´ä¸Š
  * @Classname MergeSortCode04
  * @Date 2021/5/15 23:22
  * @Author clb

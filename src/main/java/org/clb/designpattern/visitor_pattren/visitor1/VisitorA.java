@@ -8,7 +8,7 @@ package org.clb.designpattern.visitor_pattren.visitor1;
  */
 public class VisitorA implements Visitor {
     public void visitA(ShopA a){
-        System.out.println("visitA·ÃÎÊÁËa");
+        System.out.println("visitAè®¿é—®äº†a");
         a.operate();
     };
     public void visitB(ShopB b){

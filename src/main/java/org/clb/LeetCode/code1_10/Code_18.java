@@ -5,12 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * ¸øÄãÒ»¸öÓÉ n ¸öÕûÊı×é³ÉµÄÊı×é nums £¬ºÍÒ»¸öÄ¿±êÖµ target ¡£
- * ÇëÄãÕÒ³ö²¢·µ»ØÂú×ãÏÂÊöÈ«²¿Ìõ¼şÇÒ²»ÖØ¸´µÄËÄÔª×é [nums[a], nums[b], nums[c], nums[d]] £¨ÈôÁ½¸öËÄÔª×éÔªËØÒ»Ò»¶ÔÓ¦£¬ÔòÈÏÎªÁ½¸öËÄÔª×éÖØ¸´£©£º
+ * ç»™ä½ ä¸€ä¸ªç”± n ä¸ªæ•´æ•°ç»„æˆçš„æ•°ç»„ nums ï¼Œå’Œä¸€ä¸ªç›®æ ‡å€¼ target ã€‚
+ * è¯·ä½ æ‰¾å‡ºå¹¶è¿”å›æ»¡è¶³ä¸‹è¿°å…¨éƒ¨æ¡ä»¶ä¸”ä¸é‡å¤çš„å››å…ƒç»„ [nums[a], nums[b], nums[c], nums[d]] ï¼ˆè‹¥ä¸¤ä¸ªå››å…ƒç»„å…ƒç´ ä¸€ä¸€å¯¹åº”ï¼Œåˆ™è®¤ä¸ºä¸¤ä¸ªå››å…ƒç»„é‡å¤ï¼‰ï¼š
  * 0 <= a, b, c, d < n
- * a¡¢b¡¢c ºÍ d »¥²»ÏàÍ¬
+ * aã€bã€c å’Œ d äº’ä¸ç›¸åŒ
  * nums[a] + nums[b] + nums[c] + nums[d] == target
- * Äã¿ÉÒÔ°´ ÈÎÒâË³Ğò ·µ»Ø´ğ°¸ ¡£
+ * ä½ å¯ä»¥æŒ‰ ä»»æ„é¡ºåº è¿”å›ç­”æ¡ˆ ã€‚
  */
 public class Code_18 {
 
@@ -36,7 +36,7 @@ public class Code_18 {
         for (int i = index; i < nums.length-2; i++) {
             int left = i+1;
             int right = nums.length-1;
-            //´¦Àínums[i]+nums[i+1]+nums[i+2]ÕûÊıÔ½½çÎÊÌâ
+            //å¤„ç†nums[i]+nums[i+1]+nums[i+2]æ•´æ•°è¶Šç•Œé—®é¢˜
             if (Long.valueOf(nums[i])+Long.valueOf(nums[i+1])+Long.valueOf(nums[i+2])>target){
                 break;
             }

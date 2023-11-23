@@ -8,10 +8,10 @@ package org.clb.designpattern.visitor_pattren.visitor1;
  */
 public class ShopA {
     public void operate(){
-        System.out.println("shopAÖ´ÐÐ");
+        System.out.println("shopAæ‰§è¡Œ");
     }
     public void accept(VisitorA a){
-        System.out.println("ShopA±»a·ÃÎÊ");
+        System.out.println("ShopAè¢«aè®¿é—®");
         a.visitA(this);
     }
 }

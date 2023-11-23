@@ -9,6 +9,6 @@ package org.clb.designpattern.abstract_factory.animal.big;
 public class Tiger extends BigAnimal {
 
     @Override public void getName() {
-        System.out.println("ÀÏ»¢");
+        System.out.println("è€è™");
     }
 }

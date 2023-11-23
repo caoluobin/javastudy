@@ -5,7 +5,7 @@ import lombok.Data;
 import org.clb.pojo.list.BTreeNode;
 
 /**
- * @Description ÊÇ·ñÊÇËÑË÷¶ş²æÊ÷
+ * @Description æ˜¯å¦æ˜¯æœç´¢äºŒå‰æ ‘
  * @Classname BinaryTreeCode13_1
  * @Date 2021/11/21 13:34
  * @Author clb
@@ -59,7 +59,7 @@ public class BinaryTreeCode13_3 {
 
     /**
      * @param
-     * @description: Ìõ¼ş1.×ó×ÓÊ÷µÄ×î´óÖµĞ¡ÓÚµ±Ç°½Úµã 2.ÓÒ×ÓÊ÷µÄ×îĞ¡Öµ´óÓÚµ±Ç°½Úµã
+     * @description: æ¡ä»¶1.å·¦å­æ ‘çš„æœ€å¤§å€¼å°äºå½“å‰èŠ‚ç‚¹ 2.å³å­æ ‘çš„æœ€å°å€¼å¤§äºå½“å‰èŠ‚ç‚¹
      * @return:
      */
     @Data

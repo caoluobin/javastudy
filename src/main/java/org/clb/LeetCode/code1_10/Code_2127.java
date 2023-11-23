@@ -3,9 +3,9 @@ package org.clb.LeetCode.code1_10;
 import java.util.*;
 
 /**
- * һ����˾׼����֯һ�����飬������������ n λԱ������˾׼����һ�� Բ�� �����ӣ��������� ������Ŀ ��Ա����
- * Ա�����Ϊ 0 �� n - 1 ��ÿλԱ������һλ ϲ�� ��Ա����ÿλԱ�� ���ҽ��� ����������ϲ��Ա�����Աߣ����Ż�μӻ��顣ÿλԱ��ϲ����Ա�� ���� �����Լ���
- * ����һ���±�� 0 ��ʼ���������� favorite ������ favorite[i] ��ʾ�� i λԱ��ϲ����Ա�������㷵�زμӻ���� ���Ա����Ŀ ��
+ * 一个公司准备组织一场会议，邀请名单上有 n 位员工。公司准备了一张 圆形 的桌子，可以坐下 任意数目 的员工。
+ * 员工编号为 0 到 n - 1 。每位员工都有一位 喜欢 的员工，每位员工 当且仅当 他被安排在喜欢员工的旁边，他才会参加会议。每位员工喜欢的员工 不会 是他自己。
+ * 给你一个下标从 0 开始的整数数组 favorite ，其中 favorite[i] 表示第 i 位员工喜欢的员工。请你返回参加会议的 最多员工数目 。
  */
 public class Code_2127 {
     int count = 0;
@@ -20,7 +20,7 @@ public class Code_2127 {
         int n = favorite.length;
         int[] deg = new int[n];
         for (int f : favorite) {
-            deg[f]++; // ͳ�ƻ�����ÿ���ڵ�����
+            deg[f]++; // 统计基环树每个节点的入度
         }
 
         int[] maxDepth = new int[n];
@@ -30,10 +30,10 @@ public class Code_2127 {
                 q.add(i);
             }
         }
-        while (!q.isEmpty()) { // �������򣬼���ͼ��������֦
+        while (!q.isEmpty()) { // 拓扑排序，剪掉图上所有树枝
             int x = q.poll();
-            int y = favorite[x]; // x ֻ��һ������
-            maxDepth[y] = maxDepth[x] + 1;//�����ں�����滻ǰ���
+            int y = favorite[x]; // x 只有一条出边
+            maxDepth[y] = maxDepth[x] + 1;//长的在后面会替换前面的
             if (--deg[y] == 0) {
                 q.add(y);
             }
@@ -47,8 +47,8 @@ public class Code_2127 {
             return favorite.length;
         }
         int max =0;
-        //0:��ǰ��󳤶�   1����� 0:�����ջ� 1:����ջ�  2 ���ջ� 3:��������
-        //3: ��¼�ڵ�����
+        //0:当前最大长度   1：情况 0:两个闭环 1:多个闭环  2 不闭环 3:错误数据
+        //3: 记录节点索引
         Integer[][] df = new Integer[favorite.length][3];
         for (int emp = 0; emp < favorite.length; emp++) {
             getEmpJoinMaxNum(emp,favorite,df);
@@ -73,10 +73,10 @@ public class Code_2127 {
 
 
     private void getEmpJoinMaxNum(int emp, int[] favorite,Integer[][] df) {
-        if (df[emp][0]!=null) {//����Ѿ�������
+        if (df[emp][0]!=null) {//如果已经遍历过
             return ;
         }
-        if (emp==favorite[favorite[emp]] ) {//����ǻ��нڵ�
+        if (emp==favorite[favorite[emp]] ) {//如果是环中节点
             if (df[emp][0] ==null) {
                 df[emp][0] =0;
                 df[emp][1] =0;
@@ -97,8 +97,8 @@ public class Code_2127 {
                 df[df[favorite[emp]][2]][0] =Math.max(df[emp][0]-2,df[df[favorite[emp]][2]][0]);
                 return;
             } else if (df[favorite[emp]][1] ==3||df[favorite[emp]][1] ==1) {
-                df[emp][0] = 0;//���ʧ�� ����0
-                df[emp][1] = 3;//���ʧ��
+                df[emp][0] = 0;//组队失败 返回0
+                df[emp][1] = 3;//组队失败
                 return;
             }else if (df[favorite[emp]][1] ==0) {
                 df[emp][0] = 3;//
@@ -113,14 +113,14 @@ public class Code_2127 {
         int last =emp;
         while (true) {
             int now = favorite[last];
-            if (res.contains(now)){//�����ʼ�ظ�
-                if (now!=emp&&last!=favorite[now]) {//�����ǰ�ڵ㲻ϲ����һ�����ߵ�ǰ�ڵ�ϲ���Ĳ�����һ���ڵ�
-                    df[emp][0] = 0;//���ʧ�� ����0
-                    df[emp][1] = 3;//���ʧ��
+            if (res.contains(now)){//如果开始重复
+                if (now!=emp&&last!=favorite[now]) {//如果当前节点不喜欢上一个或者当前节点喜欢的不是上一个节点
+                    df[emp][0] = 0;//组队失败 返回0
+                    df[emp][1] = 3;//组队失败
                     return ;
                 }
-                if (last == favorite[now]) {//��������ջ�
-                    df[now][0] =df[now][0]==null?res.size()-2: Math.max(res.size()-2,df[now][0]);//������һ�ߵ������ⳤ��
+                if (last == favorite[now]) {//如果两个闭环
+                    df[now][0] =df[now][0]==null?res.size()-2: Math.max(res.size()-2,df[now][0]);//代表这一边的最大额外长度
                     df[now][1] =0;
                     df[now][2] =last;
                     last = emp;

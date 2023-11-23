@@ -30,7 +30,7 @@ public class ScheduledThreadPoolTest {
     }
 
     public static void scheduleAtFixedRateTest() {
-        //固定时间间隔执行
+        //鍥哄畾鏃堕棿闂撮殧鎵ц
         executor.scheduleAtFixedRate(()->{
             try {
                 Thread.sleep(1000);
@@ -42,7 +42,7 @@ public class ScheduledThreadPoolTest {
     }
 
     public static void scheduleWithFixedDelayTest() {
-        //一个任务执行完后延迟delay时间执行
+        //涓�涓换鍔℃墽琛屽畬鍚庡欢杩焏elay鏃堕棿鎵ц
         executor.scheduleWithFixedDelay(()->{
             try {
                 Thread.sleep(3000);

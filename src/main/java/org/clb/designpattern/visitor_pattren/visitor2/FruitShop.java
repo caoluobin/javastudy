@@ -9,7 +9,7 @@ public class FruitShop implements Shop{
 
     @Override
     public String getProduct() {
-        return "Ë®¹û";
+        return "æ°´æžœ";
     }
 
 }

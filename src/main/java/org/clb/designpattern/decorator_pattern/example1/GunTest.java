@@ -4,7 +4,7 @@ public class GunTest {
     public static void main(String[] args) {
         Gun gun=new Ak47();
         gun.fire();
-        FourMirror fourMirror=new FourMirror(gun,"ËÄ±¶¾µ");
+        FourMirror fourMirror=new FourMirror(gun,"å››å€é•œ");
         fourMirror.aim();
         fourMirror.fire();
     }

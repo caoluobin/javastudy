@@ -1,9 +1,9 @@
 package org.clb.LeetCode.code1_10;
 
 /**
- * ¸ø¶¨Ò»¸ö³¤¶ÈÎª n µÄ»·ĞÎÕûÊıÊı×é nums £¬·µ»Ø nums µÄ·Ç¿Õ ×ÓÊı×é µÄ×î´ó¿ÉÄÜºÍ ¡£
- * »·ĞÎÊı×é ÒâÎ¶×ÅÊı×éµÄÄ©¶Ë½«»áÓë¿ªÍ·ÏàÁ¬³Ê»·×´¡£ĞÎÊ½ÉÏ£¬ nums[i] µÄÏÂÒ»¸öÔªËØÊÇ nums[(i + 1) % n] £¬ nums[i] µÄÇ°Ò»¸öÔªËØÊÇ nums[(i - 1 + n) % n] ¡£
- * ×ÓÊı×é ×î¶àÖ»ÄÜ°üº¬¹Ì¶¨»º³åÇø nums ÖĞµÄÃ¿¸öÔªËØÒ»´Î¡£ĞÎÊ½ÉÏ£¬¶ÔÓÚ×ÓÊı×é nums[i], nums[i + 1], ..., nums[j] £¬²»´æÔÚ i <= k1, k2 <= j ÆäÖĞ k1 % n == k2 % n ¡£
+ * ç»™å®šä¸€ä¸ªé•¿åº¦ä¸º n çš„ç¯å½¢æ•´æ•°æ•°ç»„ nums ï¼Œè¿”å› nums çš„éç©º å­æ•°ç»„ çš„æœ€å¤§å¯èƒ½å’Œ ã€‚
+ * ç¯å½¢æ•°ç»„ æ„å‘³ç€æ•°ç»„çš„æœ«ç«¯å°†ä¼šä¸å¼€å¤´ç›¸è¿å‘ˆç¯çŠ¶ã€‚å½¢å¼ä¸Šï¼Œ nums[i] çš„ä¸‹ä¸€ä¸ªå…ƒç´ æ˜¯ nums[(i + 1) % n] ï¼Œ nums[i] çš„å‰ä¸€ä¸ªå…ƒç´ æ˜¯ nums[(i - 1 + n) % n] ã€‚
+ * å­æ•°ç»„ æœ€å¤šåªèƒ½åŒ…å«å›ºå®šç¼“å†²åŒº nums ä¸­çš„æ¯ä¸ªå…ƒç´ ä¸€æ¬¡ã€‚å½¢å¼ä¸Šï¼Œå¯¹äºå­æ•°ç»„ nums[i], nums[i + 1], ..., nums[j] ï¼Œä¸å­˜åœ¨ i <= k1, k2 <= j å…¶ä¸­ k1 % n == k2 % n ã€‚
  */
 public class Code_918 {
 
@@ -12,16 +12,16 @@ public class Code_918 {
     }
 
     public int maxSubarraySumCircular(int[] nums) {
-        //ÕıÊıºÍ
+        //æ­£æ•°å’Œ
         int positiveSum = 0;
-        //¸ºÊı½×¶ÎºÍ
+        //è´Ÿæ•°é˜¶æ®µå’Œ
         int negativeStageSum = 0;
         int sum = 0;
         int startIndex = 0;
         int index = 0;
         boolean flag = true;
         int max = Integer.MIN_VALUE;
-        //×îĞ¡¸ºÊı½×¶ÎºÍ
+        //æœ€å°è´Ÿæ•°é˜¶æ®µå’Œ
         int minNegative = Integer.MAX_VALUE;
         while (index != startIndex || flag) {
             if (nums[index] > 0) {

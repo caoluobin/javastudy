@@ -7,8 +7,8 @@ package org.clb.structure.sort;
  * @Author clb
  */
 public enum SortType {
-    ASC(1,"ÉıĞò"),
-    DESC(2,"½µĞò");
+    ASC(1,"å‡åº"),
+    DESC(2,"é™åº");
     Integer type;
     String name;
 

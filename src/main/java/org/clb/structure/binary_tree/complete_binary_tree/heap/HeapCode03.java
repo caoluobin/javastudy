@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 /**
- * @Descriptionc ×î´óÏß¶ÎÖØºÏÎÊÌâ£¨ÓÃ¶ÑµÄÊµÏÖ£© ¸ø¶¨ºÜ¶àÏß¶Î Ã¿¸öÏß¶ÎÓĞÁ½¸öÊı¡¾start£¬end¡¿£¬
- * ¹æ¶¨:1).Ïß¶ÎµÄ¿ªÊ¼ºÍ½áÊøÎ»ÖÃÒ»¶¨¶¼ÊÇÕûÊıÖµ
- * 2).Ïß¶ÎÖØºÏÇøÓòµÄ³¤¶È±ØĞë>=1 Çó£º·µ»ØÏß¶ÎÖØºÏ×î¶àÇøÓòÖĞ£¬°üº¬ÁË¼¸ÌõÏß¶Î
+ * @Descriptionc æœ€å¤§çº¿æ®µé‡åˆé—®é¢˜ï¼ˆç”¨å †çš„å®ç°ï¼‰ ç»™å®šå¾ˆå¤šçº¿æ®µ æ¯ä¸ªçº¿æ®µæœ‰ä¸¤ä¸ªæ•°ã€startï¼Œendã€‘ï¼Œ
+ * è§„å®š:1).çº¿æ®µçš„å¼€å§‹å’Œç»“æŸä½ç½®ä¸€å®šéƒ½æ˜¯æ•´æ•°å€¼
+ * 2).çº¿æ®µé‡åˆåŒºåŸŸçš„é•¿åº¦å¿…é¡»>=1 æ±‚ï¼šè¿”å›çº¿æ®µé‡åˆæœ€å¤šåŒºåŸŸä¸­ï¼ŒåŒ…å«äº†å‡ æ¡çº¿æ®µ
  * @Classname HeapCode03
  * @Date 2021/5/23 16:15
  * @Author clb
@@ -25,10 +25,10 @@ public class HeapCode03 {
             this.end = end;
         }
     }
-    //×Ô¶¨Òå±È½ÏÆ÷ÓÃÓÚLineµÄÅÅĞò
+    //è‡ªå®šä¹‰æ¯”è¾ƒå™¨ç”¨äºLineçš„æ’åº
     static class LineCompare implements Comparator<Line> {
 
-        //½«Line°´startÉıĞòÅÅÁĞ
+        //å°†LineæŒ‰startå‡åºæ’åˆ—
         public int compare(Line o1, Line o2) {
             return o1.start - o2.start;
         }
@@ -36,27 +36,27 @@ public class HeapCode03 {
 
     public static int getResult(int[][] a) {
         int max = 0;
-        //Éú³ÉLineÊı×é²¢ÒÔ×Ô¶¨ÒåLineCompare°´startÉıĞòÅÅÁĞ
+        //ç”ŸæˆLineæ•°ç»„å¹¶ä»¥è‡ªå®šä¹‰LineCompareæŒ‰startå‡åºæ’åˆ—
         Line[] lines=new Line[a.length];
         for (int i = 0; i < a.length; i++) {
             lines[i]=new Line(a[i][0],a[i][1]);
         }
         Arrays.sort(lines,new LineCompare());
-        //ÓÃĞ¡¸ù¶Ñ´æ·Å½áÎ²ÊıÖµ Èç¹ûĞ¡ÓÚµ±Ç°lineµÄendÖµÔòÒÆ³ı Ğ¡¸ù¶ÑÖĞµÄÊı¾İÁ¿¾ÍÎªµ±Ç°Ïß¶ÎµÄ¸öÊı
-        PriorityQueue<Integer> heap=new PriorityQueue<>();//Ä¬ÈÏĞ¡¸ù¶Ñ
+        //ç”¨å°æ ¹å †å­˜æ”¾ç»“å°¾æ•°å€¼ å¦‚æœå°äºå½“å‰lineçš„endå€¼åˆ™ç§»é™¤ å°æ ¹å †ä¸­çš„æ•°æ®é‡å°±ä¸ºå½“å‰çº¿æ®µçš„ä¸ªæ•°
+        PriorityQueue<Integer> heap=new PriorityQueue<>();//é»˜è®¤å°æ ¹å †
 //        PriorityQueue<Integer> heap2=new PriorityQueue<>(new Comparator<Integer>() {
 //            @Override
 //            public int compare(Integer o1, Integer o2) {
 //                return o2-o1;
 //            }
-//        });//´ó¸ù¶Ñ
+//        });//å¤§æ ¹å †
         int index=0;
         while (index<lines.length){
-            //µ±¶ÑÖĞµÄÍ·½áµãÊı¾İ±Èµ±Ç°½ÚµãstartÊı¾İĞ¡Ê± µ¯³ö
+            //å½“å †ä¸­çš„å¤´ç»“ç‚¹æ•°æ®æ¯”å½“å‰èŠ‚ç‚¹startæ•°æ®å°æ—¶ å¼¹å‡º
             while (heap.peek()<=lines[index].start){
-                heap.poll();//µ¯³öĞ¡Öµ
+                heap.poll();//å¼¹å‡ºå°å€¼
             }
-            //½«µ±Ç°Öµ·ÅÈë
+            //å°†å½“å‰å€¼æ”¾å…¥
             heap.add(lines[index].end);
             max=Math.max(max,heap.size());
         }

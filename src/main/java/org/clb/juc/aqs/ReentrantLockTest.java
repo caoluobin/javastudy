@@ -18,12 +18,12 @@ public class ReentrantLockTest {
     }
 
     /**
-     * ²âÊÔ¹«Æ½Ëøµ±¶ÓÁĞÖĞÓĞÏß³ÌµÈ´ıÊ±ĞèÒªĞèÒª½øÈë¶ÓÁĞµÈ´ı
+     * æµ‹è¯•å…¬å¹³é”å½“é˜Ÿåˆ—ä¸­æœ‰çº¿ç¨‹ç­‰å¾…æ—¶éœ€è¦éœ€è¦è¿›å…¥é˜Ÿåˆ—ç­‰å¾…
      */
     public static void fairTest1() throws InterruptedException {
         ReentrantLock fairLock = new ReentrantLock(true);
         for (int i = 1; i < 40; i++) {
-            //Ë¯10ms±£Ö¤Ç°ÃæÊÇ°´Ğò
+            //ç¡10msä¿è¯å‰é¢æ˜¯æŒ‰åº
             if (i <= 20)
                 Thread.sleep(10);
             int finalI = i;
@@ -31,10 +31,10 @@ public class ReentrantLockTest {
                 try {
                     fairLock.lock();
                     if (finalI == 1) {
-                        while (fairLock.getQueueLength() <= 20) {//±£Ö¤ÓĞÖÁÉÙ10¸öÊı¾İÊÇÔÚ¶ÓÁĞÖĞµÈ´ıµÄ
+                        while (fairLock.getQueueLength() <= 20) {//ä¿è¯æœ‰è‡³å°‘10ä¸ªæ•°æ®æ˜¯åœ¨é˜Ÿåˆ—ä¸­ç­‰å¾…çš„
                         }
                     }
-                    System.out.println(Thread.currentThread().getName() + "Ö´ĞĞ,µÈ´ıÊıÁ¿" + fairLock.getQueueLength());
+                    System.out.println(Thread.currentThread().getName() + "æ‰§è¡Œ,ç­‰å¾…æ•°é‡" + fairLock.getQueueLength());
                 } finally {
                     fairLock.unlock();
                 }
@@ -43,22 +43,22 @@ public class ReentrantLockTest {
     }
 
     /**
-     * ²âÊÔ·Ç¹«Æ½Ëøµ±¶ÓÁĞÖĞµÄÊı¾İ»á°´ĞòÖ´ĞĞ
+     * æµ‹è¯•éå…¬å¹³é”å½“é˜Ÿåˆ—ä¸­çš„æ•°æ®ä¼šæŒ‰åºæ‰§è¡Œ
      */
     public static void fairTest2() throws InterruptedException {
         ReentrantLock fairLock = new ReentrantLock();
         for (int i = 1; i < 21; i++) {
-            //Ë¯10ms±£Ö¤°´Ğò½øÈë¶ÓÁĞ
+            //ç¡10msä¿è¯æŒ‰åºè¿›å…¥é˜Ÿåˆ—
             Thread.sleep(10);
             int finalI = i;
             new Thread(() -> {
                 try {
                     fairLock.lock();
                     if (finalI == 1) {
-                        while (fairLock.getQueueLength() < 19) {//±£Ö¤ÁíÍâ19¸öÏß³Ì¶¼ÔÚ¶ÓÁĞÖĞµÈ´ı
+                        while (fairLock.getQueueLength() < 19) {//ä¿è¯å¦å¤–19ä¸ªçº¿ç¨‹éƒ½åœ¨é˜Ÿåˆ—ä¸­ç­‰å¾…
                         }
                     }
-                    System.out.println(Thread.currentThread().getName() + "Ö´ĞĞ,µÈ´ıÊıÁ¿" + fairLock.getQueueLength());
+                    System.out.println(Thread.currentThread().getName() + "æ‰§è¡Œ,ç­‰å¾…æ•°é‡" + fairLock.getQueueLength());
                 } finally {
                     fairLock.unlock();
                 }
@@ -67,12 +67,12 @@ public class ReentrantLockTest {
     }
 
     /**
-     * ²âÊÔ·Ç¹«Æ½Ëøµ±¶ÓÁĞÖĞÓĞÊı¾İÊ±ºóĞøĞÂ½øÈëµÄÏß³Ì¿ÉÒÔºÍÍ·½áµã½øĞĞ¾ºÕù
+     * æµ‹è¯•éå…¬å¹³é”å½“é˜Ÿåˆ—ä¸­æœ‰æ•°æ®æ—¶åç»­æ–°è¿›å…¥çš„çº¿ç¨‹å¯ä»¥å’Œå¤´ç»“ç‚¹è¿›è¡Œç«äº‰
      */
     public static void fairTest3() throws InterruptedException {
         ReentrantLock fairLock = new ReentrantLock();
         for (int i = 1; i < 40; i++) {
-            //Ë¯10ms±£Ö¤Ç°ÃæÊÇ°´Ğò
+            //ç¡10msä¿è¯å‰é¢æ˜¯æŒ‰åº
             if (i <= 10)
                 Thread.sleep(20);
             int finalI = i;
@@ -80,10 +80,10 @@ public class ReentrantLockTest {
                 try {
                     fairLock.lock();
                     if (finalI == 1) {
-                        while (fairLock.getQueueLength() <= 20) {//±£Ö¤ÓĞÖÁÉÙ10¸öÊı¾İÊÇÔÚ¶ÓÁĞÖĞµÈ´ıµÄ
+                        while (fairLock.getQueueLength() <= 20) {//ä¿è¯æœ‰è‡³å°‘10ä¸ªæ•°æ®æ˜¯åœ¨é˜Ÿåˆ—ä¸­ç­‰å¾…çš„
                         }
                     }
-                    System.out.println(Thread.currentThread().getName() + "Ö´ĞĞ,µÈ´ıÊıÁ¿" + fairLock.getQueueLength());
+                    System.out.println(Thread.currentThread().getName() + "æ‰§è¡Œ,ç­‰å¾…æ•°é‡" + fairLock.getQueueLength());
                 } finally {
                     fairLock.unlock();
                 }
@@ -95,18 +95,18 @@ public class ReentrantLockTest {
         new Thread(() -> {
             try {
                 lock.lock();
-                System.out.println(Thread.currentThread() + "¼ÓËø");
+                System.out.println(Thread.currentThread() + "åŠ é”");
                 TimeUnit.SECONDS.sleep(2);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } finally {
                 lock.unlock();
-                System.out.println(Thread.currentThread() + "ÊÍ·ÅËø");
+                System.out.println(Thread.currentThread() + "é‡Šæ”¾é”");
             }
         }).start();
         TimeUnit.SECONDS.sleep(1);
-        String flag = lock.tryLock() ? "³É¹¦" : "Ê§°Ü";
-        System.out.println("»ñÈ¡Ëø" + flag);
+        String flag = lock.tryLock() ? "æˆåŠŸ" : "å¤±è´¥";
+        System.out.println("è·å–é”" + flag);
     }
 
 

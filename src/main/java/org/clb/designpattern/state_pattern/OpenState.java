@@ -10,7 +10,7 @@ public class OpenState extends State{
 
     @Override
     public void open() {
-        System.out.println("¿ªÃÅ");
+        System.out.println("å¼€é—¨");
     }
 
     @Override

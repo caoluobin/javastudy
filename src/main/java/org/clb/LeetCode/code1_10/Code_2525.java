@@ -8,7 +8,7 @@ public class Code_2525 {
     public static String categorizeBox(int length, int width, int height, int mass) {
         long m =(long) length*width*height;
         int maxV= 10000;
-        //Με»ύ
+        //δ½“η§―
         long maxVolume = 1000*1000*1000;
         if ((m>=maxVolume||length>=maxV||width>=maxV||height>=maxV) && mass>=100) {
             return "Both";

@@ -30,7 +30,7 @@ public class MyEntry extends WeakReference<ThreadLocal<?>> {
             if (reference.get() != null) {
 //                System.out.println(reference.get());
             } else {
-                System.out.println("½áÊø====>" + a);
+                System.out.println("ç»“æŸ====>" + a);
                 break;
             }
             list.add(User.getDefaultUser());

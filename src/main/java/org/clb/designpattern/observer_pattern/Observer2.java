@@ -11,6 +11,6 @@ public class Observer2 implements Observer{
 
     @Override
     public void response() {
-        System.out.println("µÚ¶ş¸ö¹Û²ìÕß±»µ÷ÓÃÁË");
+        System.out.println("ç¬¬äºŒä¸ªè§‚å¯Ÿè€…è¢«è°ƒç”¨äº†");
     }
 }

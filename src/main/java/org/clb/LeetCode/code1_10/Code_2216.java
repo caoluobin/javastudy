@@ -67,7 +67,7 @@ public class Code_2216 {
     }
 
     /**
-     * ·µ»ØindexÏÂ±êÖ®ºóµÄ½á¹û
+     * è¿”å›indexä¸‹æ ‡ä¹‹åçš„ç»“æœ
      * @param nums
      * @param index
      * @param beforeNum
@@ -86,10 +86,10 @@ public class Code_2216 {
             if (nums[index]!=nums[index+1]) {
                 index+=2;
             } else {
-                //Á½ÖÖ²ßÂÔÈ¡×îĞ¡Öµ
-                //1.Ö±½ÓÈ¥³ıÁ½¸ö
+                //ä¸¤ç§ç­–ç•¥å–æœ€å°å€¼
+                //1.ç›´æ¥å»é™¤ä¸¤ä¸ª
                 min = dfs(nums,index+2,2,df);// 12
-                //2.È¥³ıÒ»¸ö
+                //2.å»é™¤ä¸€ä¸ª
                 min = Math.min(min,dfs(nums,index+1,1,df));
                 break;
             }

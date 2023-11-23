@@ -12,6 +12,6 @@ public abstract class SmallAnimal implements Animal {
 
     @Override
     public void shape() {
-        System.out.println("小型动物");
+        System.out.println("灏忓瀷鍔ㄧ墿");
     }
 }

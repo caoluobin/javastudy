@@ -4,21 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ¸øÄãÒ»¸öÕûÊıÊı×é nums ºÍÒ»¸öÕûÊı k £¬ÇëÄãÍ³¼Æ²¢·µ»Ø ¸ÃÊı×éÖĞºÍÎª k µÄ×ÓÊı×éµÄ¸öÊı ¡£
- * ×ÓÊı×éÊÇÊı×éÖĞÔªËØµÄÁ¬Ğø·Ç¿ÕĞòÁĞ¡£  numsÖĞÊı×ÖÎª-1000~1000
+ * ç»™ä½ ä¸€ä¸ªæ•´æ•°æ•°ç»„ nums å’Œä¸€ä¸ªæ•´æ•° k ï¼Œè¯·ä½ ç»Ÿè®¡å¹¶è¿”å› è¯¥æ•°ç»„ä¸­å’Œä¸º k çš„å­æ•°ç»„çš„ä¸ªæ•° ã€‚
+ * å­æ•°ç»„æ˜¯æ•°ç»„ä¸­å…ƒç´ çš„è¿ç»­éç©ºåºåˆ—ã€‚  numsä¸­æ•°å­—ä¸º-1000~1000
  */
 public class Code_560 {
 
     public int subarraySum(int[] nums, int k) {
         int count = 0;
-        //key Ç°i¸öµÄºÍ  value ¸ÃºÍµÄ¸öÊı
+        //key å‰iä¸ªçš„å’Œ  value è¯¥å’Œçš„ä¸ªæ•°
         Map<Integer,Integer> map = new HashMap<>();
         int pre = 0;
-        //´ú±ípre=kµÄÊ±ºòÓĞÒ»¸ö
+        //ä»£è¡¨pre=kçš„æ—¶å€™æœ‰ä¸€ä¸ª
         map.put(0,1);
         for (int i = 0; i < nums.length; i++) {
             pre+=nums[i];
-            if (map.containsKey(pre-k)) {// pre-k ´ú±íÇ°ÃæºÍ
+            if (map.containsKey(pre-k)) {// pre-k ä»£è¡¨å‰é¢å’Œ
                 count+= map.get(pre-k);
             }
             map.put(pre,map.getOrDefault(pre,0)+1);

@@ -1,8 +1,8 @@
 package org.clb.LeetCode.code1_10;
 
 /**
- * ¸øÄãÒ»¸öÕûÊı num £¬·µ»Ø num ÖĞÄÜÕû³ı num µÄÊıÎ»µÄÊıÄ¿¡£
- * Èç¹ûÂú×ã nums % val == 0 £¬ÔòÈÏÎªÕûÊı val ¿ÉÒÔÕû³ı nums ¡£
+ * ç»™ä½ ä¸€ä¸ªæ•´æ•° num ï¼Œè¿”å› num ä¸­èƒ½æ•´é™¤ num çš„æ•°ä½çš„æ•°ç›®ã€‚
+ * å¦‚æœæ»¡è¶³ nums % val == 0 ï¼Œåˆ™è®¤ä¸ºæ•´æ•° val å¯ä»¥æ•´é™¤ nums ã€‚
  */
 public class Code_2520 {
     public int countDigits(int num) {

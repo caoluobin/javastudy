@@ -18,11 +18,11 @@ public class ConditionTest {
         new Thread(() -> {
             lock.lock();
             try {
-                System.out.println(Thread.currentThread().getName() + "µÈ´ý1");
+                System.out.println(Thread.currentThread().getName() + "ç­‰å¾…1");
                 condition.await();
-                System.out.println(Thread.currentThread().getName() + "µÈ´ý2");
+                System.out.println(Thread.currentThread().getName() + "ç­‰å¾…2");
                 condition.await();
-                System.out.println(Thread.currentThread().getName() + "³å");
+                System.out.println(Thread.currentThread().getName() + "å†²");
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } finally {

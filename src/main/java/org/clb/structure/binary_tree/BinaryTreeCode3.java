@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @Description °´²ã±éÀú¶ş²æÊ÷
+ * @Description æŒ‰å±‚éå†äºŒå‰æ ‘
  * @Classname BinaryTreeCode3
  * @Date 2021/9/16 22:20
  * @Author clb

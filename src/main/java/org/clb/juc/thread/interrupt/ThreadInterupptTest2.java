@@ -10,7 +10,7 @@ public class ThreadInterupptTest2 {
 
                 }
 //                try {
-//                    System.out.println("´ò¶Ï"+Thread.interrupted());
+//                    System.out.println("æ‰“æ–­"+Thread.interrupted());
 //                    System.out.println("thread==>1"+Thread.currentThread().isInterrupted());
 //                    t2.wait();
 //                    Thread.sleep(5000);
@@ -43,7 +43,7 @@ public class ThreadInterupptTest2 {
             while (System.currentTimeMillis() - l < 1000) {
 
             }
-            System.out.println("´ò¶Ï" + Thread.interrupted());
+            System.out.println("æ‰“æ–­" + Thread.interrupted());
             System.out.println("thread==>1" + Thread.currentThread().isInterrupted());
             while (System.currentTimeMillis() - l < 2000) {
 

@@ -1,8 +1,8 @@
 package org.clb.structure.sort.mergesort;
 
 /**
- * @Description ÇóÊı×éÖĞµÄÄæĞò¶ÔµÄ¸öÊı ºÍÖ®Ç°µÄ·´Ò»·´
- * ´ÓÓÒÍù×ó¿½±´
+ * @Description æ±‚æ•°ç»„ä¸­çš„é€†åºå¯¹çš„ä¸ªæ•° å’Œä¹‹å‰çš„åä¸€å
+ * ä»å³å¾€å·¦æ‹·è´
  * @Classname MergeSortCode01
  * @Date 2021/5/13 4:06
  * @Author clb
@@ -20,7 +20,7 @@ public class MergeSortCode02 {
     }
 
     /**
-     * ¶ÔÁ½¸öÊı×é½øĞĞºÏ²¢
+     * å¯¹ä¸¤ä¸ªæ•°ç»„è¿›è¡Œåˆå¹¶
      * 357 567   535677   2
      * @param array
      * @param l
@@ -31,8 +31,8 @@ public class MergeSortCode02 {
     private static int merge(int[] array, int l, int mid, int r) {
         int[] h=new int[r-l+1];//{3,2}
         int count=0;
-        int p=r;//ÓÒÊı×é p=1
-        int q=mid;//×óÊı×é mid=0
+        int p=r;//å³æ•°ç»„ p=1
+        int q=mid;//å·¦æ•°ç»„ mid=0
         int a=r-l;//1
         while (p>=mid+1&&q>=l){//1>=1 0>=0
             count+=array[q]>array[p]?p-mid:0;//1

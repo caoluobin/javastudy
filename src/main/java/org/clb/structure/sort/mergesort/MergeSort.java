@@ -1,7 +1,7 @@
 package org.clb.structure.sort.mergesort;
 
 /**
- * @Description ¹é²¢ÅÅĞò
+ * @Description å½’å¹¶æ’åº
  * @Classname MergeSort
  * @Date 2021/5/13 4:30
  * @Author clb

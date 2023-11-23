@@ -26,20 +26,20 @@ public class SpeedSortCode01 {
     }
 
     /**
-     * ¿ìËÙÅÅĞò 1 8 5 10 7 12 9 8
-     * ÒÔ×îÓÒ±ßµÄ8Î»±ê¼Ç½«ËùÓĞ<8µÄÊı·ÅÔÚ×ó±ß >8µÄÊı·ÅÔÚÓÒ±ß =8·ÅÖĞ¼ä
-     * int less±ê¼Ç<8µÄÏÂ±ê ³õÊ¼Îªl-1  0
-     * int more±ê¼Ç>8µÄÏÂ±ê ³õÊ¼Îª r-1  6
-     * int index µ±Ç°ÊıÏÂ±ê l 0
-     * 8>1 arr[less++:0] Óëarr[index++:0]½»»»Î»ÖÃ index:1 less:1 more:6
-     * 8=8 ²»¶¯ index++ index:2 less:1 more:6
-     * 8>5 arr[less++:1] Óëarr[index++:2]½»»»Î»ÖÃ index++ less:2 index:3 more:6
-     * 8<10 arr[index:3]Óëarr[more--:6]½»»» index²»±ä more-- less:2 index:3 more:5   1 5 8 9 7 12 10 8
-     * 8<9 arr[index:3]Óëarr[more--:5]½»»» index²»±ä more-- less:2 index:3 more:4   1 5 8 12 7 9 10 8
-     * 8<12 arr[index:3]Óëarr[more--:4]½»»» index²»±ä more-- less:2 index:3 more:3   1 5 8 7 12 9 10 8
-     * 8>7 arr[less++:2]Óëarr[index++:3]½»»» less:3 index:4 more:3  1 5 7 8 12 9 10 8
-     * 12Óë7½»»»
-     * p²»±ä q-- 1 5 7 7 12 10 8 8>7 p++ 8>7 p++ p=q 8Óëarr[q]½»»»
+     * å¿«é€Ÿæ’åº 1 8 5 10 7 12 9 8
+     * ä»¥æœ€å³è¾¹çš„8ä½æ ‡è®°å°†æ‰€æœ‰<8çš„æ•°æ”¾åœ¨å·¦è¾¹ >8çš„æ•°æ”¾åœ¨å³è¾¹ =8æ”¾ä¸­é—´
+     * int lessæ ‡è®°<8çš„ä¸‹æ ‡ åˆå§‹ä¸ºl-1  0
+     * int moreæ ‡è®°>8çš„ä¸‹æ ‡ åˆå§‹ä¸º r-1  6
+     * int index å½“å‰æ•°ä¸‹æ ‡ l 0
+     * 8>1 arr[less++:0] ä¸arr[index++:0]äº¤æ¢ä½ç½® index:1 less:1 more:6
+     * 8=8 ä¸åŠ¨ index++ index:2 less:1 more:6
+     * 8>5 arr[less++:1] ä¸arr[index++:2]äº¤æ¢ä½ç½® index++ less:2 index:3 more:6
+     * 8<10 arr[index:3]ä¸arr[more--:6]äº¤æ¢ indexä¸å˜ more-- less:2 index:3 more:5   1 5 8 9 7 12 10 8
+     * 8<9 arr[index:3]ä¸arr[more--:5]äº¤æ¢ indexä¸å˜ more-- less:2 index:3 more:4   1 5 8 12 7 9 10 8
+     * 8<12 arr[index:3]ä¸arr[more--:4]äº¤æ¢ indexä¸å˜ more-- less:2 index:3 more:3   1 5 8 7 12 9 10 8
+     * 8>7 arr[less++:2]ä¸arr[index++:3]äº¤æ¢ less:3 index:4 more:3  1 5 7 8 12 9 10 8
+     * 12ä¸7äº¤æ¢
+     * pä¸å˜ q-- 1 5 7 7 12 10 8 8>7 p++ 8>7 p++ p=q 8ä¸arr[q]äº¤æ¢
      *
      * @param arr
      * @param l
@@ -53,7 +53,7 @@ public class SpeedSortCode01 {
         if (l > r) {
             return new int[]{-1, -1};
         }
-        //Í¨¹ıËæ»ú»ñÈ¡ÖĞ¼äÖµ ½µµÍÊ±¼ä¸´ÔÓ¶È
+        //é€šè¿‡éšæœºè·å–ä¸­é—´å€¼ é™ä½æ—¶é—´å¤æ‚åº¦
         swap(arr, (int) (Math.random() * (r - l + 1))+l, r);
         int less = l;
         int index = l;

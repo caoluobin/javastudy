@@ -26,13 +26,13 @@ public class SshCommandUtils {
 	}
 
 	/**
-	 * 初始化
+	 * 鍒濆鍖�
 	 *
-	 * @param ip       远程Linux地址
-	 * @param port     端口
-	 * @param username 用户名
-	 * @param password 密码
-	 * @throws JSchException JSch异常
+	 * @param ip       杩滅▼Linux鍦板潃
+	 * @param port     绔彛
+	 * @param username 鐢ㄦ埛鍚�
+	 * @param password 瀵嗙爜
+	 * @throws JSchException JSch寮傚父
 	 */
 	public void login(String ip, Integer port, String username, String password) {
 
@@ -42,7 +42,7 @@ public class SshCommandUtils {
 			session = jsch.getSession(username, ip, port);
 			session.setPassword(password);
 
-			// 设置第一次登陆的时候提示，可选值:(ask | yes | no)
+			// 璁剧疆绗竴娆＄櫥闄嗙殑鏃跺�欐彁绀猴紝鍙�夊��:(ask | yes | no)
 			session.setConfig("StrictHostKeyChecking", "no");
 			session.connect(1200 * 1000);
 		} catch (Exception e) {
@@ -53,7 +53,7 @@ public class SshCommandUtils {
 	private void doExec(String command, CMD_TYPE cmdType) {
 
 		try {
-			// 打开执行shell指令的通道
+			// 鎵撳紑鎵цshell鎸囦护鐨勯�氶亾
 			channel = session.openChannel("exec");
 			channelExec = (ChannelExec) channel;
 			channelExec.setCommand(command);
@@ -74,11 +74,11 @@ public class SshCommandUtils {
 	}
 
 	/**
-	 * 执行一条命令
+	 * 鎵ц涓�鏉″懡浠�
 	 */
 	public List<String> execCmd(String command) {
 
-		// 打开执行shell指令的通道
+		// 鎵撳紑鎵цshell鎸囦护鐨勯�氶亾
 		doExec(command, CMD_TYPE.INFO);
 
 		List<String> contentList = Lists.newArrayList();
@@ -93,7 +93,7 @@ public class SshCommandUtils {
 				builder.append(buffer).append(System.lineSeparator());
 			}
 
-			// 打印运行结果
+			// 鎵撳嵃杩愯缁撴灉
 
 			return contentList;
 		} catch (Exception e) {
@@ -109,7 +109,7 @@ public class SshCommandUtils {
 	}
 
 	/**
-	 * 执行一条命令 获取错误流中的内容
+	 * 鎵ц涓�鏉″懡浠� 鑾峰彇閿欒娴佷腑鐨勫唴瀹�
 	 */
 	public String execCmdErrContent(String command, boolean enableLog) {
 

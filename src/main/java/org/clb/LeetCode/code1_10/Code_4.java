@@ -3,7 +3,7 @@ package org.clb.LeetCode.code1_10;
 import org.clb.structure.sort.Sort;
 
 /**
- * @Description ¸ø¶¨Á½¸ö´óĞ¡·Ö±ğÎª m ºÍ n µÄÕıĞò£¨´ÓĞ¡µ½´ó£©Êı×é nums1 ºÍ nums2¡£ÇëÄãÕÒ³ö²¢·µ»ØÕâÁ½¸öÕıĞòÊı×éµÄ ÖĞÎ»Êı ¡£
+ * @Description ç»™å®šä¸¤ä¸ªå¤§å°åˆ†åˆ«ä¸º m å’Œ n çš„æ­£åºï¼ˆä»å°åˆ°å¤§ï¼‰æ•°ç»„ nums1 å’Œ nums2ã€‚è¯·ä½ æ‰¾å‡ºå¹¶è¿”å›è¿™ä¸¤ä¸ªæ­£åºæ•°ç»„çš„ ä¸­ä½æ•° ã€‚
  * @Classname Code4
  * @Date 2021/7/1 10:07
  * @Author clb
