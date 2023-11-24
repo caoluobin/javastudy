@@ -1,4 +1,4 @@
-package org.clb.netty.nio;
+package org.clb.io.nio;
 
 /**
  * 使用Buffer读写数据一般遵循以下四个步骤：

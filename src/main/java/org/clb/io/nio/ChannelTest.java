@@ -1,15 +1,12 @@
-package org.clb.netty.nio;
+package org.clb.io.nio;
 
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * SocketChannel ：一个客户端用来发起 TCP 的 Channel 。
