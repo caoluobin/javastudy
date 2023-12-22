@@ -11,13 +11,17 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.clb.io.netty.handler.NettyServerHandler;
 
 public class NettyServer {
+    public static void main(String[] args) {
+        NettyServer nettyServer = new NettyServer();
+        nettyServer.init();
+    }
 
     ServerBootstrap serverBootstrap;
 
     public void init() {
         try {
             // 创建两个事件循环组，一个用于接收客户端连接，一个用于处理连接后的数据传输
-            EventLoopGroup bossGroup = new NioEventLoopGroup(); // 接收连接
+            EventLoopGroup bossGroup = new NioEventLoopGroup(1); // 接收连接
             EventLoopGroup workerGroup = new NioEventLoopGroup(); // 处理连接后的数据传输
             serverBootstrap = new ServerBootstrap()
                     .group(bossGroup, workerGroup)
@@ -33,7 +37,7 @@ public class NettyServer {
                     .option(ChannelOption.SO_BACKLOG, 128) // 设置队列大小
                     .childOption(ChannelOption.SO_KEEPALIVE, true); // 保持连接
             // 绑定端口，开始接受进来的连接
-            ChannelFuture future = serverBootstrap.bind(8080).sync();
+            ChannelFuture future = serverBootstrap.bind(83).sync();
             // 阻塞，直到服务器 socket 关闭
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {

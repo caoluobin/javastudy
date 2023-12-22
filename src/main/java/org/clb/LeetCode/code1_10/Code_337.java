@@ -15,7 +15,7 @@ public class Code_337 {
         TreeNode treeNode = new TreeNode(1,null,treeNode3);
         Code_337 code = new Code_337();
         System.out.println(code.rob(treeNode));
-        System.out.println(count.get());
+        System.out.println(Runtime.getRuntime().availableProcessors());
 
 
     }
@@ -82,7 +82,7 @@ public class Code_337 {
         }
     }
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

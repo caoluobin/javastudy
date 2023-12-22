@@ -45,7 +45,7 @@ public class Code_979 {
         return new int[]{left[0]+right[0]+1,left[1]+right[1]+node.val-1,Math.abs(left[1])+Math.abs(right[1])+left[2]+right[2]};//2
     }
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

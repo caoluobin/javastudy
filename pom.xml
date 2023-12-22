@@ -161,6 +161,11 @@
             <artifactId>netty-all</artifactId>
             <version>4.1.65.Final</version>
         </dependency>
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.8.0</version> <!-- 使用最新版本 -->
+        </dependency>
     </dependencies>
 
 </project>
