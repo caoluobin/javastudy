@@ -43,22 +43,22 @@ public class WaterMarkingUtils {
     public static void main(String[] args) {
         String markText = "南京赛宁";
         String handout = "E:\\赛宁\\需求任务\\1.pdf";
-        String[] split = new File(handout).getPath().split(File.separator);
-        if(split.length < 1){
-            return;
-        }
+//        String[] split = new File(handout).getPath().split(File.separator);
+//        if(split.length < 1){
+//            return;
+//        }
 //        if(!handout.startsWith("D:/cpms")){
 //            handout = "E:\\cpms" + handout;
 //        }
-        String handoutPath = split[split.length - 1];
-        String[] split1 = handoutPath.split("\\.");
-        if(split1.length < 1){
-            return;
-        }
-        String handoutName = split1[0];
+//        String handoutPath = split[split.length - 1];
+//        String[] split1 = handoutPath.split("\\.");
+//        if(split1.length < 1){
+//            return;
+//        }
+//        String handoutName = split1[0];
         String replacehandout = "E:\\cpms\\1.pdf";
         try {
-//            setPdfWatermark(handout,replacehandout, markText);
+            setPdfWatermark(handout,replacehandout, markText);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -395,7 +395,7 @@ public class WaterMarkingUtils {
             pageRect = reader.getPageSizeWithRotation(i);
             content = stamper.getOverContent(i);// 在内容上方加水印
 //            content = stamper.getUnderContent(i);// 在内容下方加水印
-//            gs.setFillOpacity(1.0f);
+            gs.setFillOpacity(0.0f);
              content.setGState(gs);
             content.beginText();
             content.setRGBColorFill(128, 128, 128);

@@ -11,19 +11,9 @@ import java.nio.charset.StandardCharsets;
 
 public class Test {
     public static void main(String[] args) throws CloneNotSupportedException {
-        String host = "10.100.6.40"; // 将此处替换为你想要 ping 的主机名或 IP 地址
+        String a = "a";
+        System.out.println(a.split(",").length);
 
-        try {
-            InetAddress inetAddress = InetAddress.getByName(host);
-
-            if (inetAddress.isReachable(5000)) {
-                System.out.println("Host is reachable");
-            } else {
-                System.out.println("Host is not reachable");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
     private static void func(User user) {
         user = new User();
